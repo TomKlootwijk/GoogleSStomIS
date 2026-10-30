@@ -1,0 +1,641 @@
+
+pinion_maktub.wasm:	file format wasm 0x1
+
+Section Details:
+
+Type[10]:
+ - type[0] () -> nil
+ - type[1] () -> i32
+ - type[2] (i32, i32) -> i32
+ - type[3] (i32, i32, i32) -> nil
+ - type[4] (i32) -> i32
+ - type[5] (i32, i32, i32, i32) -> i32
+ - type[6] (i32, i32, i32) -> i32
+ - type[7] (i32, i32, i32, i32, i32, i32, i32) -> i32
+ - type[8] (i32, i32, i32, i32) -> nil
+ - type[9] (i32, i32) -> nil
+Function[106]:
+ - func[0] sig=0 <reset>
+ - func[1] sig=1 <abi_version>
+ - func[2] sig=1 <code_valid>
+ - func[3] sig=2 <uget>
+ - func[4] sig=3 <put>
+ - func[5] sig=4 <abs>
+ - func[6] sig=4 <parity>
+ - func[7] sig=2 <xor_bit>
+ - func[8] sig=5 <pack>
+ - func[9] sig=4 <field>
+ - func[10] sig=4 <class>
+ - func[11] sig=4 <mirror>
+ - func[12] sig=4 <genes_valid>
+ - func[13] sig=5 <keycmp>
+ - func[14] sig=2 <world_valid>
+ - func[15] sig=6 <live_valid>
+ - func[16] sig=4 <overlay_count>
+ - func[17] sig=2 <overlay_valid>
+ - func[18] sig=7 <pinion_install>
+ - func[19] sig=1 <state_valid>
+ - func[20] sig=1 <pinion_set_genes>
+ - func[21] sig=4 <row>
+ - func[22] sig=4 <pinion_row_word>
+ - func[23] sig=4 <pinion_step>
+ - func[24] sig=1 <pinion_checkpoint>
+ - func[25] sig=6 <maktub_step>
+ - func[26] sig=1 <bl_code_valid>
+ - func[27] sig=2 <bl_lut>
+ - func[28] sig=2 <bl_address2>
+ - func[29] sig=6 <bl_address3>
+ - func[30] sig=2 <bl_get_bit>
+ - func[31] sig=8 <bl_emit_bit>
+ - func[32] sig=4 <bl_valid>
+ - func[33] sig=0 <bl_clear>
+ - func[34] sig=2 <bl_arithmetic>
+ - func[35] sig=4 <bl_add>
+ - func[36] sig=4 <bl_sub>
+ - func[37] sig=4 <bl_neg>
+ - func[38] sig=2 <bl_logical>
+ - func[39] sig=4 <bl_and>
+ - func[40] sig=4 <bl_or>
+ - func[41] sig=4 <bl_xor>
+ - func[42] sig=4 <bl_mul>
+ - func[43] sig=2 <bl_rotl>
+ - func[44] sig=6 <bl_shift>
+ - func[45] sig=2 <bl_shl>
+ - func[46] sig=2 <bl_shr_u>
+ - func[47] sig=2 <bl_shr_s>
+ - func[48] sig=2 <bl_compare>
+ - func[49] sig=4 <bl_ltu>
+ - func[50] sig=4 <bl_lts>
+ - func[51] sig=4 <bl_eq>
+ - func[52] sig=1 <bl_tomk_mix32>
+ - func[53] sig=1 <bl_add32>
+ - func[54] sig=1 <bl_add64>
+ - func[55] sig=1 <bl_sub32>
+ - func[56] sig=1 <bl_sub64>
+ - func[57] sig=1 <bl_neg32>
+ - func[58] sig=1 <bl_neg64>
+ - func[59] sig=1 <bl_mul32>
+ - func[60] sig=1 <bl_mul64>
+ - func[61] sig=0 <bl_init>
+ - func[62] sig=2 <dv_word_zero>
+ - func[63] sig=2 <dv_word_min>
+ - func[64] sig=2 <dv_word_ones>
+ - func[65] sig=3 <dv_emit_word>
+ - func[66] sig=9 <dv_neg_word>
+ - func[67] sig=6 <dv_remainder_digit>
+ - func[68] sig=3 <dv_unsigned_core>
+ - func[69] sig=3 <dv_publish>
+ - func[70] sig=2 <dv_divide>
+ - func[71] sig=4 <dv_gcd>
+ - func[72] sig=4 <dv_udiv>
+ - func[73] sig=4 <dv_urem>
+ - func[74] sig=4 <dv_sdiv>
+ - func[75] sig=4 <dv_srem>
+ - func[76] sig=2 <wl_add>
+ - func[77] sig=2 <wl_sub>
+ - func[78] sig=2 <wl_mul>
+ - func[79] sig=2 <wl_and>
+ - func[80] sig=2 <wl_or>
+ - func[81] sig=2 <wl_xor>
+ - func[82] sig=2 <wl_shl>
+ - func[83] sig=2 <wl_shr_u>
+ - func[84] sig=2 <wl_shr_s>
+ - func[85] sig=2 <wl_rotl>
+ - func[86] sig=2 <wl_equal>
+ - func[87] sig=2 <wl_less_u>
+ - func[88] sig=2 <wl_less_s>
+ - func[89] sig=2 <wl_eq>
+ - func[90] sig=2 <wl_ne>
+ - func[91] sig=2 <wl_lt_u>
+ - func[92] sig=2 <wl_lt_s>
+ - func[93] sig=2 <wl_gt_u>
+ - func[94] sig=2 <wl_gt_s>
+ - func[95] sig=2 <wl_le_u>
+ - func[96] sig=2 <wl_le_s>
+ - func[97] sig=2 <wl_ge_u>
+ - func[98] sig=2 <wl_ge_s>
+ - func[99] sig=4 <wl_eqz>
+ - func[100] sig=4 <wl_popcnt>
+ - func[101] sig=2 <wl_div_u>
+ - func[102] sig=2 <wl_rem_u>
+ - func[103] sig=0 <boot>
+ - func[104] sig=1 <lut_code_valid>
+ - func[105] sig=1 <lut_workspace_offset>
+Memory[1]:
+ - memory[0] pages: initial=1 max=1
+Export[13]:
+ - memory[0] -> "memory"
+ - func[0] <reset> -> "reset"
+ - func[1] <abi_version> -> "abi_version"
+ - func[2] <code_valid> -> "code_valid"
+ - func[18] <pinion_install> -> "pinion_install"
+ - func[19] <state_valid> -> "pinion_state_valid"
+ - func[20] <pinion_set_genes> -> "pinion_set_genes"
+ - func[22] <pinion_row_word> -> "pinion_row_word"
+ - func[23] <pinion_step> -> "pinion_step"
+ - func[24] <pinion_checkpoint> -> "pinion_checkpoint"
+ - func[25] <maktub_step> -> "maktub_step"
+ - func[104] <lut_code_valid> -> "lut_code_valid"
+ - func[105] <lut_workspace_offset> -> "lut_workspace_offset"
+Start:
+ - start function: 103 <boot>
+Code[106]:
+ - func[0] size=49 <reset>
+ - func[1] size=4 <abi_version>
+ - func[2] size=37 <code_valid>
+ - func[3] size=13 <uget>
+ - func[4] size=15 <put>
+ - func[5] size=27 <abs>
+ - func[6] size=10 <parity>
+ - func[7] size=24 <xor_bit>
+ - func[8] size=49 <pack>
+ - func[9] size=12 <field>
+ - func[10] size=36 <class>
+ - func[11] size=45 <mirror>
+ - func[12] size=81 <genes_valid>
+ - func[13] size=102 <keycmp>
+ - func[14] size=368 <world_valid>
+ - func[15] size=84 <live_valid>
+ - func[16] size=16 <overlay_count>
+ - func[17] size=45 <overlay_valid>
+ - func[18] size=321 <pinion_install>
+ - func[19] size=139 <state_valid>
+ - func[20] size=57 <pinion_set_genes>
+ - func[21] size=149 <row>
+ - func[22] size=42 <pinion_row_word>
+ - func[23] size=868 <pinion_step>
+ - func[24] size=317 <pinion_checkpoint>
+ - func[25] size=171 <maktub_step>
+ - func[26] size=181 <bl_code_valid>
+ - func[27] size=22 <bl_lut>
+ - func[28] size=10 <bl_address2>
+ - func[29] size=16 <bl_address3>
+ - func[30] size=27 <bl_get_bit>
+ - func[31] size=69 <bl_emit_bit>
+ - func[32] size=79 <bl_valid>
+ - func[33] size=31 <bl_clear>
+ - func[34] size=155 <bl_arithmetic>
+ - func[35] size=8 <bl_add>
+ - func[36] size=8 <bl_sub>
+ - func[37] size=8 <bl_neg>
+ - func[38] size=66 <bl_logical>
+ - func[39] size=8 <bl_and>
+ - func[40] size=8 <bl_or>
+ - func[41] size=8 <bl_xor>
+ - func[42] size=184 <bl_mul>
+ - func[43] size=78 <bl_rotl>
+ - func[44] size=134 <bl_shift>
+ - func[45] size=10 <bl_shl>
+ - func[46] size=10 <bl_shr_u>
+ - func[47] size=10 <bl_shr_s>
+ - func[48] size=222 <bl_compare>
+ - func[49] size=8 <bl_ltu>
+ - func[50] size=8 <bl_lts>
+ - func[51] size=8 <bl_eq>
+ - func[52] size=394 <bl_tomk_mix32>
+ - func[53] size=6 <bl_add32>
+ - func[54] size=7 <bl_add64>
+ - func[55] size=6 <bl_sub32>
+ - func[56] size=7 <bl_sub64>
+ - func[57] size=6 <bl_neg32>
+ - func[58] size=7 <bl_neg64>
+ - func[59] size=6 <bl_mul32>
+ - func[60] size=7 <bl_mul64>
+ - func[61] size=140 <bl_init>
+ - func[62] size=48 <dv_word_zero>
+ - func[63] size=66 <dv_word_min>
+ - func[64] size=48 <dv_word_ones>
+ - func[65] size=54 <dv_emit_word>
+ - func[66] size=61 <dv_neg_word>
+ - func[67] size=198 <dv_remainder_digit>
+ - func[68] size=68 <dv_unsigned_core>
+ - func[69] size=108 <dv_publish>
+ - func[70] size=284 <dv_divide>
+ - func[71] size=201 <dv_gcd>
+ - func[72] size=8 <dv_udiv>
+ - func[73] size=8 <dv_urem>
+ - func[74] size=8 <dv_sdiv>
+ - func[75] size=8 <dv_srem>
+ - func[76] size=50 <wl_add>
+ - func[77] size=50 <wl_sub>
+ - func[78] size=50 <wl_mul>
+ - func[79] size=50 <wl_and>
+ - func[80] size=50 <wl_or>
+ - func[81] size=50 <wl_xor>
+ - func[82] size=52 <wl_shl>
+ - func[83] size=52 <wl_shr_u>
+ - func[84] size=52 <wl_shr_s>
+ - func[85] size=52 <wl_rotl>
+ - func[86] size=50 <wl_equal>
+ - func[87] size=50 <wl_less_u>
+ - func[88] size=50 <wl_less_s>
+ - func[89] size=8 <wl_eq>
+ - func[90] size=12 <wl_ne>
+ - func[91] size=8 <wl_lt_u>
+ - func[92] size=8 <wl_lt_s>
+ - func[93] size=8 <wl_gt_u>
+ - func[94] size=8 <wl_gt_s>
+ - func[95] size=12 <wl_le_u>
+ - func[96] size=12 <wl_le_s>
+ - func[97] size=12 <wl_ge_u>
+ - func[98] size=12 <wl_ge_s>
+ - func[99] size=8 <wl_eqz>
+ - func[100] size=46 <wl_popcnt>
+ - func[101] size=55 <wl_div_u>
+ - func[102] size=55 <wl_rem_u>
+ - func[103] size=6 <boot>
+ - func[104] size=4 <lut_code_valid>
+ - func[105] size=6 <lut_workspace_offset>
+Custom:
+ - name: "name"
+ - func[0] <reset>
+ - func[2] <code_valid>
+ - func[3] <uget>
+ - func[4] <put>
+ - func[5] <abs>
+ - func[6] <parity>
+ - func[7] <xor_bit>
+ - func[8] <pack>
+ - func[9] <field>
+ - func[10] <class>
+ - func[11] <mirror>
+ - func[12] <genes_valid>
+ - func[13] <keycmp>
+ - func[14] <world_valid>
+ - func[15] <live_valid>
+ - func[16] <overlay_count>
+ - func[17] <overlay_valid>
+ - func[19] <state_valid>
+ - func[21] <row>
+ - func[26] <bl_code_valid>
+ - func[27] <bl_lut>
+ - func[28] <bl_address2>
+ - func[29] <bl_address3>
+ - func[30] <bl_get_bit>
+ - func[31] <bl_emit_bit>
+ - func[32] <bl_valid>
+ - func[33] <bl_clear>
+ - func[34] <bl_arithmetic>
+ - func[35] <bl_add>
+ - func[36] <bl_sub>
+ - func[37] <bl_neg>
+ - func[38] <bl_logical>
+ - func[39] <bl_and>
+ - func[40] <bl_or>
+ - func[41] <bl_xor>
+ - func[42] <bl_mul>
+ - func[43] <bl_rotl>
+ - func[44] <bl_shift>
+ - func[45] <bl_shl>
+ - func[46] <bl_shr_u>
+ - func[47] <bl_shr_s>
+ - func[48] <bl_compare>
+ - func[49] <bl_ltu>
+ - func[50] <bl_lts>
+ - func[51] <bl_eq>
+ - func[52] <bl_tomk_mix32>
+ - func[53] <bl_add32>
+ - func[54] <bl_add64>
+ - func[55] <bl_sub32>
+ - func[56] <bl_sub64>
+ - func[57] <bl_neg32>
+ - func[58] <bl_neg64>
+ - func[59] <bl_mul32>
+ - func[60] <bl_mul64>
+ - func[61] <bl_init>
+ - func[62] <dv_word_zero>
+ - func[63] <dv_word_min>
+ - func[64] <dv_word_ones>
+ - func[65] <dv_emit_word>
+ - func[66] <dv_neg_word>
+ - func[67] <dv_remainder_digit>
+ - func[68] <dv_unsigned_core>
+ - func[69] <dv_publish>
+ - func[70] <dv_divide>
+ - func[71] <dv_gcd>
+ - func[72] <dv_udiv>
+ - func[73] <dv_urem>
+ - func[74] <dv_sdiv>
+ - func[75] <dv_srem>
+ - func[76] <wl_add>
+ - func[77] <wl_sub>
+ - func[78] <wl_mul>
+ - func[79] <wl_and>
+ - func[80] <wl_or>
+ - func[81] <wl_xor>
+ - func[82] <wl_shl>
+ - func[83] <wl_shr_u>
+ - func[84] <wl_shr_s>
+ - func[85] <wl_rotl>
+ - func[86] <wl_equal>
+ - func[87] <wl_less_u>
+ - func[88] <wl_less_s>
+ - func[89] <wl_eq>
+ - func[90] <wl_ne>
+ - func[91] <wl_lt_u>
+ - func[92] <wl_lt_s>
+ - func[93] <wl_gt_u>
+ - func[94] <wl_gt_s>
+ - func[95] <wl_le_u>
+ - func[96] <wl_le_s>
+ - func[97] <wl_ge_u>
+ - func[98] <wl_ge_s>
+ - func[99] <wl_eqz>
+ - func[100] <wl_popcnt>
+ - func[101] <wl_div_u>
+ - func[102] <wl_rem_u>
+ - func[103] <boot>
+ - func[3] local[0] <base>
+ - func[3] local[1] <index>
+ - func[4] local[0] <base>
+ - func[4] local[1] <index>
+ - func[4] local[2] <value>
+ - func[5] local[0] <v>
+ - func[5] local[1] <out>
+ - func[6] local[0] <v>
+ - func[7] local[0] <a>
+ - func[7] local[1] <b>
+ - func[8] local[0] <r>
+ - func[8] local[1] <i>
+ - func[8] local[2] <b>
+ - func[8] local[3] <a>
+ - func[8] local[4] <v>
+ - func[9] local[0] <word>
+ - func[10] local[0] <b>
+ - func[10] local[1] <c>
+ - func[11] local[0] <word>
+ - func[12] local[0] <base>
+ - func[12] local[1] <i>
+ - func[12] local[2] <v>
+ - func[13] local[0] <base>
+ - func[13] local[1] <n>
+ - func[13] local[2] <a>
+ - func[13] local[3] <b>
+ - func[13] local[4] <k>
+ - func[13] local[5] <va>
+ - func[13] local[6] <vb>
+ - func[13] local[7] <first>
+ - func[14] local[0] <base>
+ - func[14] local[1] <n>
+ - func[14] local[2] <i>
+ - func[14] local[3] <s>
+ - func[14] local[4] <d>
+ - func[14] local[5] <t>
+ - func[14] local[6] <phi>
+ - func[14] local[7] <ordered>
+ - func[14] local[8] <last>
+ - func[15] local[0] <base>
+ - func[15] local[1] <n>
+ - func[15] local[2] <word>
+ - func[15] local[3] <i>
+ - func[15] local[4] <a>
+ - func[16] local[0] <n>
+ - func[17] local[0] <base>
+ - func[17] local[1] <n>
+ - func[17] local[2] <used>
+ - func[18] local[0] <w>
+ - func[18] local[1] <h>
+ - func[18] local[2] <radius>
+ - func[18] local[3] <center>
+ - func[18] local[4] <word>
+ - func[18] local[5] <tick>
+ - func[18] local[6] <epoch>
+ - func[18] local[7] <n>
+ - func[18] local[8] <i>
+ - func[19] local[0] <n>
+ - func[21] local[0] <row>
+ - func[21] local[1] <n>
+ - func[21] local[2] <i>
+ - func[21] local[3] <c>
+ - func[21] local[4] <s>
+ - func[21] local[5] <d>
+ - func[21] local[6] <t>
+ - func[21] local[7] <bit>
+ - func[22] local[0] <row>
+ - func[23] local[0] <j>
+ - func[23] local[1] <n>
+ - func[23] local[2] <word>
+ - func[23] local[3] <r>
+ - func[23] local[4] <i>
+ - func[23] local[5] <b>
+ - func[23] local[6] <eta>
+ - func[23] local[7] <theta>
+ - func[23] local[8] <bank>
+ - func[23] local[9] <qx>
+ - func[23] local[10] <qy>
+ - func[23] local[11] <lo>
+ - func[23] local[12] <hi>
+ - func[23] local[13] <mid>
+ - func[23] local[14] <id>
+ - func[23] local[15] <cmp>
+ - func[23] local[16] <found>
+ - func[23] local[17] <s>
+ - func[23] local[18] <d>
+ - func[23] local[19] <score>
+ - func[23] local[20] <bestscore>
+ - func[23] local[21] <bestd>
+ - func[23] local[22] <bests>
+ - func[23] local[23] <dot>
+ - func[23] local[24] <row>
+ - func[23] local[25] <old>
+ - func[23] local[26] <tau>
+ - func[23] local[27] <ne>
+ - func[23] local[28] <nt>
+ - func[23] local[29] <nr>
+ - func[23] local[30] <nw>
+ - func[23] local[31] <cost>
+ - func[23] local[32] <mx>
+ - func[23] local[33] <ov>
+ - func[23] local[34] <shift>
+ - func[23] local[35] <flag>
+ - func[24] local[0] <n>
+ - func[24] local[1] <count>
+ - func[24] local[2] <i>
+ - func[24] local[3] <any>
+ - func[24] local[4] <length>
+ - func[24] local[5] <word>
+ - func[25] local[0] <b>
+ - func[25] local[1] <d>
+ - func[25] local[2] <length>
+ - func[25] local[3] <next>
+ - func[26] local[0] <bad>
+ - func[27] local[0] <table>
+ - func[27] local[1] <address>
+ - func[28] local[0] <a>
+ - func[28] local[1] <b>
+ - func[29] local[0] <a>
+ - func[29] local[1] <b>
+ - func[29] local[2] <c>
+ - func[30] local[0] <base>
+ - func[30] local[1] <i>
+ - func[31] local[0] <base>
+ - func[31] local[1] <i>
+ - func[31] local[2] <table>
+ - func[31] local[3] <address>
+ - func[31] local[4] <bit>
+ - func[31] local[5] <byte>
+ - func[31] local[6] <shift>
+ - func[31] local[7] <mask>
+ - func[32] local[0] <n>
+ - func[32] local[1] <i>
+ - func[34] local[0] <n>
+ - func[34] local[1] <mode>
+ - func[34] local[2] <status>
+ - func[34] local[3] <i>
+ - func[34] local[4] <a>
+ - func[34] local[5] <b>
+ - func[34] local[6] <carry>
+ - func[34] local[7] <address>
+ - func[35] local[0] <n>
+ - func[36] local[0] <n>
+ - func[37] local[0] <n>
+ - func[38] local[0] <n>
+ - func[38] local[1] <table>
+ - func[38] local[2] <status>
+ - func[38] local[3] <i>
+ - func[39] local[0] <n>
+ - func[40] local[0] <n>
+ - func[41] local[0] <n>
+ - func[42] local[0] <n>
+ - func[42] local[1] <status>
+ - func[42] local[2] <i>
+ - func[42] local[3] <j>
+ - func[42] local[4] <partial>
+ - func[42] local[5] <carry>
+ - func[42] local[6] <address>
+ - func[43] local[0] <n>
+ - func[43] local[1] <count>
+ - func[43] local[2] <status>
+ - func[43] local[3] <i>
+ - func[43] local[4] <source>
+ - func[43] local[5] <r>
+ - func[44] local[0] <n>
+ - func[44] local[1] <count>
+ - func[44] local[2] <mode>
+ - func[44] local[3] <status>
+ - func[44] local[4] <i>
+ - func[44] local[5] <source>
+ - func[44] local[6] <r>
+ - func[44] local[7] <bit>
+ - func[45] local[0] <n>
+ - func[45] local[1] <count>
+ - func[46] local[0] <n>
+ - func[46] local[1] <count>
+ - func[47] local[0] <n>
+ - func[47] local[1] <count>
+ - func[48] local[0] <n>
+ - func[48] local[1] <mode>
+ - func[48] local[2] <status>
+ - func[48] local[3] <i>
+ - func[48] local[4] <a>
+ - func[48] local[5] <b>
+ - func[48] local[6] <equal>
+ - func[48] local[7] <less>
+ - func[48] local[8] <different>
+ - func[48] local[9] <sign>
+ - func[48] local[10] <result>
+ - func[49] local[0] <n>
+ - func[50] local[0] <n>
+ - func[51] local[0] <n>
+ - func[52] local[0] <status>
+ - func[62] local[0] <p>
+ - func[62] local[1] <n>
+ - func[62] local[2] <i>
+ - func[62] local[3] <any>
+ - func[63] local[0] <p>
+ - func[63] local[1] <n>
+ - func[63] local[2] <i>
+ - func[63] local[3] <any>
+ - func[64] local[0] <p>
+ - func[64] local[1] <n>
+ - func[64] local[2] <i>
+ - func[64] local[3] <all>
+ - func[65] local[0] <dst>
+ - func[65] local[1] <src>
+ - func[65] local[2] <n>
+ - func[65] local[3] <i>
+ - func[66] local[0] <p>
+ - func[66] local[1] <n>
+ - func[67] local[0] <n>
+ - func[67] local[1] <b>
+ - func[67] local[2] <bit>
+ - func[67] local[3] <j>
+ - func[67] local[4] <high>
+ - func[67] local[5] <qbit>
+ - func[67] local[6] <incoming>
+ - func[68] local[0] <n>
+ - func[68] local[1] <a>
+ - func[68] local[2] <b>
+ - func[68] local[3] <i>
+ - func[68] local[4] <qbit>
+ - func[69] local[0] <n>
+ - func[69] local[1] <select_rem>
+ - func[69] local[2] <qvalid>
+ - func[70] local[0] <n>
+ - func[70] local[1] <mode>
+ - func[70] local[2] <status>
+ - func[70] local[3] <sa>
+ - func[70] local[4] <sb>
+ - func[70] local[5] <overflow>
+ - func[70] local[6] <qvalid>
+ - func[71] local[0] <n>
+ - func[71] local[1] <status>
+ - func[72] local[0] <n>
+ - func[73] local[0] <n>
+ - func[74] local[0] <n>
+ - func[75] local[0] <n>
+ - func[76] local[0] <a>
+ - func[76] local[1] <b>
+ - func[77] local[0] <a>
+ - func[77] local[1] <b>
+ - func[78] local[0] <a>
+ - func[78] local[1] <b>
+ - func[79] local[0] <a>
+ - func[79] local[1] <b>
+ - func[80] local[0] <a>
+ - func[80] local[1] <b>
+ - func[81] local[0] <a>
+ - func[81] local[1] <b>
+ - func[82] local[0] <a>
+ - func[82] local[1] <b>
+ - func[83] local[0] <a>
+ - func[83] local[1] <b>
+ - func[84] local[0] <a>
+ - func[84] local[1] <b>
+ - func[85] local[0] <a>
+ - func[85] local[1] <b>
+ - func[86] local[0] <a>
+ - func[86] local[1] <b>
+ - func[87] local[0] <a>
+ - func[87] local[1] <b>
+ - func[88] local[0] <a>
+ - func[88] local[1] <b>
+ - func[89] local[0] <a>
+ - func[89] local[1] <b>
+ - func[90] local[0] <a>
+ - func[90] local[1] <b>
+ - func[91] local[0] <a>
+ - func[91] local[1] <b>
+ - func[92] local[0] <a>
+ - func[92] local[1] <b>
+ - func[93] local[0] <a>
+ - func[93] local[1] <b>
+ - func[94] local[0] <a>
+ - func[94] local[1] <b>
+ - func[95] local[0] <a>
+ - func[95] local[1] <b>
+ - func[96] local[0] <a>
+ - func[96] local[1] <b>
+ - func[97] local[0] <a>
+ - func[97] local[1] <b>
+ - func[98] local[0] <a>
+ - func[98] local[1] <b>
+ - func[99] local[0] <a>
+ - func[100] local[0] <a>
+ - func[100] local[1] <i>
+ - func[100] local[2] <count>
+ - func[100] local[3] <bit>
+ - func[101] local[0] <a>
+ - func[101] local[1] <b>
+ - func[102] local[0] <a>
+ - func[102] local[1] <b>

@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "format": "TOM-ECS/1",
+  "profile": "native-phone-v1",
+  "full_xd_ecs_11": false,
+  "bytes": 16712,
+  "package_sha256": "9368ddec938bb08c232713345d11e30051196428b9156569f1647e6232f76f15",
+  "manifest_sha256": "c376dfe71b4d1dec23954978091ca2a69cf4fc3dad4deb0f980b05f552c941a1",
+  "state_sha256": "d6787877e1ba2ae204a91213d0bd8099d660ba344df00663af28bc5208b097b4",
+  "replay_equal": true,
+  "frontier": 4,
+  "events": 24,
+  "applied": 24,
+  "rejected": 0,
+  "operations": 95580,
+  "live_components": 19,
+  "native_profiles": 8,
+  "incomplete_tomagi_states": 0,
+  "tomagi_states": [
+    {
+      "entity": 1,
+      "words": [
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        4102348696,
+        19,
+        0,
+        25
+      ]
+    }
+  ],
+  "native_states": [
+    {
+      "entity": 3,
+      "profile_id": "tomk.exact19.data-bit-lut-v1",
+      "sequence": 2,
+      "full_memory_sha256": "1bdb605d477327050b237a7a0fe0b3d3baa478555393042ff427f416f9ee36b9",
+      "last_status": 0,
+      "last_trap": 0
+    },
+    {
+      "entity": 4,
+      "profile_id": "tomgrok.pinion.default.data-bit-lut-v1",
+      "sequence": 2,
+      "full_memory_sha256": "8fa6e5068e9eaa2cf3753c3abac4e634c0e6ac91314f62b37edacc715aa4d232",
+      "last_status": 0,
+      "last_trap": 0
+    },
+    {
+      "entity": 5,
+      "profile_id": "maktub.mirror.data-bit-lut-v1",
+      "sequence": 2,
+      "full_memory_sha256": "4612e0ee38f2e144a096a50bd03b1363f98e4e1fa50b90fc928afc2c943f47ee",
+      "last_status": 0,
+      "last_trap": 0
+    },
+    {
+      "entity": 6,
+      "profile_id": "maktubiii.paired.QIS2.data-bit-lut-v1",
+      "sequence": 2,
+      "full_memory_sha256": "bc2ad0d000a93c93c546447968cd5fbe8b0106c7ca8b2822600702b24c95f82e",
+      "last_status": 0,
+      "last_trap": 0
+    },
+    {
+      "entity": 7,
+      "profile_id": "jtk.slog2.quarterturn.data-bit-lut-v1",
+      "sequence": 2,
+      "full_memory_sha256": "bb886593fba43ca1451a9e202baedd34746715cfd4e221f23ab7feab27602a4a",
+      "last_status": 0,
+      "last_trap": 0
+    },
+    {
+      "entity": 8,
+      "profile_id": "tk.selected-quarterturn.data-bit-lut-v1",
+      "sequence": 2,
+      "full_memory_sha256": "e529f331a501447f90be6708e664dd608490b7ed3697b085051f4ad096cafbcd",
+      "last_status": 0,
+      "last_trap": 0
+    },
+    {
+      "entity": 9,
+      "profile_id": "xd.physics.rational8192.bit-data-v1",
+      "sequence": 2,
+      "full_memory_sha256": "b597df3c43b71180a015bcb29042894a874dbb3bd1745600e8034920f4fe7f4f",
+      "last_status": 0,
+      "last_trap": 0
+    },
+    {
+      "entity": 10,
+      "profile_id": "xd.parent.parity6.native-v1",
+      "sequence": 2,
+      "full_memory_sha256": "937e4727b8f888b8b6d2c879c0abdac928465a357b1125a5265fe881e900e939",
+      "last_status": 0,
+      "last_trap": 0
+    }
+  ]
+}

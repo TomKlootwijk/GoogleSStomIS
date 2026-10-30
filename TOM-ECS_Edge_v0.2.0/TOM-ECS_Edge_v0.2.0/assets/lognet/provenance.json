@@ -1,0 +1,74 @@
+{
+  "source_document_title": "log net D UNIVERSAL, Edition 2, 30 October 2026",
+  "source_pdf_sha256": "92e403b267ee30adec9bc2a0508b174e26510d0ad169d233cab4cb26df66f4ce",
+  "embedded_attachment": "log_net_D_bits_bundle.zip",
+  "embedded_attachment_sha256": "058c870f9171d12c0d298928126ec28f9c35da643a9fb5c5c7c9e1302d7fca08",
+  "source_page_map": {
+    "integer_coordinates": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "d6_group": [
+      7
+    ],
+    "q16_lut": [
+      8
+    ],
+    "exact_log2_levels": [
+      9
+    ],
+    "q16_inverse": [
+      10,
+      15
+    ],
+    "transport": [
+      11
+    ],
+    "bundle_interface": [
+      12
+    ],
+    "measurement_limits": [
+      13
+    ]
+  },
+  "original_binary_payloads": {
+    "hex_q16_bitplanes.bin": {
+      "bytes": 2448,
+      "sha256": "620cba5e0a6577e43fbce604702da7ddc5d718b6d7c836d0b25594f93e153d07"
+    },
+    "hex_validity_bits.bin": {
+      "bytes": 153,
+      "sha256": "eaa0a872c4e4f2b6b6f5f24de433d6d624dc34e9b7665b5bcd4f0611c1854989"
+    },
+    "log2_levels_bitmatrix.bin": {
+      "bytes": 512,
+      "sha256": "bada91fe20dd3263aa544ca0541677d824cd89bf6493f812aee4e332d907f67b"
+    },
+    "coordinate_frames.bin": {
+      "bytes": 140,
+      "sha256": "6b69ce2780b100067a8dd4f32e2f46a6df4ea659eed7c3da22099067c8df6b6a"
+    }
+  },
+  "validation": {
+    "manifest_files_checked": 15,
+    "manifest_sha256_and_sizes_passed": true,
+    "canonical_numeric_bits_passed": true,
+    "packed_code_mask_json_equivalence_passed": true,
+    "valid_nodes": 1158,
+    "invalid_nodes": 66,
+    "d6_node_actions_checked": 14688,
+    "d6_code_and_mask_invariance_passed": true,
+    "d6_angular_orbits": 7,
+    "d6_full_grid_representatives": 119,
+    "d6_valid_representatives": 113,
+    "exact_log2_levels_checked": 64,
+    "coordinate_fixture_records_checked": 5,
+    "coordinate_domains_padding_phase_passed": true,
+    "embedded_code_executed": false
+  },
+  "data_role": "Synthetic arithmetic fixtures, not measured phone telemetry",
+  "license_status": "User-supplied source; separate redistribution terms not supplied",
+  "included_personal_identifier_fields": false
+}

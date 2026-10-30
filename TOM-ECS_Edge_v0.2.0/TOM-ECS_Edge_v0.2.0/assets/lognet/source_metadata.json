@@ -1,0 +1,1910 @@
+{
+  "profile_id": "LND_HEX_Q16_BITS_V1",
+  "shape": [
+    17,
+    72
+  ],
+  "word_bits": 16,
+  "q16_bit_order": "MSB first; plane, radial row, angular column",
+  "validity_bit_order": "MSB first; radial row, angular column",
+  "turn_nanodegrees": 360000000000,
+  "d6_angle_index_action": "j_prime=((1-2*b)*j+12*k)%72",
+  "q16_inverse_normalized": "16^(q/65535)-1",
+  "exact_log2_level": "(1<<k)-1; k in [0,63]",
+  "source_kind": "synthetic",
+  "calibration": null,
+  "physical_uncertainty": null,
+  "center": {
+    "log_radius_defined": 0,
+    "q16_bits_msb": [
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "q16_word_msb": "1110110011010011",
+    "radius_mm": {
+      "denominator_bits": "1",
+      "kind": "rational",
+      "numerator_bits": "0",
+      "sign": 0
+    },
+    "source_nominal_irradiance_mw_cm2": {
+      "denominator_bits": "1",
+      "kind": "rational",
+      "numerator_bits": "1100",
+      "sign": 0
+    },
+    "theta_defined": 0,
+    "valid": 1
+  },
+  "coordinates": {
+    "angular_step_ticks_bits": "100101010000001011111001000000000",
+    "angular_unit": "nanodegree",
+    "angular_word_width_bits": "100111",
+    "log_radius_policy": "source_serialized_values_preserved_separately_from_symbolic_ln_of_radius",
+    "log_radius_source_rationals": [
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "11000101000000010001100001010101111100100111011011101",
+        "sign": 1
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "10001101001110111111011111110110100100011000100010011",
+        "sign": 1
+      },
+      {
+        "denominator_bits": "10001110000110111100100110111111000001000000000000000",
+        "kind": "rational",
+        "numerator_bits": "101010101110110110101111001011100110000100110100101",
+        "sign": 1
+      },
+      {
+        "denominator_bits": "10001110000110111100100110111111000001000000000",
+        "kind": "rational",
+        "numerator_bits": "1110110110001101101110011011111001111101011",
+        "sign": 1
+      },
+      {
+        "denominator_bits": "101100011010001010111100001011101100010100000000000000000",
+        "kind": "rational",
+        "numerator_bits": "100000100110000100001101110001011101011001001011100001",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1000111000011011110010011011111100000100000000000000",
+        "kind": "rational",
+        "numerator_bits": "10100011101100010001001100001101111001000110000101",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "10001001100111011010100111100110010100110001111011111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000",
+        "kind": "rational",
+        "numerator_bits": "11000001011000101100101001000101101101000000110101",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "10001110000110111100100110111111000001000000000000000",
+        "kind": "rational",
+        "numerator_bits": "1111100100100111111010101010010100010100111110111001",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1110001101011111101010010011000110100000000000000",
+        "kind": "rational",
+        "numerator_bits": "1111001111110000110101011001110100101011001000011",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "111000110101111110101001001100011010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "1001000001000111010001001000111001010101111100000001",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "11100011010111111010100100110001101000000000000000",
+        "kind": "rational",
+        "numerator_bits": "101001101001011000011110010011100001011001001111011",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "10001110000110111100100110111111000001000000000000000",
+        "kind": "rational",
+        "numerator_bits": "11101100000111100011011000010001010011000101101001101",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "1000010000000000011000110010000001111110011010001100011",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "11100011010111111010100100110001101000000000000000",
+        "kind": "rational",
+        "numerator_bits": "111010011000001010101011100011010101011101101101011",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000",
+        "kind": "rational",
+        "numerator_bits": "1001111111100010111100110101000000101110110111111111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "1010110111010100001110110110100000000111000110111000011",
+        "sign": 0
+      }
+    ],
+    "nodes": [
+      {
+        "index_bits": "0",
+        "nanodegree_word_msb": "000000000000000000000000000000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1",
+              "kind": "rational",
+              "numerator_bits": "0",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1",
+        "nanodegree_word_msb": "000000100101010000001011111001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10",
+        "nanodegree_word_msb": "000001001010100000010111110010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11",
+        "nanodegree_word_msb": "000001101111110000100011101011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100",
+        "nanodegree_word_msb": "000010010101000000101111100100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101",
+        "nanodegree_word_msb": "000010111010010000111011011101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110",
+        "nanodegree_word_msb": "000011011111100001000111010110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "110",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111",
+        "nanodegree_word_msb": "000100000100110001010011001111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000",
+        "nanodegree_word_msb": "000100101010000001011111001000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "10",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1001",
+        "nanodegree_word_msb": "000101001111010001101011000001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1010",
+        "nanodegree_word_msb": "000101110100100001110110111010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1011",
+        "nanodegree_word_msb": "000110011001110010000010110011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "1011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1100",
+        "nanodegree_word_msb": "000110111111000010001110101100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "11",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1101",
+        "nanodegree_word_msb": "000111100100010010011010100101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "1101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1110",
+        "nanodegree_word_msb": "001000001001100010100110011110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1111",
+        "nanodegree_word_msb": "001000101110110010110010010111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10000",
+        "nanodegree_word_msb": "001001010100000010111110010000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "100",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10001",
+        "nanodegree_word_msb": "001001111001010011001010001001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "10001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10010",
+        "nanodegree_word_msb": "001010011110100011010110000010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10011",
+        "nanodegree_word_msb": "001011000011110011100001111011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "10011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10100",
+        "nanodegree_word_msb": "001011101001000011101101110100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10101",
+        "nanodegree_word_msb": "001100001110010011111001101101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10110",
+        "nanodegree_word_msb": "001100110011100100000101100110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "1011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "10111",
+        "nanodegree_word_msb": "001101011000110100010001011111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "10111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11000",
+        "nanodegree_word_msb": "001101111110000100011101011000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "11",
+              "kind": "rational",
+              "numerator_bits": "10",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11001",
+        "nanodegree_word_msb": "001110100011010100101001010001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "11001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11010",
+        "nanodegree_word_msb": "001111001000100100110101001010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "1101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11011",
+        "nanodegree_word_msb": "001111101101110101000001000011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100",
+              "kind": "rational",
+              "numerator_bits": "11",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11100",
+        "nanodegree_word_msb": "010000010011000101001100111100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11101",
+        "nanodegree_word_msb": "010000111000010101011000110101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "11101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11110",
+        "nanodegree_word_msb": "010001011101100101100100101110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "110",
+              "kind": "rational",
+              "numerator_bits": "101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "11111",
+        "nanodegree_word_msb": "010010000010110101110000100111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "11111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100000",
+        "nanodegree_word_msb": "010010101000000101111100100000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "1000",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100001",
+        "nanodegree_word_msb": "010011001101010110001000011001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "1011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100010",
+        "nanodegree_word_msb": "010011110010100110010100010010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "10001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100011",
+        "nanodegree_word_msb": "010100010111110110100000001011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "100011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100100",
+        "nanodegree_word_msb": "010100111101000110101100000100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1",
+              "kind": "rational",
+              "numerator_bits": "1",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100101",
+        "nanodegree_word_msb": "010101100010010110110111111101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "100101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100110",
+        "nanodegree_word_msb": "010110000111100111000011110110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "10011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "100111",
+        "nanodegree_word_msb": "010110101100110111001111101111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "1101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101000",
+        "nanodegree_word_msb": "010111010010000111011011101000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "1010",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101001",
+        "nanodegree_word_msb": "010111110111010111100111100001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "101001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101010",
+        "nanodegree_word_msb": "011000011100100111110011011010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "110",
+              "kind": "rational",
+              "numerator_bits": "111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101011",
+        "nanodegree_word_msb": "011001000001110111111111010011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "101011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101100",
+        "nanodegree_word_msb": "011001100111001000001011001100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "1011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101101",
+        "nanodegree_word_msb": "011010001100011000010111000101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100",
+              "kind": "rational",
+              "numerator_bits": "101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101110",
+        "nanodegree_word_msb": "011010110001101000100010111110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "10111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "101111",
+        "nanodegree_word_msb": "011011010110111000101110110111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "101111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110000",
+        "nanodegree_word_msb": "011011111100001000111010110000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "11",
+              "kind": "rational",
+              "numerator_bits": "100",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110001",
+        "nanodegree_word_msb": "011100100001011001000110101001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "110001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110010",
+        "nanodegree_word_msb": "011101000110101001010010100010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "11001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110011",
+        "nanodegree_word_msb": "011101101011111001011110011011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "10001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110100",
+        "nanodegree_word_msb": "011110010001001001101010010100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "1101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110101",
+        "nanodegree_word_msb": "011110110110011001110110001101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "110101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110110",
+        "nanodegree_word_msb": "011111011011101010000010000110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10",
+              "kind": "rational",
+              "numerator_bits": "11",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "110111",
+        "nanodegree_word_msb": "100000000000111010001101111111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "110111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111000",
+        "nanodegree_word_msb": "100000100110001010011001111000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "1110",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111001",
+        "nanodegree_word_msb": "100001001011011010100101110001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "10011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111010",
+        "nanodegree_word_msb": "100001110000101010110001101010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "11101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111011",
+        "nanodegree_word_msb": "100010010101111010111101100011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "111011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111100",
+        "nanodegree_word_msb": "100010111011001011001001011100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "11",
+              "kind": "rational",
+              "numerator_bits": "101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111101",
+        "nanodegree_word_msb": "100011100000011011010101010101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "111101",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111110",
+        "nanodegree_word_msb": "100100000101101011100001001110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "11111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "111111",
+        "nanodegree_word_msb": "100100101010111011101101000111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100",
+              "kind": "rational",
+              "numerator_bits": "111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000000",
+        "nanodegree_word_msb": "100101010000001011111001000000000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "10000",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000001",
+        "nanodegree_word_msb": "100101110101011100000100111001000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "1000001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000010",
+        "nanodegree_word_msb": "100110011010101100010000110010000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "110",
+              "kind": "rational",
+              "numerator_bits": "1011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000011",
+        "nanodegree_word_msb": "100110111111111100011100101011000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "1000011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000100",
+        "nanodegree_word_msb": "100111100101001100101000100100000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1001",
+              "kind": "rational",
+              "numerator_bits": "10001",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000101",
+        "nanodegree_word_msb": "101000001010011100110100011101000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "1100",
+              "kind": "rational",
+              "numerator_bits": "10111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000110",
+        "nanodegree_word_msb": "101000101111101101000000010110000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "10010",
+              "kind": "rational",
+              "numerator_bits": "100011",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      },
+      {
+        "index_bits": "1000111",
+        "nanodegree_word_msb": "101001010100111101001100001111000000000",
+        "radian_expression": {
+          "args": [
+            {
+              "kind": "constant",
+              "name": "PI"
+            },
+            {
+              "denominator_bits": "100100",
+              "kind": "rational",
+              "numerator_bits": "1000111",
+              "sign": 0
+            }
+          ],
+          "op": "mul"
+        }
+      }
+    ],
+    "origin": "hexagon_center",
+    "pi_representation": {
+      "kind": "symbolic_constant",
+      "name": "PI"
+    },
+    "positive_theta": "counterclockwise",
+    "positive_x": "right",
+    "positive_y": "up",
+    "radius_reference": {
+      "denominator_bits": "1",
+      "kind": "rational",
+      "numerator_bits": "1",
+      "sign": 0
+    },
+    "radius_source_rationals": [
+      {
+        "denominator_bits": "10",
+        "kind": "rational",
+        "numerator_bits": "1",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "10101100111010101110000001000111111111110100111100001",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "11010010011001111101111110111100001011001101101111101",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1000111000011011110010011011111100000100000000000000",
+        "kind": "rational",
+        "numerator_bits": "1000000000000010101111100110111101010001000100101011",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1110001101011111101010010011000110100000000000000",
+        "kind": "rational",
+        "numerator_bits": "1111100100111000101000100011110111001111010011111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1000111000011011110010011011111100000100000000000",
+        "kind": "rational",
+        "numerator_bits": "1011110110001000010100111011111101010100110000111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1000111000011011110010011011111100000100000000000000",
+        "kind": "rational",
+        "numerator_bits": "1110011010011111011101111010001110101011100100101101",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "11100011010111111010100100110001101000000000000000",
+        "kind": "rational",
+        "numerator_bits": "111000000111111101010000011010110111110010000000011",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "100011100001101111001001101111110000010000000000000000",
+        "kind": "rational",
+        "numerator_bits": "1010101010111010111000101001000000001000111111011010111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1110001101011111101010010011000110100000000000",
+        "kind": "rational",
+        "numerator_bits": "101001100011000111111011011010000111110011111101",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "10001110000110111100100110111111000001000000000000000",
+        "kind": "rational",
+        "numerator_bits": "111111001100100001011101100101110001001000000001100101",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "10110101111001100010000011110100100000000000000",
+        "kind": "rational",
+        "numerator_bits": "1100010011011010110100111100000110101001111111001",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1011010111100110001000001111010010000000000",
+        "kind": "rational",
+        "numerator_bits": "111011111000100001011011001111010111101001111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "11100011010111111010100100110001101000000000000000",
+        "kind": "rational",
+        "numerator_bits": "10110110001010100001010000001110011111011011110001111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "1110100011010100101001010001000000000000000",
+        "kind": "rational",
+        "numerator_bits": "1110001011111010001001010010101010101100110111",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "111000110101111110101001001100011010000000000000",
+        "kind": "rational",
+        "numerator_bits": "1000011011011011001011101011000111001001001010011001",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "111000110101111110101001001100011010000000000000",
+        "kind": "rational",
+        "numerator_bits": "1010010000010111110000101100100001111011010111100001",
+        "sign": 0
+      }
+    ],
+    "radius_unit": "mm",
+    "space": "local_sample_plane",
+    "theta_zero": "positive_x_outward_face_normal",
+    "ticks_per_turn_bits": "101001111010001101011000001000000000000"
+  },
+  "geometry": {
+    "apothem_mm": {
+      "denominator_bits": "1",
+      "kind": "rational",
+      "numerator_bits": "1010",
+      "sign": 0
+    },
+    "ideal_circumradius_expression_mm": {
+      "args": [
+        {
+          "bits": "10100",
+          "kind": "unsigned_integer"
+        },
+        {
+          "arg": {
+            "bits": "11",
+            "kind": "unsigned_integer"
+          },
+          "op": "sqrt"
+        }
+      ],
+      "op": "div"
+    },
+    "mask_basis": "preserved_source_mask",
+    "outside_node_count_bits": "1000010",
+    "shape": "regular_hexagon",
+    "source_boundary_tolerance_mm": {
+      "denominator_bits": "111010001101010010100101000100000000000",
+      "kind": "rational",
+      "numerator_bits": "1",
+      "sign": 0
+    },
+    "source_circumradius_mm": {
+      "denominator_bits": "111000110101111110101001001100011010000000000000",
+      "kind": "rational",
+      "numerator_bits": "1010010000010111110000101100100001111011010111100001",
+      "sign": 0
+    },
+    "valid_node_count_bits": "10010000110"
+  },
+  "lookup": {
+    "center_to_first_ring_interpolation": "disabled",
+    "default": "exact_node_index_only",
+    "off_grid": "explicit_query_policy_required",
+    "outside_mask": "return_invalid_status",
+    "unrepresented_interval_endpoints": "open",
+    "unrepresented_radial_interval_mm": [
+      {
+        "denominator_bits": "1",
+        "kind": "rational",
+        "numerator_bits": "0",
+        "sign": 0
+      },
+      {
+        "denominator_bits": "10",
+        "kind": "rational",
+        "numerator_bits": "1",
+        "sign": 0
+      }
+    ],
+    "valid_zero": "validity_one_and_zero_code"
+  },
+  "decoder": {
+    "I0_mw_cm2": {
+      "denominator_bits": "1",
+      "kind": "rational",
+      "numerator_bits": "1",
+      "sign": 0
+    },
+    "Imax_mw_cm2": {
+      "denominator_bits": "1",
+      "kind": "rational",
+      "numerator_bits": "1111",
+      "sign": 0
+    },
+    "expression_ast": {
+      "args": [
+        {
+          "denominator_bits": "1",
+          "kind": "rational",
+          "numerator_bits": "1",
+          "sign": 0
+        },
+        {
+          "args": [
+            {
+              "args": [
+                {
+                  "bits": "10000",
+                  "kind": "unsigned_integer"
+                },
+                {
+                  "args": [
+                    {
+                      "field": "q16_bits",
+                      "op": "decode_unsigned_msb"
+                    },
+                    {
+                      "bits": "1111111111111111",
+                      "kind": "unsigned_integer"
+                    }
+                  ],
+                  "op": "div"
+                }
+              ],
+              "op": "pow"
+            },
+            {
+              "bits": "1",
+              "kind": "unsigned_integer"
+            }
+          ],
+          "op": "sub"
+        }
+      ],
+      "op": "mul"
+    },
+    "formula_ascii": "I_hat=I0*(16^(q/65535)-1)",
+    "mode": "exact_symbolic_expression",
+    "physical_numeric_evaluation": "separate_explicit_exact_symbolic_or_bounded_integer_algorithm",
+    "q_domain": {
+      "max_bits": "1111111111111111",
+      "min_bits": "0"
+    },
+    "result_unit": "mW/cm^2"
+  },
+  "coordinate_transport_fields": [
+    {
+      "field": "latitude_phi_word",
+      "bits": 40
+    },
+    {
+      "field": "longitude_lambda_word",
+      "bits": 40
+    },
+    {
+      "field": "height_mm_word",
+      "bits": 64
+    },
+    {
+      "field": "theta_word",
+      "bits": 39
+    },
+    {
+      "field": "winding_word",
+      "bits": 32
+    },
+    {
+      "field": "valid_bit",
+      "bits": 1
+    },
+    {
+      "field": "longitude_defined_bit",
+      "bits": 1
+    }
+  ],
+  "coordinate_frame_bits": 217,
+  "coordinate_frame_padding_bits": 7,
+  "coordinate_fixtures": [
+    {
+      "Phi_unwrapped_word": "00000000000000000000000000000000000000000000000000000000000000000000000",
+      "height_mm_word": "0000000000000000000000000000000000000000000000000000000000000000",
+      "latitude_phi_word": "0000000000000000000000000000000000000000",
+      "longitude_defined_bit": "1",
+      "longitude_lambda_word": "0000000000000000000000000000000000000000",
+      "theta_word": "000000000000000000000000000000000000000",
+      "valid_bit": "1",
+      "winding_word": "00000000000000000000000000000000"
+    },
+    {
+      "Phi_unwrapped_word": "11111111111111111111111111111111100000100100010101111101111010000000000",
+      "height_mm_word": "0000000000000000000000000000000000000000000000000000010011010010",
+      "latitude_phi_word": "0000101001111010001101011000001000000000",
+      "longitude_defined_bit": "1",
+      "longitude_lambda_word": "0000011011111100001000111010110000000000",
+      "theta_word": "001010011110100011010110000010000000000",
+      "valid_bit": "1",
+      "winding_word": "11111111111111111111111111111111"
+    },
+    {
+      "Phi_unwrapped_word": "00000000000000000000000000000001010011110100011010110000001111111111111",
+      "height_mm_word": "1111111111111111111111111111111111111111111111111111111000001100",
+      "latitude_phi_word": "0001010011110100011010110000010000000000",
+      "longitude_defined_bit": "0",
+      "longitude_lambda_word": "0000000000000000000000000000000000000000",
+      "theta_word": "101001111010001101011000000111111111111",
+      "valid_bit": "1",
+      "winding_word": "00000000000000000000000000000001"
+    },
+    {
+      "Phi_unwrapped_word": "00000000000000000000000000000000000000000000000000000000000000000000000",
+      "height_mm_word": "0000000000000000000000000000000000000000000000000000000000000001",
+      "latitude_phi_word": "1110101100001011100101001111110000000000",
+      "longitude_defined_bit": "0",
+      "longitude_lambda_word": "0000000000000000000000000000000000000000",
+      "theta_word": "000000000000000000000000000000000000000",
+      "valid_bit": "1",
+      "winding_word": "00000000000000000000000000000000"
+    },
+    {
+      "Phi_unwrapped_word": "00000000000000000000000000000000000000000000000000000000000000000000001",
+      "height_mm_word": "1111111111111111111111111111111111111111111111111111111111111111",
+      "latitude_phi_word": "1111111111111111111111111111111111111111",
+      "longitude_defined_bit": "1",
+      "longitude_lambda_word": "1101011000010111001010011111100000000000",
+      "theta_word": "000000000000000000000000000000000000001",
+      "valid_bit": "1",
+      "winding_word": "00000000000000000000000000000000"
+    }
+  ],
+  "verified_orbit_analysis": {
+    "angular_representatives": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "angular_orbit_sizes": [
+      6,
+      12,
+      12,
+      12,
+      12,
+      12,
+      6
+    ],
+    "full_grid_representatives": 119,
+    "valid_representatives": 113,
+    "valid_representatives_per_row": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      1
+    ],
+    "canonical_angle_index": "min(j%12,12-(j%12))",
+    "scope": "This exact scalar code and validity fixture only",
+    "compressed_payload_emitted": false
+  },
+  "metadata_numeric_style": "Ordinary JSON integers; source rational subrecords unchanged"
+}

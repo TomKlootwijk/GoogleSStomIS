@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "noaa_estimated_kp",
+      "url": "https://services.swpc.noaa.gov/json/planetary_k_index_1m.json",
+      "kind": "published_ground_magnetometer_derived_geomagnetic_index",
+      "transport": "https",
+      "app_integration": "manual_refresh",
+      "max_response_bytes": 65536,
+      "sensor_upload": false,
+      "observed_time_required": true,
+      "retrieved_time_required": true,
+      "satellite_uplink": false
+    },
+    {
+      "id": "noaa_spacecraft_solar_wind",
+      "url": "https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json",
+      "kind": "published_spacecraft_solar_wind_measurements",
+      "transport": "https",
+      "app_integration": "manual_refresh",
+      "max_response_bytes": 4194304,
+      "phone_measurement_upload": false,
+      "fields": [
+        "time_tag",
+        "source",
+        "active",
+        "proton_density",
+        "proton_speed",
+        "proton_temperature"
+      ],
+      "observation_selection": "latest_valid_active_timestamp",
+      "satellite_uplink": false,
+      "replacement_notice": "https://www.weather.gov/media/notification/pdf_2026/scn26-21_Data_Format_Changes_Impacting_SWPC_Products.pdf"
+    },
+    {
+      "id": "earth_engine_ahn3",
+      "collection": "AHN/AHN3",
+      "kind": "historical_airborne_lidar_dtm_dsm",
+      "period": "2014-2019",
+      "app_integration": "not_connected",
+      "example": "connectors/earth_engine_ahn3.js",
+      "requires": [
+        "user_authorized_earth_engine_project",
+        "authenticated_tile_or_query_adapter"
+      ]
+    },
+    {
+      "id": "google_personal_data",
+      "app_integration": "not_connected",
+      "requires": [
+        "specific_export_or_supported_authorized_api",
+        "explicit_data_scope"
+      ],
+      "notes": "Android app sandbox and Google authorization apply; generic internet access is insufficient."
+    }
+  ],
+  "notes": "This file documents connectors. Java currently implements the two fixed NOAA entries; it does not dynamically execute the registry. Google connections remain unconfigured."
+}

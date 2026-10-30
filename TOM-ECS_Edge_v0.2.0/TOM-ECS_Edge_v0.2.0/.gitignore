@@ -1,0 +1,16 @@
+build*/
+.gradle/
+.cxx/
+local.properties
+*.keystore
+*.jks
+models/
+/vendor/
+__pycache__/
+*.pyc
+*.gguf
+*.safetensors
+*.db
+*.db-wal
+*.db-shm
+.env

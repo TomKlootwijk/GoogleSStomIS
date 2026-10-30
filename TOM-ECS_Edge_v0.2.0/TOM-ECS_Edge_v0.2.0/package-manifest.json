@@ -1,0 +1,943 @@
+{
+  "schema": "TOM-ECS-PACKAGE-MANIFEST/1",
+  "version": "0.2.0",
+  "file_count_excluding_this_manifest": 187,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 142,
+      "sha256": "5246bb736f77a3a8d14fd70a020a6cfd630a3b7424589eb1a7d409ee4ae5e052"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 2878,
+      "sha256": "52506eaae48b92eec894c39b225eae9a9c7657c32503e2ff69d726310814c9b2"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 842,
+      "sha256": "1030e8000eaf0cd00ec61bc9038adcde4284608b0ad138f290e161f93fdf4631"
+    },
+    {
+      "path": "README.md",
+      "bytes": 17039,
+      "sha256": "778842be7442b63d42583373c841fff562bbbc9e9ea678a5760f01bd4164d94c"
+    },
+    {
+      "path": "adapters/include/edge_ai/llama_backend.hpp",
+      "bytes": 733,
+      "sha256": "ad5b0a8f8a34678873c428b8332a99611a5016535f7d85914765ccc69f560856"
+    },
+    {
+      "path": "adapters/llama_backend.cpp",
+      "bytes": 7556,
+      "sha256": "d7664c232877d7e0a6fc669d682dd7918bd854e8d964529ad7bde566817331e7"
+    },
+    {
+      "path": "adapters/model_cli.cpp",
+      "bytes": 965,
+      "sha256": "019eb996a5e9c3392a0622266af1f4d557bab9cc617de51528b860eb41832989"
+    },
+    {
+      "path": "android/README.md",
+      "bytes": 15471,
+      "sha256": "954601c2f37272b2fbdd819af4e4156ca99e1cf3fef2816f92fc8a731a24e874"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "bytes": 1052,
+      "sha256": "198af3bd1dcb1d09262fe89fca25faeae1b623f570c3422273bf05ed27ffc016"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "bytes": 1233,
+      "sha256": "26f502459ec40d608db4c9cc7930aac33edcfeab08e32ab9bbb9ca30159e9d0b"
+    },
+    {
+      "path": "android/app/src/main/assets/tom_ecs_phone_v1.tecs",
+      "bytes": 16712,
+      "sha256": "9e30e4c48fbd2f53fbc10599a42921b60a8a2cd9babae4103e3ebddebad83e71"
+    },
+    {
+      "path": "android/app/src/main/cpp/CMakeLists.txt",
+      "bytes": 1170,
+      "sha256": "e1899c4ddc4511e31885d8cbe5d5bce789f65dd119a22ad74d32003ea9c83423"
+    },
+    {
+      "path": "android/app/src/main/cpp/native_bridge.cpp",
+      "bytes": 17839,
+      "sha256": "ac6e3336044d7468e6de2692fbe992df40ea6e746d64004c07b4ab88e2825bd0"
+    },
+    {
+      "path": "android/app/src/main/java/nl/lognetd/edge/HistoryStore.java",
+      "bytes": 6224,
+      "sha256": "fa31e124f88f4054c3a94ba840648d6de3f3665790776f1f929d963c4889c835"
+    },
+    {
+      "path": "android/app/src/main/java/nl/lognetd/edge/MainActivity.java",
+      "bytes": 58903,
+      "sha256": "7712040bc5e3ee0df2ce48e235bc3d9234f362b6e517fb9db0ebecc79127171d"
+    },
+    {
+      "path": "android/app/src/main/java/nl/lognetd/edge/NativeBridge.java",
+      "bytes": 1950,
+      "sha256": "85d7107749efeea4f2ea26f84452dd1fd6a4af48e1efa576ba09fc71227cc3e8"
+    },
+    {
+      "path": "android/build.gradle",
+      "bytes": 73,
+      "sha256": "c3c0cf04da0fc239f391c774554d97d890018ab6e37e87cc62f6070d0c8c9909"
+    },
+    {
+      "path": "android/build_verification.json",
+      "bytes": 7676,
+      "sha256": "5d28241f77de158c901742c51eaa72f0094a49f251aaa12206a92df70ac3fd7f"
+    },
+    {
+      "path": "android/gradle.properties",
+      "bytes": 110,
+      "sha256": "cc38bc495ca4e4d7fa2fe7c9c1112f36af7a63fbf4fc3e7a088e215942403385"
+    },
+    {
+      "path": "android/gradle/wrapper/GRADLE_LICENSE.txt",
+      "bytes": 23622,
+      "sha256": "9536d88ea948603d18e232a13f5958d67807cd80828036b082bff171d2cf0703"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 43504,
+      "sha256": "498495120a03b9a6ab5d155f5de3c8f0d986a449153702fb80fc80e134484f17"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 337,
+      "sha256": "dc0c4f45f299ac2d51077dd1587e619128d091816ad9170d535a23694ddf355b"
+    },
+    {
+      "path": "android/gradlew",
+      "bytes": 8762,
+      "sha256": "a3648413b47ef77af21d5ebc36c687c7d103aaef3e17f33de7d4f080a6f300a3"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "bytes": 2966,
+      "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+    },
+    {
+      "path": "android/settings.gradle",
+      "bytes": 282,
+      "sha256": "54e695f911a7739570de80abc62d08b3f78575f589afec285a4583ac0307578c"
+    },
+    {
+      "path": "android/tests/fixtures/noaa_solar_wind_sample.json",
+      "bytes": 2609,
+      "sha256": "d33e359dd3e2e9da1743bf46e020ea01bd99cd10681acb1383487009b5795b58"
+    },
+    {
+      "path": "android/tests/fixtures/noaa_solar_wind_sample_metadata.json",
+      "bytes": 789,
+      "sha256": "b98fe6a2b5bb21eeef36410d763c96f2d90305de87d1f9c56c92eeb07bb85cd0"
+    },
+    {
+      "path": "assets/documents/source_cards.json",
+      "bytes": 319245,
+      "sha256": "5df7fcd9c388c747b2031f9638f06f664aa811be2942d6a812619ec04c9f9833"
+    },
+    {
+      "path": "assets/lognet/README.txt",
+      "bytes": 2811,
+      "sha256": "8d949c63d5b45d81183742413c0e101b9b073058d8b85796acb5bf2aa9544fac"
+    },
+    {
+      "path": "assets/lognet/coordinate_frames.bin",
+      "bytes": 140,
+      "sha256": "6b69ce2780b100067a8dd4f32e2f46a6df4ea659eed7c3da22099067c8df6b6a"
+    },
+    {
+      "path": "assets/lognet/hex_q16_bitplanes.bin",
+      "bytes": 2448,
+      "sha256": "620cba5e0a6577e43fbce604702da7ddc5d718b6d7c836d0b25594f93e153d07"
+    },
+    {
+      "path": "assets/lognet/hex_validity_bits.bin",
+      "bytes": 153,
+      "sha256": "eaa0a872c4e4f2b6b6f5f24de433d6d624dc34e9b7665b5bcd4f0611c1854989"
+    },
+    {
+      "path": "assets/lognet/log2_levels_bitmatrix.bin",
+      "bytes": 512,
+      "sha256": "bada91fe20dd3263aa544ca0541677d824cd89bf6493f812aee4e332d907f67b"
+    },
+    {
+      "path": "assets/lognet/provenance.json",
+      "bytes": 2131,
+      "sha256": "bcbe60d00a3e8a8d5ac66fefe7faf9dd2f9da1a014131f4a229457420e85ed81"
+    },
+    {
+      "path": "assets/lognet/source_metadata.json",
+      "bytes": 51174,
+      "sha256": "da31e56ea5c1b8f9f3710252117dbc8aca4427dd78c99fdbe2d5c1a2e921dbd3"
+    },
+    {
+      "path": "assets/tom_ecs_phone_v1.tecs",
+      "bytes": 16712,
+      "sha256": "9e30e4c48fbd2f53fbc10599a42921b60a8a2cd9babae4103e3ebddebad83e71"
+    },
+    {
+      "path": "cc5T28iE.s",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ccG0bz8T.s",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ccKdr1B8.s",
+      "bytes": 108868,
+      "sha256": "2e004ec66b0b023fae04fcfa549220991b368231e9c51f6184cf8620d2df813b"
+    },
+    {
+      "path": "ccZwgjWV.s",
+      "bytes": 32768,
+      "sha256": "1458782e4fa848b96e75b7982bad45261a9f6278d699ce9067fc544748153afd"
+    },
+    {
+      "path": "ccmbqF89.s",
+      "bytes": 532480,
+      "sha256": "5f900f9a2fe6e955581914493135adb1d0246a8430f17586c719407a6936e5eb"
+    },
+    {
+      "path": "ccqPBwrC.s",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ccxKdAOJ.s",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "config/affordances.json",
+      "bytes": 3238,
+      "sha256": "08c231a440bfd92163293ef4807e410e48bc9add3011e8909b2e77366cc663a8"
+    },
+    {
+      "path": "config/data_sources.json",
+      "bytes": 2101,
+      "sha256": "e2a0ba8eca476003a9006e3905e97d4f3a940540909dc6cfc0015af0648e294c"
+    },
+    {
+      "path": "config/model_registry.json",
+      "bytes": 3435,
+      "sha256": "4958550963fe12d18301a1dbd0167d3778852b484970765b802767eb6fe5c00d"
+    },
+    {
+      "path": "connectors/earth_engine_ahn3.js",
+      "bytes": 1100,
+      "sha256": "a2ceaa17161dfd8d598ac2b9d4f98d53edd699d27dd22d880a104f8510dcd784"
+    },
+    {
+      "path": "core/CMakeLists.txt",
+      "bytes": 848,
+      "sha256": "faf87ac6ceb9a9696fa01966abe43f63ed1112eb28ca8908d6b5500c0638e587"
+    },
+    {
+      "path": "core/demo.cpp",
+      "bytes": 1271,
+      "sha256": "fee6dc11e22a5b02537b31c0415e922992b38d1f663d88d0d2c4590f2075c708"
+    },
+    {
+      "path": "core/include/edge_ai/core.hpp",
+      "bytes": 6081,
+      "sha256": "5405129a0eeffe675187f1f55ebd5d29ccba26e792798a091d63da0901e7c02d"
+    },
+    {
+      "path": "core/jit.cpp",
+      "bytes": 7367,
+      "sha256": "dcf79d64f8d2a265f1fa70666c0216c7711c3e76258b453d1504b3a921622d1c"
+    },
+    {
+      "path": "core/lognet.cpp",
+      "bytes": 4542,
+      "sha256": "9b592be10961a3184ea08a902e16ff4ba42d8e9b055f98f12a347499f9d2ccfb"
+    },
+    {
+      "path": "core/runtime.cpp",
+      "bytes": 8015,
+      "sha256": "5881c173d109b02d0f88f7c37ed2100a59c7ddeca1a7c368d0bd354960287cfa"
+    },
+    {
+      "path": "dependencies.lock.json",
+      "bytes": 1010,
+      "sha256": "55289ad84d5fbe50c01647275a8e99747878dfb7874ae2213f9fd268967d8054"
+    },
+    {
+      "path": "docs/format.md",
+      "bytes": 11411,
+      "sha256": "85e333fd4b09cd2ee42778c35c85f23d560198843946544b61a36a5932e11863"
+    },
+    {
+      "path": "docs/math-validation.json",
+      "bytes": 2395,
+      "sha256": "79912d66e51ea7074837047f3665d62a299d0dfacc3f0558a8b544f76df6374a"
+    },
+    {
+      "path": "docs/references.md",
+      "bytes": 2835,
+      "sha256": "53f1b928e5ab25799ed7bb9f4b75c993a57b8c5d2b3a0a89157eaaa46102fd31"
+    },
+    {
+      "path": "docs/source-grounding.md",
+      "bytes": 6570,
+      "sha256": "1a03b4e7e3eb3227b6eb3cd73c9351fced285f68d47ffe3c90da9318a79691e6"
+    },
+    {
+      "path": "docs/topology-contract.md",
+      "bytes": 7639,
+      "sha256": "1ee890306c44d3f0e864e72c79b0be1c220dc8a5ecb3f8b6c97d38f0a3983d2b"
+    },
+    {
+      "path": "docs/validation.md",
+      "bytes": 5647,
+      "sha256": "73db872e77ebc5bd31e2280550f14f4f8be6ff89e323663d5140e71a5e3322b8"
+    },
+    {
+      "path": "ecs/CMakeLists.txt",
+      "bytes": 995,
+      "sha256": "367ec0668adde3e89f7f9f216d948575ce15748520fdc1ac8ba43f5cdd16e4e1"
+    },
+    {
+      "path": "ecs/README.md",
+      "bytes": 9458,
+      "sha256": "7214f8395b9d3fa70480b9e200623cda6af97e35d7f84c173de4006aeedb8496"
+    },
+    {
+      "path": "ecs/bundle.cpp",
+      "bytes": 14873,
+      "sha256": "41c4c9747439b33e6a66cc1c6875422911585c58c66212252264fae2573a0724"
+    },
+    {
+      "path": "ecs/bundle_cli.cpp",
+      "bytes": 896,
+      "sha256": "8cd7eae5acfaa3f2620350b8652ac06328728a596cc5b0ef4a8639c6af8d2763"
+    },
+    {
+      "path": "ecs/ecs.cpp",
+      "bytes": 28417,
+      "sha256": "88bb153377a6ce3c172cb0bf1ff3ba3d45cd936be9ea89570af7c3cddff69460"
+    },
+    {
+      "path": "ecs/include/edge_ai/bundle.hpp",
+      "bytes": 730,
+      "sha256": "2318dd8a3b4ed2337b771e7b2ef575ced6ccc2f6bf147eb8a5f84bbd74c85f50"
+    },
+    {
+      "path": "ecs/include/edge_ai/ecs.hpp",
+      "bytes": 5358,
+      "sha256": "6acb85f97793a7427ab2534bab36feb1b3037a93e4ebd35bd83f40c427f5c05b"
+    },
+    {
+      "path": "ecs/include/edge_ai/live_session.hpp",
+      "bytes": 1326,
+      "sha256": "bed6303cc6622e74ae7ff4b17d9591aea396cc94393bd68e2382c29339e7171c"
+    },
+    {
+      "path": "ecs/live_session.cpp",
+      "bytes": 6176,
+      "sha256": "216914a3ebca57c5cf179c0b218457168346dcc987beadb48778b207292fa81c"
+    },
+    {
+      "path": "ecs/sha256.cpp",
+      "bytes": 2950,
+      "sha256": "66eb24420712b7c95314554e4d0b0e77844061ab3aadda45bf9cd79198a8fed6"
+    },
+    {
+      "path": "ecs/vendor/tomk/LICENSE",
+      "bytes": 1070,
+      "sha256": "98b2dcd69de081567da4807aa873533c3441310e318278b00258f4aa6e092de8"
+    },
+    {
+      "path": "ecs/vendor/tomk/examples/exact19_rule.expected.json",
+      "bytes": 1023,
+      "sha256": "97dfe9b19f20c87d5e6d4dffab7f6ea9cb9f2c94de4c44ba9e6554d8ae4fda24"
+    },
+    {
+      "path": "ecs/vendor/tomk/examples/exact19_rule.json",
+      "bytes": 2543,
+      "sha256": "de4784927a24ea9930959e5cc63ff1e0343321c2d4db763773ebe3cb7c3c8e6c"
+    },
+    {
+      "path": "ecs/vendor/tomk/examples/exact19_rule.tmg",
+      "bytes": 272,
+      "sha256": "3b4aab91c3f4102e09a31638d55fc741ad61777c08ec3789b5b53f3585119c3a"
+    },
+    {
+      "path": "ecs/vendor/tomk/tomagi.c",
+      "bytes": 20124,
+      "sha256": "c88242ea069a78ca8fc52531f47182c8399fe6962152c58998a6a5731147a22d"
+    },
+    {
+      "path": "ecs/vendor/tomk/tomagi.h",
+      "bytes": 3720,
+      "sha256": "38489426f2a34ecf48040bf8c4e52f79ee61714f07d81885195e1476b27b2587"
+    },
+    {
+      "path": "examples/tom_ecs_phone_v1.expected.json",
+      "bytes": 2887,
+      "sha256": "9de324940b15b07ef6077bb66fe6b2ec0a24f9ae849371fd27720ad6d12de1e0"
+    },
+    {
+      "path": "examples/tom_ecs_phone_v1.json",
+      "bytes": 20638,
+      "sha256": "f0ee582f0a31cacdbba8d6ea51b358ffaebff91ea0d2a079467f1307a37be951"
+    },
+    {
+      "path": "examples/tom_ecs_phone_v1.tecs",
+      "bytes": 16712,
+      "sha256": "9e30e4c48fbd2f53fbc10599a42921b60a8a2cd9babae4103e3ebddebad83e71"
+    },
+    {
+      "path": "native_modules/CMakeLists.txt",
+      "bytes": 1644,
+      "sha256": "9bff338284f8fc185738bb60c1f01a5f3395939cffc753607976e26db7c82b73"
+    },
+    {
+      "path": "native_modules/README.md",
+      "bytes": 8695,
+      "sha256": "13b7f1d867d3a72a06fb0545872176d0ae2e6779a531a6cf8569a47532bc285f"
+    },
+    {
+      "path": "native_modules/generated/machine.c",
+      "bytes": 199154,
+      "sha256": "0c23785ccb3dca2c9c9fc38060cafd492663cb8230a2ae6197679c30f88f3035"
+    },
+    {
+      "path": "native_modules/generated/machine.h",
+      "bytes": 2049,
+      "sha256": "4c62c98679bae66bcce6a7d1b7a459fe486637ed321e295f949d273f9b921e02"
+    },
+    {
+      "path": "native_modules/generated/machine.objdump.txt",
+      "bytes": 5675,
+      "sha256": "9417b2642b072d72e03f9bc4619d57c41a17b7beb56493397af1f3ca0831de64"
+    },
+    {
+      "path": "native_modules/generated/maktubiii.c",
+      "bytes": 294020,
+      "sha256": "d9a99954383d697f1eb090feeaeb84d54b3865dd5508772864979c4b76f8f3c2"
+    },
+    {
+      "path": "native_modules/generated/maktubiii.h",
+      "bytes": 2192,
+      "sha256": "b8835c3dbf1e2cd0a736e11bbde05aa054fee79a46e87983a7ff7c7e2410dcce"
+    },
+    {
+      "path": "native_modules/generated/maktubiii.objdump.txt",
+      "bytes": 22957,
+      "sha256": "7aad4b33fee482ec2d81c435709341d8dc89bf0493562773fad814be7157a93f"
+    },
+    {
+      "path": "native_modules/generated/physics.c",
+      "bytes": 382362,
+      "sha256": "bc2a4fa87eb99f3d1dda3ff9bb669578ede6e7d7b06bbb7b34ad17ae07f29684"
+    },
+    {
+      "path": "native_modules/generated/physics.h",
+      "bytes": 1985,
+      "sha256": "d01bfa92a6bb03043ce4af46e30e34f88e1fff81cb2f5352b02d0f0c1c86a43f"
+    },
+    {
+      "path": "native_modules/generated/physics.objdump.txt",
+      "bytes": 26247,
+      "sha256": "01303c1843e7ae0ec06e25c74337caf1f62e3df7c8eca08bd7e1a315cf647e48"
+    },
+    {
+      "path": "native_modules/generated/pinion.c",
+      "bytes": 221958,
+      "sha256": "86df2844557810fdb87a7d2ed6620ca6d4b3241aa11cf2fb80cc85a64aecd759"
+    },
+    {
+      "path": "native_modules/generated/pinion.h",
+      "bytes": 1829,
+      "sha256": "6a33b1a7a04b7f8c4ff019742387f1b6b47e6380d587f1250d5d479f8b7cf1cb"
+    },
+    {
+      "path": "native_modules/generated/pinion.objdump.txt",
+      "bytes": 17566,
+      "sha256": "26925ecc8bcdae7ab38944b8d3538b5ce269f9f96b822bce565f8ed9cda67950"
+    },
+    {
+      "path": "native_modules/generated/profiles.c",
+      "bytes": 53567,
+      "sha256": "0431af07bb615dea05ff742feb22505f25b8fc440a9443206163a132246d27a3"
+    },
+    {
+      "path": "native_modules/generated/tomagi.c",
+      "bytes": 226559,
+      "sha256": "4ff0f8b80b52bb18972e14cc473d20239bb8f33eca93ccbd1cef70649dcd4ae7"
+    },
+    {
+      "path": "native_modules/generated/tomagi.h",
+      "bytes": 2014,
+      "sha256": "87cc4d23d648953713c228eef53e3ecf9eb659ba4de361b408cbeee07eca7c10"
+    },
+    {
+      "path": "native_modules/generated/tomagi.objdump.txt",
+      "bytes": 17425,
+      "sha256": "d9922a741407d221835b2a75570195f1d2af512f3ce3e6fa49d63c7c417cdd8a"
+    },
+    {
+      "path": "native_modules/generated/twin.c",
+      "bytes": 286220,
+      "sha256": "524b77c46f30230be3ba0b9ed819c9223c7fc97e5c49d97a475bf48642ff6179"
+    },
+    {
+      "path": "native_modules/generated/twin.h",
+      "bytes": 2050,
+      "sha256": "6326aea5c2fca43b88a5bf528bc1a94ffe50512259cb65a8e675a655612ebb26"
+    },
+    {
+      "path": "native_modules/generated/twin.objdump.txt",
+      "bytes": 22659,
+      "sha256": "e3e700953ca07cd2e8e0a85ca3dfad468f1e58a0d4b8c46e58f2bf986e6a0df9"
+    },
+    {
+      "path": "native_modules/include/tnm_native.h",
+      "bytes": 3454,
+      "sha256": "64ccdf65983db0cce16e6f29ae4b7b559f982f3ea8f728862bfb19b949481440"
+    },
+    {
+      "path": "native_modules/profiles.json",
+      "bytes": 8093,
+      "sha256": "bb55673768b7fa4519e5aa53af807268f19fd44710dd1c3299cc1d39328bf51f"
+    },
+    {
+      "path": "native_modules/runtime/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "native_modules/runtime/PATCHES.md",
+      "bytes": 961,
+      "sha256": "e4af9c423852570d2498597b7bd999cd2273ec8dac21a5798c8ed1c97793ad9a"
+    },
+    {
+      "path": "native_modules/runtime/source_manifest.json",
+      "bytes": 2197,
+      "sha256": "dd4fe3893cbaca446d9648bb8895209a58edb971417ddfe90eb59fd6394db912"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt-exceptions-impl.c",
+      "bytes": 2025,
+      "sha256": "4e5540848e153eaebd624ed18b48e1667afc53a5ecfa707c100bdfc97acf5380"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt-exceptions.h",
+      "bytes": 3767,
+      "sha256": "c0609d52ecbac7bb29718b2b8e2b9d3ac6d52a3ef00095227c51e67756836a8d"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt-impl-tableops.inc",
+      "bytes": 3405,
+      "sha256": "5debdc8ca347b7ca0fb763be3fdd3683e4824579f8f2eba84aa5de54ec040cd0"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt-impl.c",
+      "bytes": 10604,
+      "sha256": "2f14845b510f331e48ffc747304b34ccd80b19d91b67fa3a568bcf0ebfde5301"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt-impl.h",
+      "bytes": 1958,
+      "sha256": "dd8fbe19ba42258bb3a235017b82399c63fead4c932ad45197e77ca75b00d562"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt-mem-impl-helper.inc",
+      "bytes": 6897,
+      "sha256": "63975ce1e08d00059c73b757a506a368f3cf67bc2a708f6909f2c25899f0eb83"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt-mem-impl.c",
+      "bytes": 4640,
+      "sha256": "1deec12ce672fa17dcd35844a9f36b16b649c4eff3d984fcd1a62ea023ff9719"
+    },
+    {
+      "path": "native_modules/runtime/wasm-rt.h",
+      "bytes": 25600,
+      "sha256": "8905fa9c64101ca20702368d0202cd0172ea83a596c5568db135402f82fcde57"
+    },
+    {
+      "path": "native_modules/sha256.c",
+      "bytes": 2257,
+      "sha256": "837ba7fa6666ac4056309cd4597b1a0e7c0795757487734b789b45ed5ae8ba2b"
+    },
+    {
+      "path": "native_modules/source_manifest.json",
+      "bytes": 56845,
+      "sha256": "da1f3a933aa412bd381b622ad69a29b05aa34f6291a7373d1845edaebf3542f0"
+    },
+    {
+      "path": "native_modules/tests/golden.inc",
+      "bytes": 39947,
+      "sha256": "3be6d7b4b4cfc73915053f38529ed9cc1f714cb4ebd51f2143473032599a9784"
+    },
+    {
+      "path": "native_modules/tests/golden.json",
+      "bytes": 71985,
+      "sha256": "86083c90ab272be0994d1b916567bd1c1f874f4d9c4cee9ea4922220ec2632ff"
+    },
+    {
+      "path": "native_modules/tests/native_tests.c",
+      "bytes": 4796,
+      "sha256": "2c10e9e4a4fd2cf69b4e2783482bf31acb2dbd76cf3f81737f9e45a7a3355e46"
+    },
+    {
+      "path": "native_modules/tests/validation.json",
+      "bytes": 3494,
+      "sha256": "29e00b77480e28ca738dbe0c5cd07de799425fb35ea20f81da0a1fcd75a2f58e"
+    },
+    {
+      "path": "native_modules/tnm_internal.h",
+      "bytes": 1104,
+      "sha256": "7203dfb72126992babf1318fad5cae77f65b058a90134d669fcc22a35fac0cf0"
+    },
+    {
+      "path": "native_modules/tnm_native.c",
+      "bytes": 8817,
+      "sha256": "4716c6eb22f6c3a6077001d899d6fa979152ca8ceb755ac9b0abf84583de4cf7"
+    },
+    {
+      "path": "native_modules/tools/generate_adapter.py",
+      "bytes": 5511,
+      "sha256": "48d7acbb69a64cf47de3634a5548218056fbeab2710867fda2dc86a44c101a16"
+    },
+    {
+      "path": "native_modules/tools/generate_tests.py",
+      "bytes": 1042,
+      "sha256": "5e566172c6375c289680d7a1e0e234582d73f62e8c227447c0662df8303e35e6"
+    },
+    {
+      "path": "native_modules/tools/golden.mjs",
+      "bytes": 1652,
+      "sha256": "2784f87f43a20ac509963247d831d89f119caa79a09df123bdc78d363ad50766"
+    },
+    {
+      "path": "native_modules/tools/prepare.py",
+      "bytes": 5763,
+      "sha256": "667be37c12ff4b1019b6e3726e269109144d539109804bcde449d24b31e698ab"
+    },
+    {
+      "path": "native_modules/upstream/README.md",
+      "bytes": 4814,
+      "sha256": "a99baddb2c9518a6873815db79dcfc6325f8e1067aba478625e39dc3cf10aa7e"
+    },
+    {
+      "path": "native_modules/upstream/language/xd_ecs_hop_suite/registry.json",
+      "bytes": 124434,
+      "sha256": "bf0902088979c93b7d82008ceb18dc08b1ed7ecf94380f66d0edd5655ab44db5"
+    },
+    {
+      "path": "native_modules/upstream/language/xd_ecs_v2/native_recipe.mjs",
+      "bytes": 13478,
+      "sha256": "4ad47ad094361ae96bbdf1b94ce2f797164baeebb0ed220a9ded1f372b686bfa"
+    },
+    {
+      "path": "native_modules/upstream/software/maktubiii_bit_exact/README.md",
+      "bytes": 4203,
+      "sha256": "031eb80ce149457a8d90d72852f8c5debddb20a1c1daf39d0156e415010af473"
+    },
+    {
+      "path": "native_modules/upstream/software/maktubiii_bit_exact/SPEC.md",
+      "bytes": 7686,
+      "sha256": "2d8d0f687b8e9d89e491fb392c7ade76852bbf2ff2996de911267d2a678965a3"
+    },
+    {
+      "path": "native_modules/upstream/software/maktubiii_bit_exact/default_paired.memory.bin",
+      "bytes": 65536,
+      "sha256": "52e2f28202daac8884d7236a7d6ee361738854f6a3cdc47cb792f1c4a55116bb"
+    },
+    {
+      "path": "native_modules/upstream/software/maktubiii_bit_exact/maktubiii.wasm",
+      "bytes": 13743,
+      "sha256": "793a9a0d74fc21247e2b6722aa6e659108d68eb806d9c9bca6eaa3ce039fbeaa"
+    },
+    {
+      "path": "native_modules/upstream/software/maktubiii_bit_exact/maktubiii.wat",
+      "bytes": 83149,
+      "sha256": "f44b5c4a3c8b25fcec0dc643b591a4634faf6d7011688be9da0c012c5c71d6f1"
+    },
+    {
+      "path": "native_modules/upstream/software/pinion_bit_exact/README.md",
+      "bytes": 4381,
+      "sha256": "bda7d988752811cdac36dc63c286b29ce588b8e2aa191d62af6ec7685661caff"
+    },
+    {
+      "path": "native_modules/upstream/software/pinion_bit_exact/default_profile.memory.bin",
+      "bytes": 65536,
+      "sha256": "2986b7d2436208456f41cb1519e1f087e44262f4cb29ff1ecdb3d3b1fceaba98"
+    },
+    {
+      "path": "native_modules/upstream/software/pinion_bit_exact/pinion_maktub.wasm",
+      "bytes": 10576,
+      "sha256": "ccc534051973b025ad0ba83c98ede902eb4fa1de4d5a78f4f66d9c868e8499bf"
+    },
+    {
+      "path": "native_modules/upstream/software/pinion_bit_exact/pinion_maktub.wat",
+      "bytes": 65433,
+      "sha256": "d66349c2eea2c8b6348292ef0da1d039bcf51a95a105078cd95190398d267fe8"
+    },
+    {
+      "path": "native_modules/upstream/software/tomk_bit_complete/README.md",
+      "bytes": 7755,
+      "sha256": "7dafbaaa4f6f08132097a52f14bdf220272161776d7186357744a979194f9853"
+    },
+    {
+      "path": "native_modules/upstream/software/tomk_bit_complete/tomagi.wasm",
+      "bytes": 9603,
+      "sha256": "256140abcadce241d5bbef9dd18438f02b948cef0115db0256fa7e6e5b446314"
+    },
+    {
+      "path": "native_modules/upstream/software/tomk_bit_complete/tomagi.wat",
+      "bytes": 59875,
+      "sha256": "1a1e2c8b57625c4471a6c4bb3572ae71b0ede3af0f88442b10acec1233b15f21"
+    },
+    {
+      "path": "native_modules/upstream/software/tomk_exact/fixtures/exact19.tmg",
+      "bytes": 272,
+      "sha256": "3b4aab91c3f4102e09a31638d55fc741ad61777c08ec3789b5b53f3585119c3a"
+    },
+    {
+      "path": "native_modules/upstream/software/twin_bit_exact/ABI.md",
+      "bytes": 3408,
+      "sha256": "0672884143db9ed666dc1d1d7f0d3cdb7a5b6dca3ccd7d849ab049cdc7ff658e"
+    },
+    {
+      "path": "native_modules/upstream/software/twin_bit_exact/README.md",
+      "bytes": 6703,
+      "sha256": "72ff91704b350073fedfc672635038a0ce0ccba2d2dcbbe5443f8ce569c1008c"
+    },
+    {
+      "path": "native_modules/upstream/software/twin_bit_exact/jtk_default_memory.bin",
+      "bytes": 65536,
+      "sha256": "1322548e8c24c62d0e7fe64e8302de2543ce246601dcc95535b8c1c88b65dead"
+    },
+    {
+      "path": "native_modules/upstream/software/twin_bit_exact/tk_default_memory.bin",
+      "bytes": 65536,
+      "sha256": "7f6b49ddc0ae6d461637cb4878f955a755c4b800b49f203b9de0c61deb67b4df"
+    },
+    {
+      "path": "native_modules/upstream/software/twin_bit_exact/twin.wasm",
+      "bytes": 14452,
+      "sha256": "dc7925afc65db4ef80b271b10d79185c117dd44f1419deff5e292903ed27adc7"
+    },
+    {
+      "path": "native_modules/upstream/software/twin_bit_exact/twin.wat",
+      "bytes": 81961,
+      "sha256": "97942a500835ec7de482481068beb1fa5d8c9aab407fb17a53d26ecf72d5dcc5"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_lut_machine/ABI.md",
+      "bytes": 7632,
+      "sha256": "b2cd27a4202df268601b5a49b6091d138e879f83734265d2059b3bf1a1105690"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_lut_machine/README.md",
+      "bytes": 3440,
+      "sha256": "1b7f87c62f428383ceb561455d4672182864c00687c2a49edc843b58ad1ee745"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_lut_machine/machine.wasm",
+      "bytes": 9412,
+      "sha256": "ad77e0056a21f8a6d77c70785bf65ca93853b660c7bb59922f5c666f758cd597"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_lut_machine/machine.wat",
+      "bytes": 55359,
+      "sha256": "1e1003679ee9e26945fe1f92ea4d8cfc6f40e1c8d2e235a3c3271ab231c0c0de"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_rational_bit_exact/ABI.md",
+      "bytes": 9588,
+      "sha256": "ebcbb691095271c1adb496f11242e2e8bf0802784945fceb061764e57e6d9f75"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_rational_bit_exact/README.md",
+      "bytes": 5086,
+      "sha256": "f39a7c4fdf77532dadd44fd01199f4d49f267b1d007d52f83f49f5ad984f37c5"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_rational_bit_exact/default_profile.memory.bin",
+      "bytes": 1048576,
+      "sha256": "07e6a24a8a5f977ceb46977b90417c39764045c716828c8319452406e122c606"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_rational_bit_exact/physics.wasm",
+      "bytes": 20353,
+      "sha256": "a311aea3fcdabf9ed0538fd25591d7143f0764cfe0bff677de5337e9bf5b4d0b"
+    },
+    {
+      "path": "native_modules/upstream/software/xd_rational_bit_exact/physics.wat",
+      "bytes": 127453,
+      "sha256": "94046191c1d458e250443ed35651e1728cce53e53a4a2a404c58f4f8e6829e8e"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt-exceptions-impl.c",
+      "bytes": 2025,
+      "sha256": "4e5540848e153eaebd624ed18b48e1667afc53a5ecfa707c100bdfc97acf5380"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt-exceptions.h",
+      "bytes": 3767,
+      "sha256": "c0609d52ecbac7bb29718b2b8e2b9d3ac6d52a3ef00095227c51e67756836a8d"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt-impl-tableops.inc",
+      "bytes": 3405,
+      "sha256": "5debdc8ca347b7ca0fb763be3fdd3683e4824579f8f2eba84aa5de54ec040cd0"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt-impl.c",
+      "bytes": 10604,
+      "sha256": "2f14845b510f331e48ffc747304b34ccd80b19d91b67fa3a568bcf0ebfde5301"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt-impl.h",
+      "bytes": 1958,
+      "sha256": "dd8fbe19ba42258bb3a235017b82399c63fead4c932ad45197e77ca75b00d562"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt-mem-impl-helper.inc",
+      "bytes": 6784,
+      "sha256": "cb830e338448fafb4fa09a2013ecb11b45c6ff5ffd09eca3f72bffaf1cf63583"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt-mem-impl.c",
+      "bytes": 4640,
+      "sha256": "1deec12ce672fa17dcd35844a9f36b16b649c4eff3d984fcd1a62ea023ff9719"
+    },
+    {
+      "path": "native_modules/upstream/wabt-runtime/wasm-rt.h",
+      "bytes": 25600,
+      "sha256": "8905fa9c64101ca20702368d0202cd0172ea83a596c5568db135402f82fcde57"
+    },
+    {
+      "path": "provenance/huggingface/audit.md",
+      "bytes": 8485,
+      "sha256": "d990d8a78a1c4e660eb2bb11bd507b1166fabb6441b5a4cafea3e72dc8de7379"
+    },
+    {
+      "path": "provenance/huggingface/corpus_validation.json",
+      "bytes": 646,
+      "sha256": "65e68f1cac44d19050e1fbfbd47b0fc9e798a4252b63fdb1ca5541a4fa3875bf"
+    },
+    {
+      "path": "provenance/huggingface/dataset_seed_reference.json",
+      "bytes": 1576,
+      "sha256": "bed7370a1ddcd78ef2ca42cc63cc12061d0f56e715f7be71b82239a933bffb7e"
+    },
+    {
+      "path": "provenance/huggingface/notices/JTK-Twin-Viper_LICENSE",
+      "bytes": 3782,
+      "sha256": "68609d4782ed814d122c90883e488d2e2757e11b7ff61a6277ac04988c5f9a55"
+    },
+    {
+      "path": "provenance/huggingface/notices/TK-MK-ULTRA_LICENSE",
+      "bytes": 3916,
+      "sha256": "adff52e3926ed13dd58564298ad577b6e0d6f1e3ae050b992971b867263e7a4d"
+    },
+    {
+      "path": "provenance/huggingface/notices/TOMK_LICENSE",
+      "bytes": 1070,
+      "sha256": "98b2dcd69de081567da4807aa873533c3441310e318278b00258f4aa6e092de8"
+    },
+    {
+      "path": "provenance/huggingface/source_manifest.json",
+      "bytes": 1984520,
+      "sha256": "1d9b73a4c812a67aaa5c030f5f9a6d00158a1394b74ebbbe3f00bc4e24380121"
+    },
+    {
+      "path": "release/TOM-ECS_Edge_v0.2.0_arm64-debug.apk",
+      "bytes": 3321189,
+      "sha256": "df70e8f3d145bb8260458db2e3ee27c4c6a2a2a9bbeddff9da941668b45e5e92"
+    },
+    {
+      "path": "release/release_manifest.json",
+      "bytes": 1550,
+      "sha256": "5349459fdd6fe73fa2210311179c2741043486bc6bea717c169a1b040269b619"
+    },
+    {
+      "path": "requirements-tools.txt",
+      "bytes": 115,
+      "sha256": "05457c9b00371622c63632b04a3bf50088eb9efdde58ea95dd9f513e2adee2d7"
+    },
+    {
+      "path": "tests/bundle_sanitizer_validation.json",
+      "bytes": 8317,
+      "sha256": "d8e6c00343224c3ff354b6603ae88caa9fe44f21452ae0fb87b775b54792ecfd"
+    },
+    {
+      "path": "tests/bundle_tests.py",
+      "bytes": 12898,
+      "sha256": "c20bcc4a194b6a90849f886669620a5f55c6452e5d3b5b52a17778fe56495530"
+    },
+    {
+      "path": "tests/bundle_validation.json",
+      "bytes": 8317,
+      "sha256": "d8e6c00343224c3ff354b6603ae88caa9fe44f21452ae0fb87b775b54792ecfd"
+    },
+    {
+      "path": "tests/core_tests.cpp",
+      "bytes": 10696,
+      "sha256": "d33c2fa62a607dc7a27f10b0162a73ec78ead86fb1b4c87a443bf07f4a7900b0"
+    },
+    {
+      "path": "tests/core_validation.json",
+      "bytes": 1432,
+      "sha256": "a209f686d88fbac8ec25a1698da9036f8a957734f41271fc9564acf02a462d4c"
+    },
+    {
+      "path": "tests/ecs_tests.cpp",
+      "bytes": 20339,
+      "sha256": "3de257e6972da7feb9e4ba02575cc17fed10b365a1241014c422bb2ffb17e4f0"
+    },
+    {
+      "path": "tests/ecs_validation.json",
+      "bytes": 4000,
+      "sha256": "1c36c4f10e4e2763e8e9146c4c8a7a545d729b0332cf0a2b9f960cf61ba37dbf"
+    },
+    {
+      "path": "tests/integration_validation.json",
+      "bytes": 2231,
+      "sha256": "37f62cfc1890df0239a4e110157c2c1a309d3bcd732a497eadedc8cb3e2cf1ab"
+    },
+    {
+      "path": "tests/staging_tests.py",
+      "bytes": 3843,
+      "sha256": "560c5c1754810ed0a43d30092185bf3801c28139eabcdd33f19966929f83e82f"
+    },
+    {
+      "path": "tests/verify_aarch64_encoding.py",
+      "bytes": 2649,
+      "sha256": "2d021698d3ae61c39f2abe61824beb797d3ab05208b53baff37d08810a2ff4e1"
+    },
+    {
+      "path": "tools/hf_catalog.py",
+      "bytes": 8429,
+      "sha256": "84fa12ba70fce8af58351857ff35d4b0400c11b13ae6b14e070c3e8e72d1d1de"
+    },
+    {
+      "path": "tools/import_lognet.py",
+      "bytes": 13303,
+      "sha256": "95de47bc057511af368136a48b52230af35e5690c8e634de73e1cb501081c3cb"
+    },
+    {
+      "path": "tools/tom_ecs.py",
+      "bytes": 10978,
+      "sha256": "edf5d9faaedc7c029f6cdee9f6ccb0a9dbc9c88dd5a42bea112cc9e54a52c568"
+    }
+  ],
+  "exclusions": "Toolchains, caches, build intermediates, local SDK/proxy configuration and debug private keys are not included."
+}

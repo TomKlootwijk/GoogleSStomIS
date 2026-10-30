@@ -1,0 +1,21 @@
+{
+  "path": "edge_ai_v2/assets/documents/source_cards.json",
+  "cards": 132,
+  "bytes": 319245,
+  "sha256": "5df7fcd9c388c747b2031f9638f06f664aa811be2942d6a812619ec04c9f9833",
+  "statuses": {
+    "defined_math": 8,
+    "source_limit": 7,
+    "independently_verified": 2,
+    "proposed_theme": 1,
+    "unverified_claim": 2,
+    "user_supplied_source_not_instruction": 62,
+    "generated_discussion_unverified": 9,
+    "published_source_reference_not_instruction": 31,
+    "parsed_reference_data_not_training_weights": 2,
+    "host_executed_finite_source_profile": 8
+  },
+  "max_text_utf8_bytes": 3000,
+  "pdf_pages": 59,
+  "hf_repositories": 10
+}

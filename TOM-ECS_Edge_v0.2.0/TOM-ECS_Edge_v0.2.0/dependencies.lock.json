@@ -1,0 +1,24 @@
+{
+  "llama_cpp": {
+    "repository": "https://github.com/ggml-org/llama.cpp",
+    "revision": "e216f4ec8753e7317314e1ee01861b0230e583aa",
+    "revision_time_utc": "2026-10-30T09:01:28Z",
+    "purpose": "Optional decoder-only GGUF inference; not bundled model weights"
+  },
+  "huggingface_hub": "2.4.0",
+  "source_assets": "assets/lognet/provenance.json",
+  "owner_namespace": "c0mbatduckzz",
+  "huggingface_public_repositories": "provenance/huggingface/source_manifest.json",
+  "tnomtom_native_profiles": {
+    "repository": "https://huggingface.co/c0mbatduckzz/TNOMTOM",
+    "revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+    "profile_manifest": "native_modules/profiles.json",
+    "source_manifest": "native_modules/source_manifest.json"
+  },
+  "wabt": {
+    "version": "1.0.42",
+    "repository": "https://github.com/WebAssembly/wabt",
+    "purpose": "Build-time Wasm-to-C translation and bounded native runtime support",
+    "runtime_manifest": "native_modules/runtime/source_manifest.json"
+  }
+}

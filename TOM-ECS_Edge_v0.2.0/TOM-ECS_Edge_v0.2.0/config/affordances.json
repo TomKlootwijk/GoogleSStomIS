@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "role": "Explicit capability map; descriptive registry, not an autonomous executor",
+  "operations": [
+    {"id": "lut.exact_node", "input": "radial_row_and_angle_index", "output": "q16_and_validity", "domain": "geometric_symmetry", "implemented": true, "preconditions": ["valid_array_bounds", "validity_checked"], "network": false},
+    {"id": "lut.canonical_node", "input": "radial_row_and_angle_index", "output": "q16_and_validity", "domain": "geometric_symmetry", "implemented": true, "preconditions": ["loaded_lut_passed_all_d6_actions", "task_requires_invariant_scalar"], "network": false},
+    {"id": "numeric.linear_score", "input": "1_to_16_bounded_finite_features", "output": "bounded_double", "domain": "compiler_topology", "implemented": true, "variants": ["x86_64_jit", "aarch64_jit", "interpreter"], "preconditions": ["dimensions_match", "self_check_passed_for_native"], "network": false},
+    {"id": "phone.sensor_read", "input": "enumerated_sensor", "output": "sensor_event", "domain": "sensor_topology", "implemented": "android_source", "preconditions": ["sensor_exposed", "app_foreground", "required_permissions_granted"], "network": false},
+    {"id": "phone.location_fix", "input": "one_fix_request", "output": "coordinates_accuracy_and_time", "domain": "geographic_topology", "implemented": "android_source", "preconditions": ["user_tap", "location_permission", "provider_enabled"], "network": "Android provider dependent", "upload": false},
+    {"id": "memory.local_retrieve", "input": "query_and_context_budget", "output": "bounded_reference_text", "domain": "memory_topology", "implemented": true, "variants": ["cpp_ram_ring", "android_sqlite"], "preconditions": ["source_and_scope_retained"], "network": false},
+    {"id": "model.local_generate", "input": "prompt_and_selected_gguf", "output": "bounded_completion", "domain": "model_topology", "implemented": true, "preconditions": ["llama_backend_compiled", "compatible_decoder_architecture", "token_budget", "memory_admission", "thermal_admission"], "network": false},
+    {"id": "noaa.public_fetch", "input": "explicit_refresh", "output": "timestamped_public_observation", "domain": "network_topology", "implemented": "android_source", "preconditions": ["fixed_approved_endpoint", "validated_network", "response_cap", "schema_and_time_validation"], "network": true, "phone_measurement_upload": false},
+    {"id": "earth_engine.terrain", "input": "area_of_interest", "output": "georeferenced_historical_elevation", "domain": "topography", "implemented": "code_editor_example", "preconditions": ["authorized_cloud_project", "authenticated_bounded_adapter", "crs_and_vertical_datum"], "network": true},
+    {"id": "topology.persistent_homology", "input": "metric_dataset_and_filtration", "output": "topological_features", "domain": "computational_topology", "implemented": false, "preconditions": ["algorithm_and_error_contract_not_yet_selected"]},
+    {"id": "cpp.general_source_jit", "input": "cpp_source_and_dependency_contract", "output": "validated_native_program", "domain": "compiler_topology", "implemented": false, "preconditions": ["clang_frontend", "llvm_orc_backend", "android_execution_and_distribution_validation"]}
+  ]
+}

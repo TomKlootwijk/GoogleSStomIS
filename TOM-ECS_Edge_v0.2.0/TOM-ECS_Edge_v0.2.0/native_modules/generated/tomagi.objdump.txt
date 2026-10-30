@@ -1,0 +1,642 @@
+
+tomagi.wasm:	file format wasm 0x1
+
+Section Details:
+
+Type[13]:
+ - type[0] (i32) -> i32
+ - type[1] (i32, i32) -> nil
+ - type[2] (i32, i32, i32, i32) -> i32
+ - type[3] (i64) -> i64
+ - type[4] (i64, i64) -> i64
+ - type[5] () -> nil
+ - type[6] (i32, i32) -> i32
+ - type[7] () -> i32
+ - type[8] (i32, i32, i32) -> i32
+ - type[9] (i32, i32, i32, i32) -> nil
+ - type[10] (i64, i64) -> i32
+ - type[11] (i64) -> i32
+ - type[12] (i32) -> i64
+Function[117]:
+ - func[0] sig=0 <get>
+ - func[1] sig=1 <set>
+ - func[2] sig=0 <result>
+ - func[3] sig=0 <mix>
+ - func[4] sig=2 <hi>
+ - func[5] sig=2 <lo>
+ - func[6] sig=2 <less>
+ - func[7] sig=3 <abs64>
+ - func[8] sig=4 <max64>
+ - func[9] sig=2 <delta>
+ - func[10] sig=5 <normalize>
+ - func[11] sig=6 <validate>
+ - func[12] sig=6 <find>
+ - func[13] sig=7 <reset>
+ - func[14] sig=0 <load>
+ - func[15] sig=7 <step>
+ - func[16] sig=0 <run>
+ - func[17] sig=6 <find_key>
+ - func[18] sig=7 <abi_version>
+ - func[19] sig=7 <upload_offset>
+ - func[20] sig=7 <program_offset>
+ - func[21] sig=7 <state_offset>
+ - func[22] sig=7 <candidate_offset>
+ - func[23] sig=7 <control_offset>
+ - func[24] sig=7 <max_cells>
+ - func[25] sig=7 <bl_code_valid>
+ - func[26] sig=6 <bl_lut>
+ - func[27] sig=6 <bl_address2>
+ - func[28] sig=8 <bl_address3>
+ - func[29] sig=6 <bl_get_bit>
+ - func[30] sig=9 <bl_emit_bit>
+ - func[31] sig=0 <bl_valid>
+ - func[32] sig=5 <bl_clear>
+ - func[33] sig=6 <bl_arithmetic>
+ - func[34] sig=0 <bl_add>
+ - func[35] sig=0 <bl_sub>
+ - func[36] sig=0 <bl_neg>
+ - func[37] sig=6 <bl_logical>
+ - func[38] sig=0 <bl_and>
+ - func[39] sig=0 <bl_or>
+ - func[40] sig=0 <bl_xor>
+ - func[41] sig=0 <bl_mul>
+ - func[42] sig=6 <bl_rotl>
+ - func[43] sig=8 <bl_shift>
+ - func[44] sig=6 <bl_shl>
+ - func[45] sig=6 <bl_shr_u>
+ - func[46] sig=6 <bl_shr_s>
+ - func[47] sig=6 <bl_compare>
+ - func[48] sig=0 <bl_ltu>
+ - func[49] sig=0 <bl_lts>
+ - func[50] sig=0 <bl_eq>
+ - func[51] sig=7 <bl_tomk_mix32>
+ - func[52] sig=7 <bl_add32>
+ - func[53] sig=7 <bl_add64>
+ - func[54] sig=7 <bl_sub32>
+ - func[55] sig=7 <bl_sub64>
+ - func[56] sig=7 <bl_neg32>
+ - func[57] sig=7 <bl_neg64>
+ - func[58] sig=7 <bl_mul32>
+ - func[59] sig=7 <bl_mul64>
+ - func[60] sig=5 <bl_init>
+ - func[61] sig=6 <wl_add>
+ - func[62] sig=6 <wl_sub>
+ - func[63] sig=6 <wl_mul>
+ - func[64] sig=6 <wl_and>
+ - func[65] sig=6 <wl_or>
+ - func[66] sig=6 <wl_xor>
+ - func[67] sig=6 <wl_shl>
+ - func[68] sig=6 <wl_shr_u>
+ - func[69] sig=6 <wl_shr_s>
+ - func[70] sig=6 <wl_rotl>
+ - func[71] sig=6 <wl_equal>
+ - func[72] sig=6 <wl_less_u>
+ - func[73] sig=6 <wl_less_s>
+ - func[74] sig=6 <wl_eq>
+ - func[75] sig=6 <wl_ne>
+ - func[76] sig=6 <wl_lt_u>
+ - func[77] sig=6 <wl_lt_s>
+ - func[78] sig=6 <wl_gt_u>
+ - func[79] sig=6 <wl_gt_s>
+ - func[80] sig=6 <wl_le_u>
+ - func[81] sig=6 <wl_le_s>
+ - func[82] sig=6 <wl_ge_u>
+ - func[83] sig=6 <wl_ge_s>
+ - func[84] sig=0 <wl_eqz>
+ - func[85] sig=4 <wl64_add>
+ - func[86] sig=4 <wl64_sub>
+ - func[87] sig=4 <wl64_mul>
+ - func[88] sig=4 <wl64_and>
+ - func[89] sig=4 <wl64_or>
+ - func[90] sig=4 <wl64_xor>
+ - func[91] sig=4 <wl64_shl>
+ - func[92] sig=4 <wl64_shr_u>
+ - func[93] sig=4 <wl64_shr_s>
+ - func[94] sig=4 <wl64_rotl>
+ - func[95] sig=10 <wl64_equal>
+ - func[96] sig=10 <wl64_less_u>
+ - func[97] sig=10 <wl64_less_s>
+ - func[98] sig=10 <wl64_eq>
+ - func[99] sig=10 <wl64_ne>
+ - func[100] sig=10 <wl64_lt_u>
+ - func[101] sig=10 <wl64_lt_s>
+ - func[102] sig=10 <wl64_gt_u>
+ - func[103] sig=10 <wl64_gt_s>
+ - func[104] sig=10 <wl64_le_u>
+ - func[105] sig=10 <wl64_le_s>
+ - func[106] sig=10 <wl64_ge_u>
+ - func[107] sig=10 <wl64_ge_s>
+ - func[108] sig=11 <wl64_eqz>
+ - func[109] sig=5 <guard_data>
+ - func[110] sig=12 <wl_extend_s>
+ - func[111] sig=12 <wl_extend_u>
+ - func[112] sig=11 <wl_wrap>
+ - func[113] sig=6 <wl_div_pow2>
+ - func[114] sig=0 <wl_popcnt>
+ - func[115] sig=7 <lut_code_valid>
+ - func[116] sig=7 <lut_workspace_offset>
+Memory[1]:
+ - memory[0] pages: initial=8 max=8
+Export[17]:
+ - memory[0] -> "memory"
+ - func[4] <hi> -> "key_hi"
+ - func[5] <lo> -> "key_lo"
+ - func[13] <reset> -> "reset"
+ - func[14] <load> -> "load"
+ - func[15] <step> -> "step"
+ - func[16] <run> -> "run"
+ - func[17] <find_key> -> "find_key"
+ - func[18] <abi_version> -> "abi_version"
+ - func[19] <upload_offset> -> "upload_offset"
+ - func[20] <program_offset> -> "program_offset"
+ - func[21] <state_offset> -> "state_offset"
+ - func[22] <candidate_offset> -> "candidate_offset"
+ - func[23] <control_offset> -> "control_offset"
+ - func[24] <max_cells> -> "max_cells"
+ - func[115] <lut_code_valid> -> "lut_code_valid"
+ - func[116] <lut_workspace_offset> -> "lut_workspace_offset"
+Start:
+ - start function: 60 <bl_init>
+Code[117]:
+ - func[0] size=14 <get>
+ - func[1] size=16 <set>
+ - func[2] size=11 <result>
+ - func[3] size=32 <mix>
+ - func[4] size=30 <hi>
+ - func[5] size=37 <lo>
+ - func[6] size=24 <less>
+ - func[7] size=20 <abs64>
+ - func[8] size=16 <max64>
+ - func[9] size=38 <delta>
+ - func[10] size=67 <normalize>
+ - func[11] size=329 <validate>
+ - func[12] size=134 <find>
+ - func[13] size=105 <reset>
+ - func[14] size=56 <load>
+ - func[15] size=1825 <step>
+ - func[16] size=57 <run>
+ - func[17] size=39 <find_key>
+ - func[18] size=6 <abi_version>
+ - func[19] size=5 <upload_offset>
+ - func[20] size=6 <program_offset>
+ - func[21] size=5 <state_offset>
+ - func[22] size=5 <candidate_offset>
+ - func[23] size=4 <control_offset>
+ - func[24] size=5 <max_cells>
+ - func[25] size=181 <bl_code_valid>
+ - func[26] size=22 <bl_lut>
+ - func[27] size=10 <bl_address2>
+ - func[28] size=16 <bl_address3>
+ - func[29] size=27 <bl_get_bit>
+ - func[30] size=69 <bl_emit_bit>
+ - func[31] size=79 <bl_valid>
+ - func[32] size=31 <bl_clear>
+ - func[33] size=155 <bl_arithmetic>
+ - func[34] size=8 <bl_add>
+ - func[35] size=8 <bl_sub>
+ - func[36] size=8 <bl_neg>
+ - func[37] size=66 <bl_logical>
+ - func[38] size=8 <bl_and>
+ - func[39] size=8 <bl_or>
+ - func[40] size=8 <bl_xor>
+ - func[41] size=184 <bl_mul>
+ - func[42] size=78 <bl_rotl>
+ - func[43] size=134 <bl_shift>
+ - func[44] size=10 <bl_shl>
+ - func[45] size=10 <bl_shr_u>
+ - func[46] size=10 <bl_shr_s>
+ - func[47] size=222 <bl_compare>
+ - func[48] size=8 <bl_ltu>
+ - func[49] size=8 <bl_lts>
+ - func[50] size=8 <bl_eq>
+ - func[51] size=394 <bl_tomk_mix32>
+ - func[52] size=6 <bl_add32>
+ - func[53] size=7 <bl_add64>
+ - func[54] size=6 <bl_sub32>
+ - func[55] size=7 <bl_sub64>
+ - func[56] size=6 <bl_neg32>
+ - func[57] size=7 <bl_neg64>
+ - func[58] size=6 <bl_mul32>
+ - func[59] size=7 <bl_mul64>
+ - func[60] size=140 <bl_init>
+ - func[61] size=50 <wl_add>
+ - func[62] size=50 <wl_sub>
+ - func[63] size=50 <wl_mul>
+ - func[64] size=50 <wl_and>
+ - func[65] size=50 <wl_or>
+ - func[66] size=50 <wl_xor>
+ - func[67] size=52 <wl_shl>
+ - func[68] size=52 <wl_shr_u>
+ - func[69] size=52 <wl_shr_s>
+ - func[70] size=52 <wl_rotl>
+ - func[71] size=50 <wl_equal>
+ - func[72] size=50 <wl_less_u>
+ - func[73] size=50 <wl_less_s>
+ - func[74] size=8 <wl_eq>
+ - func[75] size=12 <wl_ne>
+ - func[76] size=8 <wl_lt_u>
+ - func[77] size=8 <wl_lt_s>
+ - func[78] size=8 <wl_gt_u>
+ - func[79] size=8 <wl_gt_s>
+ - func[80] size=12 <wl_le_u>
+ - func[81] size=12 <wl_le_s>
+ - func[82] size=12 <wl_ge_u>
+ - func[83] size=12 <wl_ge_s>
+ - func[84] size=8 <wl_eqz>
+ - func[85] size=33 <wl64_add>
+ - func[86] size=33 <wl64_sub>
+ - func[87] size=33 <wl64_mul>
+ - func[88] size=33 <wl64_and>
+ - func[89] size=33 <wl64_or>
+ - func[90] size=33 <wl64_xor>
+ - func[91] size=49 <wl64_shl>
+ - func[92] size=49 <wl64_shr_u>
+ - func[93] size=49 <wl64_shr_s>
+ - func[94] size=49 <wl64_rotl>
+ - func[95] size=33 <wl64_equal>
+ - func[96] size=33 <wl64_less_u>
+ - func[97] size=33 <wl64_less_s>
+ - func[98] size=8 <wl64_eq>
+ - func[99] size=12 <wl64_ne>
+ - func[100] size=8 <wl64_lt_u>
+ - func[101] size=8 <wl64_lt_s>
+ - func[102] size=8 <wl64_gt_u>
+ - func[103] size=8 <wl64_gt_s>
+ - func[104] size=12 <wl64_le_u>
+ - func[105] size=12 <wl64_le_s>
+ - func[106] size=12 <wl64_ge_u>
+ - func[107] size=12 <wl64_ge_s>
+ - func[108] size=8 <wl64_eqz>
+ - func[109] size=9 <guard_data>
+ - func[110] size=40 <wl_extend_s>
+ - func[111] size=27 <wl_extend_u>
+ - func[112] size=18 <wl_wrap>
+ - func[113] size=103 <wl_div_pow2>
+ - func[114] size=46 <wl_popcnt>
+ - func[115] size=4 <lut_code_valid>
+ - func[116] size=6 <lut_workspace_offset>
+Custom:
+ - name: "name"
+ - func[0] <get>
+ - func[1] <set>
+ - func[2] <result>
+ - func[3] <mix>
+ - func[4] <hi>
+ - func[5] <lo>
+ - func[6] <less>
+ - func[7] <abs64>
+ - func[8] <max64>
+ - func[9] <delta>
+ - func[10] <normalize>
+ - func[11] <validate>
+ - func[12] <find>
+ - func[13] <reset>
+ - func[15] <step>
+ - func[25] <bl_code_valid>
+ - func[26] <bl_lut>
+ - func[27] <bl_address2>
+ - func[28] <bl_address3>
+ - func[29] <bl_get_bit>
+ - func[30] <bl_emit_bit>
+ - func[31] <bl_valid>
+ - func[32] <bl_clear>
+ - func[33] <bl_arithmetic>
+ - func[34] <bl_add>
+ - func[35] <bl_sub>
+ - func[36] <bl_neg>
+ - func[37] <bl_logical>
+ - func[38] <bl_and>
+ - func[39] <bl_or>
+ - func[40] <bl_xor>
+ - func[41] <bl_mul>
+ - func[42] <bl_rotl>
+ - func[43] <bl_shift>
+ - func[44] <bl_shl>
+ - func[45] <bl_shr_u>
+ - func[46] <bl_shr_s>
+ - func[47] <bl_compare>
+ - func[48] <bl_ltu>
+ - func[49] <bl_lts>
+ - func[50] <bl_eq>
+ - func[51] <bl_tomk_mix32>
+ - func[52] <bl_add32>
+ - func[53] <bl_add64>
+ - func[54] <bl_sub32>
+ - func[55] <bl_sub64>
+ - func[56] <bl_neg32>
+ - func[57] <bl_neg64>
+ - func[58] <bl_mul32>
+ - func[59] <bl_mul64>
+ - func[60] <bl_init>
+ - func[61] <wl_add>
+ - func[62] <wl_sub>
+ - func[63] <wl_mul>
+ - func[64] <wl_and>
+ - func[65] <wl_or>
+ - func[66] <wl_xor>
+ - func[67] <wl_shl>
+ - func[68] <wl_shr_u>
+ - func[69] <wl_shr_s>
+ - func[70] <wl_rotl>
+ - func[71] <wl_equal>
+ - func[72] <wl_less_u>
+ - func[73] <wl_less_s>
+ - func[74] <wl_eq>
+ - func[75] <wl_ne>
+ - func[76] <wl_lt_u>
+ - func[77] <wl_lt_s>
+ - func[78] <wl_gt_u>
+ - func[79] <wl_gt_s>
+ - func[80] <wl_le_u>
+ - func[81] <wl_le_s>
+ - func[82] <wl_ge_u>
+ - func[83] <wl_ge_s>
+ - func[84] <wl_eqz>
+ - func[85] <wl64_add>
+ - func[86] <wl64_sub>
+ - func[87] <wl64_mul>
+ - func[88] <wl64_and>
+ - func[89] <wl64_or>
+ - func[90] <wl64_xor>
+ - func[91] <wl64_shl>
+ - func[92] <wl64_shr_u>
+ - func[93] <wl64_shr_s>
+ - func[94] <wl64_rotl>
+ - func[95] <wl64_equal>
+ - func[96] <wl64_less_u>
+ - func[97] <wl64_less_s>
+ - func[98] <wl64_eq>
+ - func[99] <wl64_ne>
+ - func[100] <wl64_lt_u>
+ - func[101] <wl64_lt_s>
+ - func[102] <wl64_gt_u>
+ - func[103] <wl64_gt_s>
+ - func[104] <wl64_le_u>
+ - func[105] <wl64_le_s>
+ - func[106] <wl64_ge_u>
+ - func[107] <wl64_ge_s>
+ - func[108] <wl64_eqz>
+ - func[109] <guard_data>
+ - func[110] <wl_extend_s>
+ - func[111] <wl_extend_u>
+ - func[112] <wl_wrap>
+ - func[113] <wl_div_pow2>
+ - func[114] <wl_popcnt>
+ - func[0] local[0] <i>
+ - func[1] local[0] <i>
+ - func[1] local[1] <v>
+ - func[2] local[0] <v>
+ - func[3] local[0] <x>
+ - func[4] local[0] <rho>
+ - func[4] local[1] <theta>
+ - func[4] local[2] <tick>
+ - func[4] local[3] <phi>
+ - func[5] local[0] <rho>
+ - func[5] local[1] <theta>
+ - func[5] local[2] <tick>
+ - func[5] local[3] <phi>
+ - func[6] local[0] <ah>
+ - func[6] local[1] <al>
+ - func[6] local[2] <bh>
+ - func[6] local[3] <bl>
+ - func[7] local[0] <x>
+ - func[8] local[0] <a>
+ - func[8] local[1] <b>
+ - func[9] local[0] <x>
+ - func[9] local[1] <center>
+ - func[9] local[2] <mask>
+ - func[9] local[3] <half>
+ - func[9] local[4] <d>
+ - func[11] local[0] <base>
+ - func[11] local[1] <length>
+ - func[11] local[2] <count>
+ - func[11] local[3] <i>
+ - func[11] local[4] <p>
+ - func[11] local[5] <ph>
+ - func[11] local[6] <pl>
+ - func[11] local[7] <h>
+ - func[11] local[8] <l>
+ - func[12] local[0] <h>
+ - func[12] local[1] <l>
+ - func[12] local[2] <left>
+ - func[12] local[3] <right>
+ - func[12] local[4] <mid>
+ - func[12] local[5] <p>
+ - func[13] local[0] <v>
+ - func[14] local[0] <length>
+ - func[14] local[1] <v>
+ - func[15] local[0] <v>
+ - func[15] local[1] <index>
+ - func[15] local[2] <p>
+ - func[15] local[3] <op>
+ - func[15] local[4] <flags>
+ - func[15] local[5] <a0>
+ - func[15] local[6] <a1>
+ - func[15] local[7] <a2>
+ - func[15] local[8] <a3>
+ - func[15] local[9] <next0>
+ - func[15] local[10] <next1>
+ - func[15] local[11] <payload>
+ - func[15] local[12] <aux>
+ - func[15] local[13] <kh>
+ - func[15] local[14] <kl>
+ - func[15] local[15] <bit>
+ - func[15] local[16] <x>
+ - func[15] local[17] <shift>
+ - func[15] local[18] <raw>
+ - func[15] local[19] <wraps>
+ - func[15] local[20] <r>
+ - func[15] local[21] <angular>
+ - func[16] local[0] <ticks>
+ - func[16] local[1] <i>
+ - func[16] local[2] <v>
+ - func[17] local[0] <h>
+ - func[17] local[1] <l>
+ - func[25] local[0] <bad>
+ - func[26] local[0] <table>
+ - func[26] local[1] <address>
+ - func[27] local[0] <a>
+ - func[27] local[1] <b>
+ - func[28] local[0] <a>
+ - func[28] local[1] <b>
+ - func[28] local[2] <c>
+ - func[29] local[0] <base>
+ - func[29] local[1] <i>
+ - func[30] local[0] <base>
+ - func[30] local[1] <i>
+ - func[30] local[2] <table>
+ - func[30] local[3] <address>
+ - func[30] local[4] <bit>
+ - func[30] local[5] <byte>
+ - func[30] local[6] <shift>
+ - func[30] local[7] <mask>
+ - func[31] local[0] <n>
+ - func[31] local[1] <i>
+ - func[33] local[0] <n>
+ - func[33] local[1] <mode>
+ - func[33] local[2] <status>
+ - func[33] local[3] <i>
+ - func[33] local[4] <a>
+ - func[33] local[5] <b>
+ - func[33] local[6] <carry>
+ - func[33] local[7] <address>
+ - func[34] local[0] <n>
+ - func[35] local[0] <n>
+ - func[36] local[0] <n>
+ - func[37] local[0] <n>
+ - func[37] local[1] <table>
+ - func[37] local[2] <status>
+ - func[37] local[3] <i>
+ - func[38] local[0] <n>
+ - func[39] local[0] <n>
+ - func[40] local[0] <n>
+ - func[41] local[0] <n>
+ - func[41] local[1] <status>
+ - func[41] local[2] <i>
+ - func[41] local[3] <j>
+ - func[41] local[4] <partial>
+ - func[41] local[5] <carry>
+ - func[41] local[6] <address>
+ - func[42] local[0] <n>
+ - func[42] local[1] <count>
+ - func[42] local[2] <status>
+ - func[42] local[3] <i>
+ - func[42] local[4] <source>
+ - func[42] local[5] <r>
+ - func[43] local[0] <n>
+ - func[43] local[1] <count>
+ - func[43] local[2] <mode>
+ - func[43] local[3] <status>
+ - func[43] local[4] <i>
+ - func[43] local[5] <source>
+ - func[43] local[6] <r>
+ - func[43] local[7] <bit>
+ - func[44] local[0] <n>
+ - func[44] local[1] <count>
+ - func[45] local[0] <n>
+ - func[45] local[1] <count>
+ - func[46] local[0] <n>
+ - func[46] local[1] <count>
+ - func[47] local[0] <n>
+ - func[47] local[1] <mode>
+ - func[47] local[2] <status>
+ - func[47] local[3] <i>
+ - func[47] local[4] <a>
+ - func[47] local[5] <b>
+ - func[47] local[6] <equal>
+ - func[47] local[7] <less>
+ - func[47] local[8] <different>
+ - func[47] local[9] <sign>
+ - func[47] local[10] <result>
+ - func[48] local[0] <n>
+ - func[49] local[0] <n>
+ - func[50] local[0] <n>
+ - func[51] local[0] <status>
+ - func[61] local[0] <a>
+ - func[61] local[1] <b>
+ - func[62] local[0] <a>
+ - func[62] local[1] <b>
+ - func[63] local[0] <a>
+ - func[63] local[1] <b>
+ - func[64] local[0] <a>
+ - func[64] local[1] <b>
+ - func[65] local[0] <a>
+ - func[65] local[1] <b>
+ - func[66] local[0] <a>
+ - func[66] local[1] <b>
+ - func[67] local[0] <a>
+ - func[67] local[1] <b>
+ - func[68] local[0] <a>
+ - func[68] local[1] <b>
+ - func[69] local[0] <a>
+ - func[69] local[1] <b>
+ - func[70] local[0] <a>
+ - func[70] local[1] <b>
+ - func[71] local[0] <a>
+ - func[71] local[1] <b>
+ - func[72] local[0] <a>
+ - func[72] local[1] <b>
+ - func[73] local[0] <a>
+ - func[73] local[1] <b>
+ - func[74] local[0] <a>
+ - func[74] local[1] <b>
+ - func[75] local[0] <a>
+ - func[75] local[1] <b>
+ - func[76] local[0] <a>
+ - func[76] local[1] <b>
+ - func[77] local[0] <a>
+ - func[77] local[1] <b>
+ - func[78] local[0] <a>
+ - func[78] local[1] <b>
+ - func[79] local[0] <a>
+ - func[79] local[1] <b>
+ - func[80] local[0] <a>
+ - func[80] local[1] <b>
+ - func[81] local[0] <a>
+ - func[81] local[1] <b>
+ - func[82] local[0] <a>
+ - func[82] local[1] <b>
+ - func[83] local[0] <a>
+ - func[83] local[1] <b>
+ - func[84] local[0] <a>
+ - func[85] local[0] <a>
+ - func[85] local[1] <b>
+ - func[86] local[0] <a>
+ - func[86] local[1] <b>
+ - func[87] local[0] <a>
+ - func[87] local[1] <b>
+ - func[88] local[0] <a>
+ - func[88] local[1] <b>
+ - func[89] local[0] <a>
+ - func[89] local[1] <b>
+ - func[90] local[0] <a>
+ - func[90] local[1] <b>
+ - func[91] local[0] <a>
+ - func[91] local[1] <b>
+ - func[92] local[0] <a>
+ - func[92] local[1] <b>
+ - func[93] local[0] <a>
+ - func[93] local[1] <b>
+ - func[94] local[0] <a>
+ - func[94] local[1] <b>
+ - func[95] local[0] <a>
+ - func[95] local[1] <b>
+ - func[96] local[0] <a>
+ - func[96] local[1] <b>
+ - func[97] local[0] <a>
+ - func[97] local[1] <b>
+ - func[98] local[0] <a>
+ - func[98] local[1] <b>
+ - func[99] local[0] <a>
+ - func[99] local[1] <b>
+ - func[100] local[0] <a>
+ - func[100] local[1] <b>
+ - func[101] local[0] <a>
+ - func[101] local[1] <b>
+ - func[102] local[0] <a>
+ - func[102] local[1] <b>
+ - func[103] local[0] <a>
+ - func[103] local[1] <b>
+ - func[104] local[0] <a>
+ - func[104] local[1] <b>
+ - func[105] local[0] <a>
+ - func[105] local[1] <b>
+ - func[106] local[0] <a>
+ - func[106] local[1] <b>
+ - func[107] local[0] <a>
+ - func[107] local[1] <b>
+ - func[108] local[0] <a>
+ - func[110] local[0] <a>
+ - func[110] local[1] <high>
+ - func[111] local[0] <a>
+ - func[112] local[0] <a>
+ - func[113] local[0] <a>
+ - func[113] local[1] <divisor>
+ - func[113] local[2] <negative>
+ - func[113] local[3] <magnitude>
+ - func[113] local[4] <quotient>
+ - func[113] local[5] <shift>
+ - func[114] local[0] <a>
+ - func[114] local[1] <i>
+ - func[114] local[2] <count>
+ - func[114] local[3] <bit>

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "validation_date": "2026-10-30",
+  "host_architecture": "x86_64",
+  "native_jit_observed": "native-x86_64",
+  "strict_host_checks_passed": 20685,
+  "address_and_undefined_behavior_sanitizer_checks_passed": 20685,
+  "aarch64_encoding_checks_passed": 172,
+  "native_jit_numeric_comparisons": 3200,
+  "source_lut_group_actions_checked": 14688,
+  "aarch64_encoding_oracles": {
+    "capstone": "5.0.9",
+    "keystone-engine": "0.9.2"
+  },
+  "sanitizer_environment": "Requires access to process maps. The restricted sandbox caused sanitizer infrastructure failures also reproduced by an independent trivial exception program; the full test binary passed with that restriction removed.",
+  "device_execution": false,
+  "android_apk_built_by_core_validation": false,
+  "model_inference_tested_by_core_validation": false,
+  "performance_benchmarks": false,
+  "notes": [
+    "The arithmetic JIT executes generated x86_64 machine code on the validation host.",
+    "ARM64 validation checks opcodes and relative literal offsets; it does not establish Android executable-memory permission or device behavior.",
+    "The source LUT loader validates sizes, invalid payloads and D6 invariance; source SHA256 provenance is checked by tools/import_lognet.py.",
+    "Memory selection is lexical and bounded by content bytes, not model tokenization.",
+    "Route selection does not execute network or model operations."
+  ]
+}

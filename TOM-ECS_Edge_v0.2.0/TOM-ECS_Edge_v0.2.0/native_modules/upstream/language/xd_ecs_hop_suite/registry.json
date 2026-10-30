@@ -1,0 +1,3552 @@
+{
+  "schema": "XD-ECS-REGISTRY/8",
+  "profiles": {
+    "jtk.slog2.quarterturn.data-bit-lut-v1": {
+      "frame_bytes": "48",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "14452",
+            "path": "software/twin_bit_exact/twin.wasm",
+            "sha256": "dc7925afc65db4ef80b271b10d79185c117dd44f1419deff5e292903ed27adc7"
+          },
+          {
+            "bytes": "65536",
+            "path": "software/twin_bit_exact/jtk_default_memory.bin",
+            "sha256": "1322548e8c24c62d0e7fe64e8302de2543ce246601dcc95535b8c1c88b65dead"
+          }
+        ],
+        "id": "jtk.slog2.quarterturn.data-bit-lut-v1",
+        "initialize": [
+          {
+            "bytes": "65536",
+            "offset": "0",
+            "op": "resource_write",
+            "resource": "software/twin_bit_exact/jtk_default_memory.bin"
+          }
+        ],
+        "input": {
+          "bits": "384",
+          "bytes": "48",
+          "clock": "logical_n",
+          "offset": "256",
+          "type": "canonical_rational_i64_vec3",
+          "unit": "m"
+        },
+        "memory_bytes": "65536",
+        "metadata": {
+          "bit_data_producer": {
+            "bytes": "11651",
+            "path": "software/twin_bit_exact/manifest.json",
+            "sha256": "eacc99f13d5adbccc2adb9e75214c66f556bdce04540c32f98c293c632f5c135"
+          },
+          "capacity": null,
+          "fixed_parameters": {
+            "angle_rad": "pi/2",
+            "cos_delta": "0",
+            "ell_m": "1",
+            "height_m": "1",
+            "sin_delta": "1",
+            "velocity_m_s": [
+              "0",
+              "0",
+              "0"
+            ],
+            "z0_m": "0"
+          },
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "JTK-Twin-Viper",
+          "native_clocks": [
+            {
+              "bytes": "4",
+              "counter_offset": "24",
+              "kind": "logical_n",
+              "meaning": "Source fourth-product tick; geometric event, no elapsed physical time supplied."
+            }
+          ],
+          "native_source_profile_scope": "Exact mathematical restriction of source chart/rotation/fourth-product. Formal natural logarithm/polar expressions retained by codec. Native binary64 results are not byte-identical. No calibrated physical interface. Separately sealed computational-DATA bit-LUT backend; native control/address/index/packing remains. No wholeCPU, hardware or physical calibration claim.",
+          "number_domain": "canonical_rational_i64_and_exact_formal_expressions",
+          "output_meaning": "Current Cartesian x,y,z after exact quarter-turn; each rational is signed i64 numerator + positive i64 denominator, little endian.",
+          "parent_profile": "jtk.slog2.quarterturn.exact-v1",
+          "parent_profile_sha256": "b630203a6783469f3404a2743d2a7275f11425c646895eadd13d876889c98bc0",
+          "physical_measurement": false,
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/twin_bit_exact/twin.wasm",
+        "output": {
+          "bits": "384",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "canonical_rational_i64_vec3",
+          "unit": "m"
+        },
+        "projection": [
+          {
+            "bytes": "48",
+            "offset": "256"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [],
+            "export": "jtk_advance",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "b0170d1a412c8af45c7f18af7f1039c096aa47e2bda35347515e360fc6a236ac"
+    },
+    "maktub.mirror.data-bit-lut-v1": {
+      "frame_bytes": "8",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "10576",
+            "path": "software/pinion_bit_exact/pinion_maktub.wasm",
+            "sha256": "ccc534051973b025ad0ba83c98ede902eb4fa1de4d5a78f4f66d9c868e8499bf"
+          }
+        ],
+        "id": "maktub.mirror.data-bit-lut-v1",
+        "initialize": [
+          {
+            "accept": [
+              "void"
+            ],
+            "args": [],
+            "export": "reset",
+            "op": "call"
+          },
+          {
+            "hex": "6e756c6c",
+            "offset": "24000",
+            "op": "write"
+          }
+        ],
+        "input": {
+          "bits": "64",
+          "bytes": "8",
+          "clock": "logical_n",
+          "offset": "30008",
+          "type": "identified_pair_u32",
+          "unit": "1"
+        },
+        "memory_bytes": "65536",
+        "metadata": {
+          "code_fault_contract": {
+            "mutator_status": "9",
+            "predicate_checkpoint": "0 before any write",
+            "row_reset": "trap before any write",
+            "status9_alias": "Original source9 is f8 lookup failure; lut_code_valid()==0 identifies added helper-bank failure."
+          },
+          "event_admission": "JSON null parsed/validated at build/admission; native kernel retains4exactbytes, no runtimehost callback",
+          "event_literal": "null",
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "Maktub-Tom-Klootwijk",
+          "native_source_profile_scope": "Original paired state/description mirror specialization, admitted opaque finiteJSON null event. No WASM JSON-parser or full adaptive Maktub port claim. New separatemoduleidentity lowers computationalDATA through retainedbitLUTs; sourcecode/equations unchanged. Native index/address/packing remain explicit.",
+          "number_domain": "coincident_binary_pair_in_u32_words",
+          "parent_recipe": "maktub.mirror.native-bit-v1",
+          "parent_recipe_sha256": "a8c34ef39e3e15a13e1360130277a9056019740ed30d63b29f96e742d21e5665",
+          "physical_measurement": false,
+          "private_workspace": {
+            "bytes": "1024",
+            "offset": "60000",
+            "retained": true
+          },
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/pinion_bit_exact/pinion_maktub.wasm",
+        "output": {
+          "bits": "64",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "identified_pair_u32",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "8",
+            "offset": "30008"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [
+              {
+                "memory": "30008",
+                "type": "i32"
+              },
+              {
+                "memory": "30012",
+                "type": "i32"
+              },
+              {
+                "literal": "4",
+                "type": "i32"
+              }
+            ],
+            "export": "maktub_step",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "79ee8a73f89547ba39628b278baa6b31fdbdf601f43091d8ea4ac0a9633d7f8c"
+    },
+    "maktubiii.h2.QIS2.data-bit-lut-v1": {
+      "frame_bytes": "40",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "13743",
+            "path": "software/maktubiii_bit_exact/maktubiii.wasm",
+            "sha256": "793a9a0d74fc21247e2b6722aa6e659108d68eb806d9c9bca6eaa3ce039fbeaa"
+          },
+          {
+            "bytes": "65536",
+            "path": "software/maktubiii_bit_exact/default_h2.memory.bin",
+            "sha256": "bdb1fc785f01ce441726e4709063319e6f28427e0e55fd2a679aa61d30f2a35e"
+          }
+        ],
+        "id": "maktubiii.h2.QIS2.data-bit-lut-v1",
+        "initialize": [
+          {
+            "bytes": "65536",
+            "offset": "0",
+            "op": "resource_write",
+            "resource": "software/maktubiii_bit_exact/default_h2.memory.bin"
+          }
+        ],
+        "input": {
+          "bits": "320",
+          "bytes": "40",
+          "clock": "logical_n",
+          "offset": "1024",
+          "type": "maktubiii.QIS2.complex_vector2",
+          "unit": "1"
+        },
+        "memory_bytes": "65536",
+        "metadata": {
+          "bit_data_producer": {
+            "bytes": "17444",
+            "path": "software/maktubiii_bit_exact/manifest.json",
+            "sha256": "603cf609e822381caf0f6dabd9a12c770706bc7c84d5ef839e46a5a17b79a687"
+          },
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOM-MAKTUBIII",
+          "native_source_profile_scope": "NEW ideal/algebraic source-operator profile; originalrawbinary64/PaperTnotclaimed; Explicit output-to-input copy creates repeated H² period2. Separately sealed computational-DATA bit-LUT backend; native control/address/index/packing remains. No wholeCPU, hardware or physical calibration claim.",
+          "number_domain": "canonical_Q_i_sqrt2_20B_bound2^20",
+          "parent_profile": "maktubiii.h2.QIS2.v1",
+          "parent_profile_sha256": "463b94c79c7a8101bffd5b7614bd164b8dce2a7a29da08f83913a5feb01a94ac",
+          "physical_measurement": false,
+          "quantum_preparation": false,
+          "scheduling": "Explicit output-to-input copy creates repeated H² period2.",
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/maktubiii_bit_exact/maktubiii.wasm",
+        "output": {
+          "bits": "320",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "maktubiii.QIS2.complex_vector2",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "40",
+            "offset": "4096"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [
+              {
+                "literal": "1",
+                "type": "i32"
+              },
+              {
+                "literal": "2",
+                "type": "i32"
+              }
+            ],
+            "export": "apply",
+            "op": "call"
+          },
+          {
+            "bytes": "40",
+            "from": "4096",
+            "op": "copy",
+            "to": "1024"
+          }
+        ]
+      },
+      "recipe_sha256": "b7946609dd955a2287e4ecdff31b7409ecb00ce5cbb1b0fddd79d05321b84c5b"
+    },
+    "maktubiii.paired.QIS2.data-bit-lut-v1": {
+      "frame_bytes": "20",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "13743",
+            "path": "software/maktubiii_bit_exact/maktubiii.wasm",
+            "sha256": "793a9a0d74fc21247e2b6722aa6e659108d68eb806d9c9bca6eaa3ce039fbeaa"
+          },
+          {
+            "bytes": "65536",
+            "path": "software/maktubiii_bit_exact/default_paired.memory.bin",
+            "sha256": "52e2f28202daac8884d7236a7d6ee361738854f6a3cdc47cb792f1c4a55116bb"
+          }
+        ],
+        "id": "maktubiii.paired.QIS2.data-bit-lut-v1",
+        "initialize": [
+          {
+            "bytes": "65536",
+            "offset": "0",
+            "op": "resource_write",
+            "resource": "software/maktubiii_bit_exact/default_paired.memory.bin"
+          }
+        ],
+        "input": {
+          "bits": "320",
+          "bytes": "40",
+          "clock": "logical_n",
+          "offset": "1024",
+          "type": "maktubiii.QIS2.rational_pair",
+          "unit": "1"
+        },
+        "memory_bytes": "65536",
+        "metadata": {
+          "bit_data_producer": {
+            "bytes": "17444",
+            "path": "software/maktubiii_bit_exact/manifest.json",
+            "sha256": "603cf609e822381caf0f6dabd9a12c770706bc7c84d5ef839e46a5a17b79a687"
+          },
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOM-MAKTUBIII",
+          "native_source_profile_scope": "NEW ideal/algebraic source-operator profile; originalrawbinary64/PaperTnotclaimed; Explicit next_event_T adds1 to the supplied positive rational model coordinate after sourcepairedStep; not a physical-time law. Separately sealed computational-DATA bit-LUT backend; native control/address/index/packing remains. No wholeCPU, hardware or physical calibration claim.",
+          "number_domain": "canonical_Q_i_sqrt2_20B_bound2^20",
+          "parent_profile": "maktubiii.paired.QIS2.v1",
+          "parent_profile_sha256": "044b47fcd8557b77cfafc6141212e84fa68b8bb29ae98cf7d8baa92961b8d0b6",
+          "physical_measurement": false,
+          "quantum_preparation": false,
+          "scheduling": "Explicit next_event_T adds1 to the supplied positive rational model coordinate after sourcepairedStep; not a physical-time law.",
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/maktubiii_bit_exact/maktubiii.wasm",
+        "output": {
+          "bits": "160",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "maktubiii.QIS2.rational_scalar",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "20",
+            "offset": "4608"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [
+              {
+                "literal": "3",
+                "type": "i32"
+              }
+            ],
+            "export": "paired_step",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [],
+            "export": "next_event_T",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "25f16d1ccd487518a31d2f0679de216411479913838aa6c9541f3be379e9a72a"
+    },
+    "tk.selected-quarterturn.data-bit-lut-v1": {
+      "frame_bytes": "32",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "14452",
+            "path": "software/twin_bit_exact/twin.wasm",
+            "sha256": "dc7925afc65db4ef80b271b10d79185c117dd44f1419deff5e292903ed27adc7"
+          },
+          {
+            "bytes": "65536",
+            "path": "software/twin_bit_exact/tk_default_memory.bin",
+            "sha256": "7f6b49ddc0ae6d461637cb4878f955a755c4b800b49f203b9de0c61deb67b4df"
+          }
+        ],
+        "id": "tk.selected-quarterturn.data-bit-lut-v1",
+        "initialize": [
+          {
+            "bytes": "65536",
+            "offset": "0",
+            "op": "resource_write",
+            "resource": "software/twin_bit_exact/tk_default_memory.bin"
+          }
+        ],
+        "memory_bytes": "65536",
+        "metadata": {
+          "bit_data_producer": {
+            "bytes": "11651",
+            "path": "software/twin_bit_exact/manifest.json",
+            "sha256": "eacc99f13d5adbccc2adb9e75214c66f556bdce04540c32f98c293c632f5c135"
+          },
+          "capacity": {
+            "failure": "Explicit status3 and committed bank unchanged.",
+            "tick_max": "256"
+          },
+          "fixed_parameters": {
+            "L_m": "1",
+            "M0_kg": "1/1000000000",
+            "a": "1",
+            "c_m_s": "299792458",
+            "sphere_radius_m": "1/20",
+            "tStar_s": "1/1000000000"
+          },
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "TK-MK-ULTRA",
+          "native_clocks": [
+            {
+              "actual_apparatus_time": false,
+              "expression": "t=(2*n/omega)*atan(a); omega=4c/(5L); a=1; t0=0",
+              "kind": "source_coordinate_time",
+              "unit": "s"
+            },
+            {
+              "actual_apparatus_time": false,
+              "expression": "tau=(41/80)t-q*r/(5omega)",
+              "kind": "source_conformal_time",
+              "unit": "s"
+            },
+            {
+              "actual_apparatus_time": false,
+              "expression": "T=ln(1+t/tStar)",
+              "kind": "source_log_time",
+              "unit": "1"
+            },
+            {
+              "actual_apparatus_time": false,
+              "expression": "sqrt(1+q²)/2",
+              "kind": "source_allocation_rate",
+              "unit": "1"
+            },
+            {
+              "actual_apparatus_time": false,
+              "expression": "4sqrt(1+q²)/5",
+              "kind": "source_flat_proper_rate",
+              "unit": "1"
+            }
+          ],
+          "native_source_profile_scope": "Exact selected mathematical source profile; rational physical state plus formal exact field/energy/clock expressions. No native float byte equivalence, source clock/apparatus conflation or measured material claim. Separately sealed computational-DATA bit-LUT backend; native control/address/index/packing remains. No wholeCPU, hardware or physical calibration claim.",
+          "number_domain": "canonical_rational_i64_and_exact_formal_expressions",
+          "output_meaning": "Exact q=x/L and r=p/(M0*c), selected source orbit q²+r²=9/16.",
+          "parent_profile": "tk.selected-quarterturn.exact-v1",
+          "parent_profile_sha256": "a6bb03323eb8402109389a55a5a9365fdd5698c8934195fdf16cd4210c564e75",
+          "physical_measurement": false,
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/twin_bit_exact/twin.wasm",
+        "output": {
+          "bits": "256",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "canonical_rational_i64_pair",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "32",
+            "offset": "8448"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [],
+            "export": "tk_step",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "dad126fc72f31f71f7a8e324eb47bd39876787fc3a65691ef5a79a3ab7d169ad"
+    },
+    "tomgrok.machine.pinion-default.data-bit-lut-v1": {
+      "frame_bytes": "8",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "14912",
+            "path": "software/tomgrok_pinion_world_exact/native/pinion_world.wasm",
+            "sha256": "82003cc296ef3c6582f8c9f3fbd13fb83518a948d674d537279e30379051d690"
+          },
+          {
+            "bytes": "6525",
+            "path": "software/tomgrok_tape_exact/native/tape.wasm",
+            "sha256": "403ca173797e095b7f6182f10b5e966154ef4e8362bccdba9ccb8f8123503f89"
+          },
+          {
+            "bytes": "54202",
+            "path": "language/xd_ecs_machine_suite/recipes/pinion-default.boot.json",
+            "sha256": "c8f81c59b877d2014bd42b620362bc876df7cf43a578e64e3de45bf5408e3ea3"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_machine_suite/recipes/pinion-default.boot.json",
+        "id": "tomgrok.machine.pinion-default.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": {
+          "pinion": "131072",
+          "tape": "33554432"
+        },
+        "metadata": {
+          "BOOT_profiles": {
+            "pinion": "59d8ebfedb11041e89a8111a1171bce2563e36312b7f6b6e5fd79220d0690e2f",
+            "tape": "88142c5a2cb571c2037089076be9bdd761bfc86f45d1b5fa83e347a28f523c3c"
+          },
+          "HopRounds": false,
+          "clock": {
+            "apparatus_time": false,
+            "kind": "logical_n",
+            "meaning": "Parent sampling clock; a source Machine batch accepts zero or many native transitions and may freshly reset a role clock."
+          },
+          "default_batch": [
+            {
+              "bits": "AA",
+              "count": "1",
+              "kind": "step"
+            }
+          ],
+          "family": {
+            "bytes": "24931",
+            "path": "software/tomgrok_pinion_world_exact/manifest.json",
+            "sha256": "c2704bd9d37d96f15bc3465ad665cea3d82ce5211249a8e71dadc2596f91f23f"
+          },
+          "family_sha256": "c2704bd9d37d96f15bc3465ad665cea3d82ce5211249a8e71dadc2596f91f23f",
+          "geometry": "EMPTY",
+          "independent_source_reference": {
+            "bytes": "21408",
+            "path": "software/tomgrok_pinion_world_exact/reference/verification.json",
+            "sha256": "b878cec9e8ef67180490528402261ac0e1e16ccdc93a38448ccfa0f262c7bafb"
+          },
+          "initial_sha256": "2d544010e40df10bb975d6b4adfb362a13405d024271c179a03fce39cea54540",
+          "leading_role": "contained",
+          "live_state_preserving_genes": true,
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOM-GROK",
+          "native_layout": {
+            "active_memory_bytes": {
+              "pinion": "131072",
+              "tape": "33554432"
+            },
+            "pinion": {
+              "atomicity": "new constructor executes source world and live installation natively; lowlevel failures may alter work/staging, outer runtime discards whole private candidate",
+              "axes": {
+                "lane_bytes": "4",
+                "lanes": "512",
+                "offset": "68864"
+              },
+              "bd": {
+                "lane_bytes": "4",
+                "lanes": "256",
+                "offset": "66816"
+              },
+              "checkpoint_input": {
+                "max_bytes": "416",
+                "offset": "81920"
+              },
+              "construction_defaults": {
+                "authority": "literal published default environment; independent of supplied live turns/gains",
+                "turns": [
+                  "11",
+                  "53",
+                  "137"
+                ]
+              },
+              "constructor_header": {
+                "N": "65556",
+                "bytes": "64",
+                "center": "65552",
+                "height": "65544",
+                "max_distance": "65564",
+                "offset": "65536",
+                "radius": "65548",
+                "ready": "65536",
+                "status": "65560",
+                "width": "65540"
+              },
+              "dc": {
+                "lane_bytes": "4",
+                "lanes": "256",
+                "offset": "65792"
+              },
+              "dc_order": {
+                "lane_bytes": "4",
+                "lanes": "256",
+                "offset": "72960"
+              },
+              "ip": {
+                "lane_bytes": "4",
+                "lanes": "256",
+                "offset": "70912"
+              },
+              "legacy": {
+                "candidate_overlay": "58000",
+                "candidate_world": "40000",
+                "checkpoint_max_bytes": "416",
+                "checkpoint_output": "21000",
+                "genes": "24",
+                "genes_input": "768",
+                "header": "0",
+                "lut_workspace": "60000",
+                "lut_workspace_bytes": "1024",
+                "overlay_max_bytes": "384",
+                "state": "256",
+                "state_max_bytes": "400",
+                "trace": "20480",
+                "trace_bytes": "32",
+                "world": "1024",
+                "world_max_bytes": "17408"
+              },
+              "memory_bytes": "131072",
+              "memory_pages": "2",
+              "new_exports": {
+                "initialize": "0",
+                "pinion_construct": "7",
+                "pinion_fresh": "3",
+                "pinion_restore": "1",
+                "reset_all": "0",
+                "world_build": "4"
+              },
+              "new_status": {
+                "CHECKPOINT": "18",
+                "CODE": "12",
+                "FIELD": "15",
+                "GENES": "17",
+                "LIVE": "16",
+                "OK": "0",
+                "PHASE": "19",
+                "RADIUS": "14",
+                "WORLD_ARGUMENTS": "13"
+              },
+              "queue": {
+                "lane_bytes": "4",
+                "lanes": "256",
+                "offset": "71936"
+              },
+              "schema": "TOMGROK-PINION-WORLD-NATIVE-LAYOUT/1",
+              "sign": {
+                "lane_bytes": "4",
+                "lanes": "256",
+                "offset": "67840"
+              },
+              "sort_work": {
+                "lane_bytes": "4",
+                "lanes": "256",
+                "offset": "73984"
+              },
+              "start_function": null,
+              "whole_CPU_or_hardware": false
+            },
+            "projection": {
+              "bytes": "8",
+              "native_value_offsets": {
+                "pinion": "256",
+                "tape": "0"
+              },
+              "role_tag_offset": "4",
+              "role_tags": {
+                "pinion": "0",
+                "tape": "1"
+              },
+              "value_offset": "0"
+            },
+            "tape": {
+              "abi_identity": {
+                "bytes": "4",
+                "offset": "40"
+              },
+              "cells": {
+                "lane_bytes": "4",
+                "lanes": "4096",
+                "offset": "4096",
+                "signed_origin": "-2048"
+              },
+              "device_status": {
+                "ACCEPT": "0",
+                "DEFER": "3",
+                "HALT": "1",
+                "INVALID": "2"
+              },
+              "fresh_cell_seen": {
+                "bytes": "4096",
+                "offset": "24576"
+              },
+              "header": {
+                "bytes": "40",
+                "device_status": "12",
+                "halt": "20",
+                "head_offset": "4",
+                "offset": "0",
+                "phase": "28",
+                "q": "0",
+                "rule_count": "24",
+                "source_status": "36",
+                "states": "16",
+                "tick": "8",
+                "trace_count": "32"
+              },
+              "lut_workspace": {
+                "bytes": "1024",
+                "identity_bytes": "12",
+                "identity_offset": "33489024",
+                "offset": "33488896"
+              },
+              "memory_bytes": "33554432",
+              "phase": {
+                "empty": "0",
+                "executable": "3",
+                "fresh_loader": "1",
+                "genes_loader": "2"
+              },
+              "rule_order": {
+                "entries": "1048576",
+                "entry_bytes": "4",
+                "offset": "13631488"
+              },
+              "rules": {
+                "fields": [
+                  "write_byte",
+                  "signed_move",
+                  "next_q"
+                ],
+                "missing_next_q": "4294967295",
+                "offset": "1048576",
+                "row_bytes": "12",
+                "rows": "1048576"
+              },
+              "source_status": {
+                "ACCEPT": "1",
+                "DEFER": "4",
+                "HALT": "2",
+                "INVALID": "3",
+                "READY": "0"
+              },
+              "trace": {
+                "fields": [
+                  "q",
+                  "signed_head",
+                  "write_byte",
+                  "tick"
+                ],
+                "offset": "65536",
+                "row_bytes": "16",
+                "rows": "4096"
+              }
+            }
+          },
+          "native_source_profile_scope": "Original same-role live genes and fresh Pinion/Tape Machine batches; full general world/TKG1 reconstruction under retained publication defaults. Exactly one native role is active; all source/role/native history remains retained.",
+          "number_domain": "Original source finite Pinion and synchronized Tape domains; variable active memory, nonwrapping native counters and exact retained source batches.",
+          "original_Machine_dispatcher": true,
+          "outer_rewrite_is_fresh": true,
+          "physical_hardware_or_calibration": false,
+          "program": "source_machine",
+          "tagged_output": {
+            "pinion_role_tag": "0",
+            "role_lane": "4",
+            "tape_role_tag": "1",
+            "value_lane": "0"
+          },
+          "whole_CPU": false
+        },
+        "modules": {
+          "pinion": "software/tomgrok_pinion_world_exact/native/pinion_world.wasm",
+          "tape": "software/tomgrok_tape_exact/native/tape.wasm"
+        },
+        "output": {
+          "bits": "64",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "TOM-GROK.Machine.control.tagged64",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "8",
+            "offset": "0"
+          }
+        ],
+        "schema": "XD-MACHINE-RECIPE/1"
+      },
+      "recipe_sha256": "f309a416d2b2bdc7223894557de73b67fdd71ee16bc8bcff4e94c39c0c2b9c86"
+    },
+    "tomgrok.pinion.default.data-bit-lut-v1": {
+      "frame_bytes": "48",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "10576",
+            "path": "software/pinion_bit_exact/pinion_maktub.wasm",
+            "sha256": "ccc534051973b025ad0ba83c98ede902eb4fa1de4d5a78f4f66d9c868e8499bf"
+          },
+          {
+            "bytes": "65536",
+            "path": "software/pinion_bit_exact/default_profile.memory.bin",
+            "sha256": "2986b7d2436208456f41cb1519e1f087e44262f4cb29ff1ecdb3d3b1fceaba98"
+          }
+        ],
+        "id": "tomgrok.pinion.default.data-bit-lut-v1",
+        "initialize": [
+          {
+            "bytes": "65536",
+            "offset": "0",
+            "op": "resource_write",
+            "resource": "software/pinion_bit_exact/default_profile.memory.bin"
+          }
+        ],
+        "memory_bytes": "65536",
+        "metadata": {
+          "code_fault_contract": {
+            "mutator_status": "9",
+            "predicate_checkpoint": "0 before any write",
+            "row_reset": "trap before any write",
+            "status9_alias": "Original source9 is f8 lookup failure; lut_code_valid()==0 identifies added helper-bank failure."
+          },
+          "jitter_event": "1",
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOM-GROK",
+          "native_source_profile_scope": "Original Pinion read-act-before-overlay-mutation finite integer-world profile; fixed explicit jitter event1. Unsupported Tape/HopRounds/float constructions not imported. New separatemoduleidentity lowers computationalDATA through retainedbitLUTs; sourcecode/equations unchanged. Native index/address/packing remain explicit.",
+          "number_domain": "source_RP32_i32_modular_words",
+          "parent_recipe": "tomgrok.pinion.default.word-v1",
+          "parent_recipe_sha256": "9b00a6c5ded76cff7a1dd23bffcec8c094b77612c7135c47f73bc03dfde2ef24",
+          "physical_measurement": false,
+          "private_workspace": {
+            "bytes": "1024",
+            "offset": "60000",
+            "retained": true
+          },
+          "state_frame": "first16 native state bytes then32byte actual source trace",
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/pinion_bit_exact/pinion_maktub.wasm",
+        "output": {
+          "bits": "32",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "TOM-GROK.RP32",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "16",
+            "offset": "256"
+          },
+          {
+            "bytes": "32",
+            "offset": "20480"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [
+              {
+                "literal": "1",
+                "type": "i32"
+              }
+            ],
+            "export": "pinion_step",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "6c664075bb45ff72dc05448287e57d3b9f97b829cfcbfabaa528267c465f493a"
+    },
+    "tomgrok.tape.byte-counter.data-bit-lut-v1": {
+      "frame_bytes": "40",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "6525",
+            "path": "software/tomgrok_tape_exact/native/tape.wasm",
+            "sha256": "403ca173797e095b7f6182f10b5e966154ef4e8362bccdba9ccb8f8123503f89"
+          },
+          {
+            "bytes": "44656",
+            "path": "language/xd_ecs_tape_suite/recipes/byte_counter.boot.json",
+            "sha256": "2e00b4b046d81fcd9b17beda154da6972b95768140d0972bfb43102c97e9a72b"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_tape_suite/recipes/byte_counter.boot.json",
+        "id": "tomgrok.tape.byte-counter.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "33554432",
+        "metadata": {
+          "BOOT_profile_sha256": "88142c5a2cb571c2037089076be9bdd761bfc86f45d1b5fa83e347a28f523c3c",
+          "HopRounds": false,
+          "Pinion_Tape_dispatcher": false,
+          "clock": {
+            "adapter_sequence": "accepted_source_batches",
+            "apparatus_time": false,
+            "kind": "logical_n",
+            "meaning": "Parent sampling clock; a requested native batch may accept zero or many Tape transitions.",
+            "native_tick_offset": "8",
+            "native_tick_unit": "accepted_tape_steps"
+          },
+          "default_batch": [
+            {
+              "bits": "AA",
+              "count": "1",
+              "kind": "step"
+            }
+          ],
+          "family": {
+            "bytes": "18691",
+            "path": "software/tomgrok_tape_exact/manifest.json",
+            "sha256": "eba0818bb2ea1ccc2655c67918327274ccdbe24df4e54d813adfae1519828ed9"
+          },
+          "family_sha256": "eba0818bb2ea1ccc2655c67918327274ccdbe24df4e54d813adfae1519828ed9",
+          "geometry": "EMPTY",
+          "initial_sha256": "3dfef3eaac994bfe5f127aefc87fbbe83e8c2c7108abada987af769ac3d6c621",
+          "leading_role": "contained",
+          "live_state_preserving_genes": true,
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOM-GROK",
+          "native_layout": {
+            "abi_identity": {
+              "bytes": "4",
+              "offset": "40"
+            },
+            "cells": {
+              "lane_bytes": "4",
+              "lanes": "4096",
+              "offset": "4096",
+              "signed_origin": "-2048"
+            },
+            "device_status": {
+              "ACCEPT": "0",
+              "DEFER": "3",
+              "HALT": "1",
+              "INVALID": "2"
+            },
+            "fresh_cell_seen": {
+              "bytes": "4096",
+              "offset": "24576"
+            },
+            "header": {
+              "bytes": "40",
+              "device_status": "12",
+              "halt": "20",
+              "head_offset": "4",
+              "offset": "0",
+              "phase": "28",
+              "q": "0",
+              "rule_count": "24",
+              "source_status": "36",
+              "states": "16",
+              "tick": "8",
+              "trace_count": "32"
+            },
+            "lut_workspace": {
+              "bytes": "1024",
+              "identity_bytes": "12",
+              "identity_offset": "33489024",
+              "offset": "33488896"
+            },
+            "memory_bytes": "33554432",
+            "phase": {
+              "empty": "0",
+              "executable": "3",
+              "fresh_loader": "1",
+              "genes_loader": "2"
+            },
+            "rule_order": {
+              "entries": "1048576",
+              "entry_bytes": "4",
+              "offset": "13631488"
+            },
+            "rules": {
+              "fields": [
+                "write_byte",
+                "signed_move",
+                "next_q"
+              ],
+              "missing_next_q": "4294967295",
+              "offset": "1048576",
+              "row_bytes": "12",
+              "rows": "1048576"
+            },
+            "source_status": {
+              "ACCEPT": "1",
+              "DEFER": "4",
+              "HALT": "2",
+              "INVALID": "3",
+              "READY": "0"
+            },
+            "trace": {
+              "fields": [
+                "q",
+                "signed_head",
+                "write_byte",
+                "tick"
+              ],
+              "offset": "65536",
+              "row_bytes": "16",
+              "rows": "4096"
+            }
+          },
+          "native_source_profile_scope": "Full finite native U-TAPE-1, source Tape-only Machine batches; live Tape genes preserve state, outer capability replacement initializes fresh. No Pinion/Tape dispatcher or HopRounds is inferred.",
+          "number_domain": "u32 tick, states1..4096, byte symbols, signed finite window-2048..2047, ordered rules<=1048576",
+          "outer_rewrite_is_fresh": true,
+          "physical_hardware_or_calibration": false,
+          "program": "byte_counter",
+          "whole_CPU": false
+        },
+        "module": "software/tomgrok_tape_exact/native/tape.wasm",
+        "output": {
+          "bits": "32",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "TOM-GROK.U-TAPE-1.control.u32",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "40",
+            "offset": "0"
+          }
+        ],
+        "schema": "XD-TAPE-RECIPE/1"
+      },
+      "recipe_sha256": "cae55a8a3e6026db402338d09da7b7352d905488a03e6415eab9092b9cceb0d8"
+    },
+    "tomgrok.tape.scan3.data-bit-lut-v1": {
+      "frame_bytes": "40",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "6525",
+            "path": "software/tomgrok_tape_exact/native/tape.wasm",
+            "sha256": "403ca173797e095b7f6182f10b5e966154ef4e8362bccdba9ccb8f8123503f89"
+          },
+          {
+            "bytes": "18336",
+            "path": "language/xd_ecs_tape_suite/recipes/scan3.boot.json",
+            "sha256": "1ed0f92ecc6938946135eeca917b8d3c4cd74194bd3914c1b5c8fca0c19d8f40"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_tape_suite/recipes/scan3.boot.json",
+        "id": "tomgrok.tape.scan3.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "33554432",
+        "metadata": {
+          "BOOT_profile_sha256": "88142c5a2cb571c2037089076be9bdd761bfc86f45d1b5fa83e347a28f523c3c",
+          "HopRounds": false,
+          "Pinion_Tape_dispatcher": false,
+          "clock": {
+            "adapter_sequence": "accepted_source_batches",
+            "apparatus_time": false,
+            "kind": "logical_n",
+            "meaning": "Parent sampling clock; a requested native batch may accept zero or many Tape transitions.",
+            "native_tick_offset": "8",
+            "native_tick_unit": "accepted_tape_steps"
+          },
+          "default_batch": [
+            {
+              "bits": "AA",
+              "count": "1",
+              "kind": "step"
+            }
+          ],
+          "family": {
+            "bytes": "18691",
+            "path": "software/tomgrok_tape_exact/manifest.json",
+            "sha256": "eba0818bb2ea1ccc2655c67918327274ccdbe24df4e54d813adfae1519828ed9"
+          },
+          "family_sha256": "eba0818bb2ea1ccc2655c67918327274ccdbe24df4e54d813adfae1519828ed9",
+          "geometry": "EMPTY",
+          "initial_sha256": "2697a3c607afae30c7b8c754fe36a3f62ebaf0a5324a84c459f57c0fe562737c",
+          "leading_role": "contained",
+          "live_state_preserving_genes": true,
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOM-GROK",
+          "native_layout": {
+            "abi_identity": {
+              "bytes": "4",
+              "offset": "40"
+            },
+            "cells": {
+              "lane_bytes": "4",
+              "lanes": "4096",
+              "offset": "4096",
+              "signed_origin": "-2048"
+            },
+            "device_status": {
+              "ACCEPT": "0",
+              "DEFER": "3",
+              "HALT": "1",
+              "INVALID": "2"
+            },
+            "fresh_cell_seen": {
+              "bytes": "4096",
+              "offset": "24576"
+            },
+            "header": {
+              "bytes": "40",
+              "device_status": "12",
+              "halt": "20",
+              "head_offset": "4",
+              "offset": "0",
+              "phase": "28",
+              "q": "0",
+              "rule_count": "24",
+              "source_status": "36",
+              "states": "16",
+              "tick": "8",
+              "trace_count": "32"
+            },
+            "lut_workspace": {
+              "bytes": "1024",
+              "identity_bytes": "12",
+              "identity_offset": "33489024",
+              "offset": "33488896"
+            },
+            "memory_bytes": "33554432",
+            "phase": {
+              "empty": "0",
+              "executable": "3",
+              "fresh_loader": "1",
+              "genes_loader": "2"
+            },
+            "rule_order": {
+              "entries": "1048576",
+              "entry_bytes": "4",
+              "offset": "13631488"
+            },
+            "rules": {
+              "fields": [
+                "write_byte",
+                "signed_move",
+                "next_q"
+              ],
+              "missing_next_q": "4294967295",
+              "offset": "1048576",
+              "row_bytes": "12",
+              "rows": "1048576"
+            },
+            "source_status": {
+              "ACCEPT": "1",
+              "DEFER": "4",
+              "HALT": "2",
+              "INVALID": "3",
+              "READY": "0"
+            },
+            "trace": {
+              "fields": [
+                "q",
+                "signed_head",
+                "write_byte",
+                "tick"
+              ],
+              "offset": "65536",
+              "row_bytes": "16",
+              "rows": "4096"
+            }
+          },
+          "native_source_profile_scope": "Full finite native U-TAPE-1, source Tape-only Machine batches; live Tape genes preserve state, outer capability replacement initializes fresh. No Pinion/Tape dispatcher or HopRounds is inferred.",
+          "number_domain": "u32 tick, states1..4096, byte symbols, signed finite window-2048..2047, ordered rules<=1048576",
+          "outer_rewrite_is_fresh": true,
+          "physical_hardware_or_calibration": false,
+          "program": "scan3",
+          "whole_CPU": false
+        },
+        "module": "software/tomgrok_tape_exact/native/tape.wasm",
+        "output": {
+          "bits": "32",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "TOM-GROK.U-TAPE-1.control.u32",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "40",
+            "offset": "0"
+          }
+        ],
+        "schema": "XD-TAPE-RECIPE/1"
+      },
+      "recipe_sha256": "9380a87c72559f991881c32e0d48861ceae57643df90f4728920d16136e75d5e"
+    },
+    "tomk.exact19.data-bit-lut-v1": {
+      "frame_bytes": "64",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "9603",
+            "path": "software/tomk_bit_complete/tomagi.wasm",
+            "sha256": "256140abcadce241d5bbef9dd18438f02b948cef0115db0256fa7e6e5b446314"
+          },
+          {
+            "bytes": "272",
+            "path": "software/tomk_exact/fixtures/exact19.tmg",
+            "sha256": "3b4aab91c3f4102e09a31638d55fc741ad61777c08ec3789b5b53f3585119c3a"
+          }
+        ],
+        "id": "tomk.exact19.data-bit-lut-v1",
+        "initialize": [
+          {
+            "bytes": "272",
+            "offset": "4096",
+            "op": "resource_write",
+            "resource": "software/tomk_exact/fixtures/exact19.tmg"
+          },
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [
+              {
+                "literal": "272",
+                "type": "i32"
+              }
+            ],
+            "export": "load",
+            "op": "call"
+          }
+        ],
+        "memory_bytes": "524288",
+        "metadata": {
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOMK",
+          "native_halt_status": "1",
+          "native_source_profile_scope": "Original16opcode State64/Cell48 source profile; computational DATA arithmetic bit-LUT lowered, explicit native admission/index/address/packing remains. No whole1bitCPU theorem.",
+          "number_domain": "source_u32_i32_and_wide64_bits",
+          "physical_measurement": false,
+          "program": "software/tomk_exact/fixtures/exact19.tmg",
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/tomk_bit_complete/tomagi.wasm",
+        "output": {
+          "bits": "32",
+          "clock": "logical_n",
+          "offset": "52",
+          "type": "TOMK.State64.output.u32",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "64",
+            "offset": "256"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0",
+              "1"
+            ],
+            "args": [],
+            "export": "step",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "ed535257244214d9f60af91edcfa3a32e8d6768bec54984f53abca09d28513b8"
+    },
+    "tomk.license.data-bit-lut-v1": {
+      "frame_bytes": "64",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "9603",
+            "path": "software/tomk_bit_complete/tomagi.wasm",
+            "sha256": "256140abcadce241d5bbef9dd18438f02b948cef0115db0256fa7e6e5b446314"
+          },
+          {
+            "bytes": "12992",
+            "path": "software/tomk_exact/fixtures/license.tmg",
+            "sha256": "c18233116b1e87f10290146ac7466c69b8587ea31574158ad44cb0071c1b5dec"
+          }
+        ],
+        "id": "tomk.license.data-bit-lut-v1",
+        "initialize": [
+          {
+            "bytes": "12992",
+            "offset": "4096",
+            "op": "resource_write",
+            "resource": "software/tomk_exact/fixtures/license.tmg"
+          },
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [
+              {
+                "literal": "12992",
+                "type": "i32"
+              }
+            ],
+            "export": "load",
+            "op": "call"
+          }
+        ],
+        "memory_bytes": "524288",
+        "metadata": {
+          "leading_role": "contained_under_XD-TAU",
+          "lowering": "computational_data_bit_LUT",
+          "model": "TOMK",
+          "native_halt_status": "1",
+          "native_source_profile_scope": "Original16opcode State64/Cell48 source profile; computational DATA arithmetic bit-LUT lowered, explicit native admission/index/address/packing remains. No whole1bitCPU theorem.",
+          "number_domain": "source_u32_i32_and_wide64_bits",
+          "physical_measurement": false,
+          "program": "software/tomk_exact/fixtures/license.tmg",
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/tomk_bit_complete/tomagi.wasm",
+        "output": {
+          "bits": "32",
+          "clock": "logical_n",
+          "offset": "52",
+          "type": "TOMK.State64.output.u32",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "64",
+            "offset": "256"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0",
+              "1"
+            ],
+            "args": [],
+            "export": "step",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "fac48da6bee7a45bcdebf8fa5eb7c8c5dfe38f554eac58df2acbc14aa2f379af"
+    },
+    "xd.matrix.mechanical-chain16.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "3695138",
+            "path": "language/xd_ecs_matrix_suite/recipes/PH-MECHANICAL-CHAIN16.boot.json",
+            "sha256": "73dd00f39213926cf5b081baf9eff02cc23f8c9fd86c2d5ad103c21c80c17fcb"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_matrix_suite/recipes/PH-MECHANICAL-CHAIN16.boot.json",
+        "id": "xd.matrix.mechanical-chain16.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "16",
+            "dissipation_meaning": "ideal declared resistor/viscous dissipation energy",
+            "parameter_origin": "declared_verification_parameters",
+            "profile_id": "PH-MECHANICAL-CHAIN16",
+            "source_profile": {
+              "bytes": "175534",
+              "path": "software/xd_ph_matrix_exact/applications/profiles/PH-MECHANICAL-CHAIN16.json",
+              "sha256": "c2eb158386272a76667fe02f9bfccaf6498e5a732516db768ea11088233cc98c"
+            },
+            "states": [
+              {
+                "name": "displacement_0",
+                "unit": "m"
+              },
+              {
+                "name": "displacement_1",
+                "unit": "m"
+              },
+              {
+                "name": "displacement_2",
+                "unit": "m"
+              },
+              {
+                "name": "displacement_3",
+                "unit": "m"
+              },
+              {
+                "name": "displacement_4",
+                "unit": "m"
+              },
+              {
+                "name": "displacement_5",
+                "unit": "m"
+              },
+              {
+                "name": "displacement_6",
+                "unit": "m"
+              },
+              {
+                "name": "displacement_7",
+                "unit": "m"
+              },
+              {
+                "name": "momentum_0",
+                "unit": "kg*m/s"
+              },
+              {
+                "name": "momentum_1",
+                "unit": "kg*m/s"
+              },
+              {
+                "name": "momentum_2",
+                "unit": "kg*m/s"
+              },
+              {
+                "name": "momentum_3",
+                "unit": "kg*m/s"
+              },
+              {
+                "name": "momentum_4",
+                "unit": "kg*m/s"
+              },
+              {
+                "name": "momentum_5",
+                "unit": "kg*m/s"
+              },
+              {
+                "name": "momentum_6",
+                "unit": "kg*m/s"
+              },
+              {
+                "name": "momentum_7",
+                "unit": "kg*m/s"
+              }
+            ]
+          },
+          "calibration": false,
+          "clock": {
+            "kind": "declared_model_time_s",
+            "step_fraction": "1/100",
+            "unit": "s",
+            "update": "One native rat_add(time,time,h) per accepted eligible tick; not an apparatus timestamp or source replay horizon."
+          },
+          "family_manifest": {
+            "bytes": "24199",
+            "path": "software/xd_ph_matrix_exact/manifest.json",
+            "sha256": "943bd8bbbbae2485a4ffff894cf34dd3afddaf9065b7007b213433e012732f8b"
+          },
+          "geometry": "EMPTY: matrix profile adds no native parenthesized geometry",
+          "leading_role": "parent_numeric",
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "256"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "256"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "256"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "16"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "16",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "16"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Original v14 Fraction dense port-Hamiltonian midpoint, selected sealed SI application and explicit native rational model-clock/cumulative program. Control/address/codec remains native.",
+          "number_domain": "canonical reduced BigRat8192; every reduced intermediate must fit",
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "m"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-MATRIX-APPLICATION-RECIPE/1"
+      },
+      "recipe_sha256": "4a0770ec04b354c8a67191b05429e396759bbc9a9999ad7171005587b2423d8a"
+    },
+    "xd.matrix.parallel-rlc-reported.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "118542",
+            "path": "language/xd_ecs_matrix_suite/recipes/PH-RLC-PARALLEL-REPORTED.boot.json",
+            "sha256": "fd054cfe608fc5ea6a20da79e3dec2c2bc3eb6bf15d3d4f114c908b7538e5c96"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_matrix_suite/recipes/PH-RLC-PARALLEL-REPORTED.boot.json",
+        "id": "xd.matrix.parallel-rlc-reported.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "2",
+            "dissipation_meaning": "ideal declared resistor/viscous dissipation energy",
+            "parameter_origin": "published_nominals_with_reported_factory_variation",
+            "profile_id": "PH-RLC-PARALLEL-REPORTED",
+            "source_profile": {
+              "bytes": "6177",
+              "path": "software/xd_ph_matrix_exact/applications/profiles/PH-RLC-PARALLEL-REPORTED.json",
+              "sha256": "2dbd52b9b492f461d5ca7f64c6dca4f068d04d1584153e5500ad430480fff766"
+            },
+            "states": [
+              {
+                "name": "capacitor_charge",
+                "unit": "C"
+              },
+              {
+                "name": "inductor_flux",
+                "unit": "Wb"
+              }
+            ]
+          },
+          "calibration": false,
+          "clock": {
+            "kind": "declared_model_time_s",
+            "step_fraction": "1/100000",
+            "unit": "s",
+            "update": "One native rat_add(time,time,h) per accepted eligible tick; not an apparatus timestamp or source replay horizon."
+          },
+          "family_manifest": {
+            "bytes": "24199",
+            "path": "software/xd_ph_matrix_exact/manifest.json",
+            "sha256": "943bd8bbbbae2485a4ffff894cf34dd3afddaf9065b7007b213433e012732f8b"
+          },
+          "geometry": "EMPTY: matrix profile adds no native parenthesized geometry",
+          "leading_role": "parent_numeric",
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "4"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "4"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "4"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "2"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "2",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "2"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Original v14 Fraction dense port-Hamiltonian midpoint, selected sealed SI application and explicit native rational model-clock/cumulative program. Control/address/codec remains native.",
+          "number_domain": "canonical reduced BigRat8192; every reduced intermediate must fit",
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "C"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-MATRIX-APPLICATION-RECIPE/1"
+      },
+      "recipe_sha256": "4f1ee4626af0415332f3be41bfcbc4a106f8cd7383c47cfdc31c1a0daf2b3d47"
+    },
+    "xd.matrix.series-rlc.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "118124",
+            "path": "language/xd_ecs_matrix_suite/recipes/PH-RLC-SERIES.boot.json",
+            "sha256": "3ad6267b59ae0f99d8614b1bfde64c6008d8dace3b49091204d5a05a01314d70"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_matrix_suite/recipes/PH-RLC-SERIES.boot.json",
+        "id": "xd.matrix.series-rlc.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "2",
+            "dissipation_meaning": "ideal declared resistor/viscous dissipation energy",
+            "parameter_origin": "declared_verification_parameters",
+            "profile_id": "PH-RLC-SERIES",
+            "source_profile": {
+              "bytes": "5807",
+              "path": "software/xd_ph_matrix_exact/applications/profiles/PH-RLC-SERIES.json",
+              "sha256": "5f6fc00d8ebec9148bf32cfb228b8f9f3a533a2641fe1fcf8ef53970c09a4413"
+            },
+            "states": [
+              {
+                "name": "capacitor_charge",
+                "unit": "C"
+              },
+              {
+                "name": "inductor_flux",
+                "unit": "Wb"
+              }
+            ]
+          },
+          "calibration": false,
+          "clock": {
+            "kind": "declared_model_time_s",
+            "step_fraction": "1/100000",
+            "unit": "s",
+            "update": "One native rat_add(time,time,h) per accepted eligible tick; not an apparatus timestamp or source replay horizon."
+          },
+          "family_manifest": {
+            "bytes": "24199",
+            "path": "software/xd_ph_matrix_exact/manifest.json",
+            "sha256": "943bd8bbbbae2485a4ffff894cf34dd3afddaf9065b7007b213433e012732f8b"
+          },
+          "geometry": "EMPTY: matrix profile adds no native parenthesized geometry",
+          "leading_role": "parent_numeric",
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "4"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "4"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "4"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "2"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "2",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "2"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Original v14 Fraction dense port-Hamiltonian midpoint, selected sealed SI application and explicit native rational model-clock/cumulative program. Control/address/codec remains native.",
+          "number_domain": "canonical reduced BigRat8192; every reduced intermediate must fit",
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "C"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-MATRIX-APPLICATION-RECIPE/1"
+      },
+      "recipe_sha256": "b0e01d8c4ca4b15e0e3749b680069a245888671edb0db22a2047dd2340548825"
+    },
+    "xd.matrix.thermal-storage3.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "197202",
+            "path": "language/xd_ecs_matrix_suite/recipes/PH-THERMAL-STORAGE3.boot.json",
+            "sha256": "ef5e63c71f194fc7ca4c5dea7be0b3976ad541b8e6420e46c850b71780845c59"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_matrix_suite/recipes/PH-THERMAL-STORAGE3.boot.json",
+        "id": "xd.matrix.thermal-storage3.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "3",
+            "dissipation_meaning": "quadratic temperature-deviation storage-functional loss; not physical deposited heat or exact exergy",
+            "parameter_origin": "declared_verification_parameters",
+            "profile_id": "PH-THERMAL-STORAGE3",
+            "source_profile": {
+              "bytes": "10542",
+              "path": "software/xd_ph_matrix_exact/applications/profiles/PH-THERMAL-STORAGE3.json",
+              "sha256": "1fe34d46737437d91cb27db26805c72de38f300cf650f9e4383141ddc0fa0155"
+            },
+            "states": [
+              {
+                "name": "internal_energy_deviation_0",
+                "unit": "J"
+              },
+              {
+                "name": "internal_energy_deviation_1",
+                "unit": "J"
+              },
+              {
+                "name": "internal_energy_deviation_2",
+                "unit": "J"
+              }
+            ]
+          },
+          "calibration": false,
+          "clock": {
+            "kind": "declared_model_time_s",
+            "step_fraction": "1/1",
+            "unit": "s",
+            "update": "One native rat_add(time,time,h) per accepted eligible tick; not an apparatus timestamp or source replay horizon."
+          },
+          "family_manifest": {
+            "bytes": "24199",
+            "path": "software/xd_ph_matrix_exact/manifest.json",
+            "sha256": "943bd8bbbbae2485a4ffff894cf34dd3afddaf9065b7007b213433e012732f8b"
+          },
+          "geometry": "EMPTY: matrix profile adds no native parenthesized geometry",
+          "leading_role": "parent_numeric",
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "9"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "9"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "9"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "3"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "3",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "3"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Original v14 Fraction dense port-Hamiltonian midpoint, selected sealed SI application and explicit native rational model-clock/cumulative program. Control/address/codec remains native.",
+          "number_domain": "canonical reduced BigRat8192; every reduced intermediate must fit",
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "J"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-MATRIX-APPLICATION-RECIPE/1"
+      },
+      "recipe_sha256": "d54fe203c43ccd73312cc01fe4bcb0f5f8713f3a0e4933affe749d4da831c7f0"
+    },
+    "xd.matrix.voice-coil-nominal.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "195339",
+            "path": "language/xd_ecs_matrix_suite/recipes/PH-VOICE-COIL.boot.json",
+            "sha256": "0f01184aea4c26705be867addc5dbd8cf467886358d1dcd6bbfcdde14968d422"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_matrix_suite/recipes/PH-VOICE-COIL.boot.json",
+        "id": "xd.matrix.voice-coil-nominal.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "3",
+            "dissipation_meaning": "ideal declared resistor/viscous dissipation energy",
+            "parameter_origin": "manufacturer_published_nominals",
+            "profile_id": "PH-VOICE-COIL",
+            "source_profile": {
+              "bytes": "9172",
+              "path": "software/xd_ph_matrix_exact/applications/profiles/PH-VOICE-COIL.json",
+              "sha256": "8c8a6145ee6f89cfd51dad8ef093077cfc75567770b175e593d668e72c0b1df8"
+            },
+            "states": [
+              {
+                "name": "coil_flux",
+                "unit": "Wb"
+              },
+              {
+                "name": "displacement",
+                "unit": "m"
+              },
+              {
+                "name": "momentum",
+                "unit": "kg*m/s"
+              }
+            ]
+          },
+          "calibration": false,
+          "clock": {
+            "kind": "declared_model_time_s",
+            "step_fraction": "1/100000",
+            "unit": "s",
+            "update": "One native rat_add(time,time,h) per accepted eligible tick; not an apparatus timestamp or source replay horizon."
+          },
+          "family_manifest": {
+            "bytes": "24199",
+            "path": "software/xd_ph_matrix_exact/manifest.json",
+            "sha256": "943bd8bbbbae2485a4ffff894cf34dd3afddaf9065b7007b213433e012732f8b"
+          },
+          "geometry": "EMPTY: matrix profile adds no native parenthesized geometry",
+          "leading_role": "parent_numeric",
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "9"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "9"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "9"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "3"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "3",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "3"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Original v14 Fraction dense port-Hamiltonian midpoint, selected sealed SI application and explicit native rational model-clock/cumulative program. Control/address/codec remains native.",
+          "number_domain": "canonical reduced BigRat8192; every reduced intermediate must fit",
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "Wb"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-MATRIX-APPLICATION-RECIPE/1"
+      },
+      "recipe_sha256": "a9e15618679c442749c3c610442208c7e9564f1dd80e55c0aa1b26874ff869b4"
+    },
+    "xd.network.capacitor-coil-mass.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "158412",
+            "path": "language/xd_ecs_power_suite/recipes/capacitor_coil_mass.boot.json",
+            "sha256": "0e5f04aeac77a623a101cd79963ec139cfd73ec90d22f92c663b9657b14f634f"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_power_suite/recipes/capacitor_coil_mass.boot.json",
+        "id": "xd.network.capacitor-coil-mass.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "4",
+            "dissipation_meaning": "declared ideal resistor dissipation energy; no thermal body/temperature is modeled",
+            "parameter_origin": "sealed original-source catalog: nominal H2W coil/mass plus explicitly declared1uF capacitor fixture when present",
+            "profile_id": "capacitor_coil_mass",
+            "states": [
+              {
+                "name": "cap.charge",
+                "unit": "C"
+              },
+              {
+                "name": "coil.flux",
+                "unit": "Wb"
+              },
+              {
+                "name": "mass.position",
+                "unit": "m"
+              },
+              {
+                "name": "mass.momentum",
+                "unit": "kg*m/s"
+              }
+            ]
+          },
+          "calibrated_apparatus": false,
+          "catalog_sha256": "b5267f04e6294a6b62f078aa43de269a7129588e8d80c17064f352b38c653fd3",
+          "clock": {
+            "kind": "declared_model_time_s",
+            "native_register": "86656",
+            "step_source": "native canonical Rat from sealed voice-coil ingress",
+            "unit": "s"
+          },
+          "geometry": "EMPTY: the physical network introduces no parenthesized native geometry",
+          "leading_role": "parent_numeric",
+          "live_physical_switch": false,
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "16"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "16"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "16"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "4"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "4",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "4"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Frozen component-network wheel with separately sealed canonical literal-layout transport; all coefficient assembly and exact physical stepping remain in original v14 matrix WASM. Fixed topology per fresh capability; no live switch or host solver.",
+          "number_domain": "canonical reduced BigRat8192; every intermediate must fit",
+          "plan_sha256": "beafe9fff3e927c8b9874382bffd4a34a937ccbcf919731a6b3f1eaf33933dbf",
+          "prototype_manifest": {
+            "bytes": "10274",
+            "path": "language/xd_physical_networks/manifest.json",
+            "sha256": "06fc103a4af90838fbbfed201ab169f6615448591ef201e994aebd4240f498c4"
+          },
+          "transport_bindings": [
+            {
+              "bytes": "1324",
+              "path": "language/xd_physical_networks_canonical/compiler.mjs",
+              "sha256": "51ca7115b5499a375ab46c6c5858f8d71bd12ae421bb497c4506d685611e2a4d"
+            },
+            {
+              "bytes": "5516",
+              "path": "language/xd_physical_networks_canonical/runtime.mjs",
+              "sha256": "ec6e73792ad44f13f933a842e1e5f9c99c053787ca7470be443f1595a2118f9f"
+            },
+            {
+              "bytes": "7122",
+              "path": "language/xd_physical_networks_canonical/manifest.json",
+              "sha256": "d92f086f86f1026155a33b475529a079f6291db3744acb6358d6d87dd12dc182"
+            }
+          ],
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "C"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-PHYSICAL-NETWORK-RECIPE/1"
+      },
+      "recipe_sha256": "b28e25e34efe123630f2417cd800bc54d385ae8fd907e7fa18fa1c3c631539ff"
+    },
+    "xd.network.capacitor-isolated.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "157298",
+            "path": "language/xd_ecs_power_suite/recipes/capacitor_decoupled.boot.json",
+            "sha256": "c61a4f498d422a7453f71169b7e40f98dba313a0d9cb152f8eb277dc6cc2050d"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_power_suite/recipes/capacitor_decoupled.boot.json",
+        "id": "xd.network.capacitor-isolated.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "4",
+            "dissipation_meaning": "declared ideal resistor dissipation energy; no thermal body/temperature is modeled",
+            "parameter_origin": "sealed original-source catalog: nominal H2W coil/mass plus explicitly declared1uF capacitor fixture when present",
+            "profile_id": "capacitor_decoupled",
+            "states": [
+              {
+                "name": "cap.charge",
+                "unit": "C"
+              },
+              {
+                "name": "coil.flux",
+                "unit": "Wb"
+              },
+              {
+                "name": "mass.position",
+                "unit": "m"
+              },
+              {
+                "name": "mass.momentum",
+                "unit": "kg*m/s"
+              }
+            ]
+          },
+          "calibrated_apparatus": false,
+          "catalog_sha256": "b5267f04e6294a6b62f078aa43de269a7129588e8d80c17064f352b38c653fd3",
+          "clock": {
+            "kind": "declared_model_time_s",
+            "native_register": "86656",
+            "step_source": "native canonical Rat from sealed voice-coil ingress",
+            "unit": "s"
+          },
+          "geometry": "EMPTY: the physical network introduces no parenthesized native geometry",
+          "leading_role": "parent_numeric",
+          "live_physical_switch": false,
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "16"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "16"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "16"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "4"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "4",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "4"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Frozen component-network wheel with separately sealed canonical literal-layout transport; all coefficient assembly and exact physical stepping remain in original v14 matrix WASM. Fixed topology per fresh capability; no live switch or host solver.",
+          "number_domain": "canonical reduced BigRat8192; every intermediate must fit",
+          "plan_sha256": "0efc519d2f121d5e8bbc436c78b3244ea988e3401e2e81bfdecdcb34a069e04c",
+          "prototype_manifest": {
+            "bytes": "10274",
+            "path": "language/xd_physical_networks/manifest.json",
+            "sha256": "06fc103a4af90838fbbfed201ab169f6615448591ef201e994aebd4240f498c4"
+          },
+          "transport_bindings": [
+            {
+              "bytes": "1324",
+              "path": "language/xd_physical_networks_canonical/compiler.mjs",
+              "sha256": "51ca7115b5499a375ab46c6c5858f8d71bd12ae421bb497c4506d685611e2a4d"
+            },
+            {
+              "bytes": "5516",
+              "path": "language/xd_physical_networks_canonical/runtime.mjs",
+              "sha256": "ec6e73792ad44f13f933a842e1e5f9c99c053787ca7470be443f1595a2118f9f"
+            },
+            {
+              "bytes": "7122",
+              "path": "language/xd_physical_networks_canonical/manifest.json",
+              "sha256": "d92f086f86f1026155a33b475529a079f6291db3744acb6358d6d87dd12dc182"
+            }
+          ],
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "C"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-PHYSICAL-NETWORK-RECIPE/1"
+      },
+      "recipe_sha256": "ecd3698727735bedfc0eee38a3e952e208f2242255b126a1bb994a6b18571c05"
+    },
+    "xd.network.voice-coil.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "25136",
+            "path": "software/xd_ph_matrix_exact/native/matrix.wasm",
+            "sha256": "e42078a5b6b0406952e0f69d3623d06423fea60f11f88f72b163435c483b590e"
+          },
+          {
+            "bytes": "150488",
+            "path": "language/xd_ecs_power_suite/recipes/voice_coil.boot.json",
+            "sha256": "c4ae4ace3e291f245e8406c9ee2d1bd21111d7d5fd26003c7e8cf563af42b8c5"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_power_suite/recipes/voice_coil.boot.json",
+        "id": "xd.network.voice-coil.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "application": {
+            "dimension": "3",
+            "dissipation_meaning": "declared ideal resistor dissipation energy; no thermal body/temperature is modeled",
+            "parameter_origin": "sealed original-source catalog: nominal H2W coil/mass plus explicitly declared1uF capacitor fixture when present",
+            "profile_id": "voice_coil",
+            "states": [
+              {
+                "name": "coil.flux",
+                "unit": "Wb"
+              },
+              {
+                "name": "mass.position",
+                "unit": "m"
+              },
+              {
+                "name": "mass.momentum",
+                "unit": "kg*m/s"
+              }
+            ]
+          },
+          "calibrated_apparatus": false,
+          "catalog_sha256": "b5267f04e6294a6b62f078aa43de269a7129588e8d80c17064f352b38c653fd3",
+          "clock": {
+            "kind": "declared_model_time_s",
+            "native_register": "86656",
+            "step_source": "native canonical Rat from sealed voice-coil ingress",
+            "unit": "s"
+          },
+          "geometry": "EMPTY: the physical network introduces no parenthesized native geometry",
+          "leading_role": "parent_numeric",
+          "live_physical_switch": false,
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_layout": {
+            "J": {
+              "offset": "1835008",
+              "records": "9"
+            },
+            "Q": {
+              "offset": "1245184",
+              "records": "9"
+            },
+            "R": {
+              "offset": "2424832",
+              "records": "9"
+            },
+            "forcing": {
+              "offset": "1114112",
+              "records": "3"
+            },
+            "header": {
+              "bytes": "40",
+              "offset": "1048576"
+            },
+            "ledger": {
+              "names": [
+                "Hbefore",
+                "Hafter",
+                "dissipation",
+                "work",
+                "residual"
+              ],
+              "offset": "3211264",
+              "records": "5",
+              "valid_field_offset": "1048596"
+            },
+            "memory_bytes": "8388608",
+            "rat_bytes": "2064",
+            "registers": {
+              "cumulative_dissipation": "90784",
+              "cumulative_work": "92848",
+              "last_dissipation": "94912",
+              "last_work": "96976",
+              "one": "101104",
+              "step_count": "99040",
+              "step_h": "88720",
+              "time": "86656",
+              "zero": "103168"
+            },
+            "solution": {
+              "offset": "3145728",
+              "records": "3",
+              "valid_field_offset": "1048592"
+            },
+            "state": {
+              "offset": "1052672",
+              "records": "3"
+            },
+            "step_h": {
+              "offset": "1179648",
+              "records": "1"
+            }
+          },
+          "native_source_profile_scope": "Frozen component-network wheel with separately sealed canonical literal-layout transport; all coefficient assembly and exact physical stepping remain in original v14 matrix WASM. Fixed topology per fresh capability; no live switch or host solver.",
+          "number_domain": "canonical reduced BigRat8192; every intermediate must fit",
+          "plan_sha256": "39f33f8747e54a9786ccd536d1e3eec3ed4d48eb1622d81d2096cc105e383e62",
+          "prototype_manifest": {
+            "bytes": "10274",
+            "path": "language/xd_physical_networks/manifest.json",
+            "sha256": "06fc103a4af90838fbbfed201ab169f6615448591ef201e994aebd4240f498c4"
+          },
+          "transport_bindings": [
+            {
+              "bytes": "1324",
+              "path": "language/xd_physical_networks_canonical/compiler.mjs",
+              "sha256": "51ca7115b5499a375ab46c6c5858f8d71bd12ae421bb497c4506d685611e2a4d"
+            },
+            {
+              "bytes": "5516",
+              "path": "language/xd_physical_networks_canonical/runtime.mjs",
+              "sha256": "ec6e73792ad44f13f933a842e1e5f9c99c053787ca7470be443f1595a2118f9f"
+            },
+            {
+              "bytes": "7122",
+              "path": "language/xd_physical_networks_canonical/manifest.json",
+              "sha256": "d92f086f86f1026155a33b475529a079f6291db3744acb6358d6d87dd12dc182"
+            }
+          ],
+          "whole_CPU_or_hardware": false
+        },
+        "module": "software/xd_ph_matrix_exact/native/matrix.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "declared_model_time_s",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "Wb"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "1052672"
+          }
+        ],
+        "schema": "XD-PHYSICAL-NETWORK-RECIPE/1"
+      },
+      "recipe_sha256": "59962122818aba0ca8e9d3e007c97c586a1cce1ed86ac9e4badbc5565869d6a9"
+    },
+    "xd.original.events.geometry.physics.data-bit-lut-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "40207",
+            "path": "software/xd_event_geometry_exact/machine/compound.wasm",
+            "sha256": "a7fa27602e63905cbcd89f89f5c7c8c860d92a0a6acd486e361d5cc57805f767"
+          },
+          {
+            "bytes": "27624",
+            "path": "language/xd_ecs_source_suite/source_boot.json",
+            "sha256": "2b5db8df8a44190d2b055e47cd061930dff4017b5bf8fff9c8d4cd15e9f0094e"
+          }
+        ],
+        "boot_resource": "language/xd_ecs_source_suite/source_boot.json",
+        "id": "xd.original.events.geometry.physics.data-bit-lut-v1",
+        "input": null,
+        "memory_bytes": "8388608",
+        "metadata": {
+          "initialization": "Source base literals only, native replay0; future payloads arrive online.",
+          "leading_role": "parent_numeric",
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_source_profile_scope": "Bounded original v15 tagged events, full regular-closed3D geometry/n2 parity/UTF32 assignments and unchanged exact coupled replay. Native control/address/codec/transport remains explicit.",
+          "number_domain": "canonical BigRat8192; full bounded Python UTF32 codepoints; signed64 versions/unsigned64 activation",
+          "parent_profile": "xd.physics.rational8192.bit-data-v1",
+          "source_family_manifest": {
+            "bytes": "27051",
+            "path": "software/xd_event_geometry_exact/manifest.json",
+            "sha256": "9e0c93fffaa88c56c1dffc3a5b0edc248464b63be74d3ef00afda0800648fac9"
+          },
+          "source_module_sha256": "a7fa27602e63905cbcd89f89f5c7c8c860d92a0a6acd486e361d5cc57805f767",
+          "whole_CPU_or_physical_calibration": false
+        },
+        "module": "software/xd_event_geometry_exact/machine/compound.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "source_model_time",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "declared_model.displacement"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "4096"
+          }
+        ],
+        "schema": "XD-SOURCE-WHEEL-RECIPE/1"
+      },
+      "recipe_sha256": "092a160c0fec9918ba384f5bca58e6055bc450c94225fd94417a802e836ebd9f"
+    },
+    "xd.parent.parity6.native-v1": {
+      "frame_bytes": "31",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "9412",
+            "path": "software/xd_lut_machine/machine.wasm",
+            "sha256": "ad77e0056a21f8a6d77c70785bf65ca93853b660c7bb59922f5c666f758cd597"
+          }
+        ],
+        "id": "xd.parent.parity6.native-v1",
+        "initialize": [
+          {
+            "accept": [
+              "void"
+            ],
+            "args": [],
+            "export": "reset",
+            "op": "call"
+          }
+        ],
+        "memory_bytes": "1048576",
+        "metadata": {
+          "leading_role": "leading_XD_controller_native_profile",
+          "lowering": "native_packed_onebit_LUT_parity",
+          "model": "XD-TAU",
+          "native_source_profile_scope": "Leading retained XD transaction controller executes original sixvertex45XOR parity kernel on a fixed actual admitted72bit fixture; not every XD geometry/CRDT/physics operator.",
+          "number_domain": "original_packed72inputs_15Qbits",
+          "physical_measurement": false,
+          "scheduling": "One explicit input-patch transaction then one committed-code invocation transaction per recipe event; both receipts acknowledged. Retained117wirebits remain in projectedframe.",
+          "source_fixture": {
+            "encoding": "source integer hex to little-endian packed memory bytes",
+            "input_hex": "000000000000000002",
+            "input_memory_hex": "020000000000000000",
+            "output_hex": "0001",
+            "output_memory_hex": "0100"
+          },
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/xd_lut_machine/machine.wasm",
+        "output": {
+          "bits": "15",
+          "clock": "logical_n",
+          "offset": "0",
+          "type": "XD.parity6.Q15",
+          "unit": "1"
+        },
+        "projection": [
+          {
+            "bytes": "31",
+            "offset": "24832"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "hex": "020000000000000000",
+            "offset": "524288",
+            "op": "write"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [
+              {
+                "memory": "4128",
+                "type": "i64"
+              },
+              {
+                "literal": "0",
+                "type": "i32"
+              },
+              {
+                "literal": "0",
+                "type": "i32"
+              }
+            ],
+            "export": "enqueue",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [],
+            "export": "begin",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [
+              {
+                "literal": "4",
+                "type": "i32"
+              },
+              {
+                "literal": "0",
+                "type": "i32"
+              },
+              {
+                "literal": "9",
+                "type": "i32"
+              }
+            ],
+            "export": "stage_patch",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [],
+            "export": "validate",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [],
+            "export": "commit",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [
+              {
+                "memory": "38656",
+                "type": "i64"
+              }
+            ],
+            "export": "ack_outbox",
+            "op": "call"
+          },
+          {
+            "hex": "00000000",
+            "offset": "524288",
+            "op": "write"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [
+              {
+                "memory": "4128",
+                "type": "i64"
+              },
+              {
+                "literal": "1",
+                "type": "i32"
+              },
+              {
+                "literal": "4",
+                "type": "i32"
+              }
+            ],
+            "export": "enqueue",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [],
+            "export": "begin",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [
+              {
+                "literal": "0",
+                "type": "i32"
+              }
+            ],
+            "export": "run_candidate",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [],
+            "export": "validate",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [],
+            "export": "commit",
+            "op": "call"
+          },
+          {
+            "accept": [
+              "1"
+            ],
+            "args": [
+              {
+                "memory": "38656",
+                "type": "i64"
+              }
+            ],
+            "export": "ack_outbox",
+            "op": "call"
+          }
+        ]
+      },
+      "recipe_sha256": "572c1f256e8503dad79625c789ab0c2879c5ad1227d9ca6353eafaebdb46a450"
+    },
+    "xd.physics.rational8192.bit-data-v1": {
+      "frame_bytes": "2064",
+      "onebit_data": true,
+      "recipe": {
+        "bindings": [
+          {
+            "bytes": "20353",
+            "path": "software/xd_rational_bit_exact/physics.wasm",
+            "sha256": "a311aea3fcdabf9ed0538fd25591d7143f0764cfe0bff677de5337e9bf5b4d0b"
+          },
+          {
+            "bytes": "1048576",
+            "path": "software/xd_rational_bit_exact/default_profile.memory.bin",
+            "sha256": "07e6a24a8a5f977ceb46977b90417c39764045c716828c8319452406e122c606"
+          }
+        ],
+        "id": "xd.physics.rational8192.bit-data-v1",
+        "initialize": [
+          {
+            "bytes": "1048576",
+            "offset": "0",
+            "op": "resource_write",
+            "resource": "software/xd_rational_bit_exact/default_profile.memory.bin"
+          }
+        ],
+        "input": {
+          "bits": "16512",
+          "bytes": "2064",
+          "clock": "source_model_time",
+          "offset": "32992",
+          "type": "canonical_BigRat8192",
+          "unit": "declared_model.force"
+        },
+        "memory_bytes": "1048576",
+        "metadata": {
+          "bit_data_producer": {
+            "bytes": "15890",
+            "path": "software/xd_rational_bit_exact/manifest.json",
+            "sha256": "494cd10cf1c169e8e2e9ed0c134b8add76bf9a96f42ccc0881d8e8f7153de5ac"
+          },
+          "fixed_coupling_source": "unchanged original base_profile cube sampled response3/9 and parity0; actualgeometry/CRDT not ported",
+          "initial_state_source": "unchanged original initial_physics() and base_profile().assignments",
+          "leading_role": "leading_XD_native_numeric_operator_profile",
+          "lowering": "computational_data_bit_LUT",
+          "model": "XD-TAU",
+          "native_clock": {
+            "meaning": "original discrete model time; no apparatus timing/calibration claim",
+            "step_h": [
+              "1",
+              "5"
+            ],
+            "step_h_cell": "17",
+            "tick_offset": "8",
+            "tick_type": "u64",
+            "time_cell": "8",
+            "unit": "declared_model.time"
+          },
+          "native_source_profile_scope": "Exact bounded original discrete numeric model; computational DATA bit-LUT lowered in a separately sealed backend. Native control/address/index/packing remains. No continuum, empirical device, wholeCPU or fullgeometry/CRDT port claim.",
+          "number_domain": "canonical_BigRat8192_checked_intermediates16400",
+          "parent_profile": "xd.physics.rational8192.source-base-v1",
+          "parent_profile_sha256": "35757e4853becc6ef202c917c3ce07c74836ccd0071b9023f68894fc30f0da39",
+          "physical_measurement": false,
+          "whole_suite_one_bit_complete": false
+        },
+        "module": "software/xd_rational_bit_exact/physics.wasm",
+        "output": {
+          "bits": "16512",
+          "clock": "source_model_time",
+          "offset": "0",
+          "type": "canonical_BigRat8192",
+          "unit": "declared_model.displacement"
+        },
+        "projection": [
+          {
+            "bytes": "2064",
+            "offset": "4096"
+          }
+        ],
+        "schema": "XD-KERNEL-RECIPE/1",
+        "step": [
+          {
+            "accept": [
+              "0"
+            ],
+            "args": [
+              {
+                "literal": "0",
+                "type": "i32"
+              },
+              {
+                "literal": "32",
+                "type": "i32"
+              },
+              {
+                "literal": "13",
+                "type": "i32"
+              },
+              {
+                "literal": "3",
+                "type": "i32"
+              },
+              {
+                "literal": "0",
+                "type": "i32"
+              }
+            ],
+            "export": "coupled",
+            "op": "call"
+          },
+          {
+            "bytes": "26832",
+            "from": "70144",
+            "op": "copy",
+            "to": "4096"
+          }
+        ]
+      },
+      "recipe_sha256": "3f2b1b09428434647fd5c2e74b1d316b525fa47fb94a9e944c70c879c23b0e4d"
+    },
+    "tomgrok.async-hop-machine.data-bit-lut-v1": {
+      "recipe": {
+        "schema": "XD-HOP-MACHINE-RECIPE/1",
+        "id": "tomgrok.async-hop-machine.data-bit-lut-v1",
+        "modules": {
+          "pinion": "software/tomgrok_pinion_world_exact/native/pinion_world.wasm",
+          "protocol": "software/tomgrok_hoprounds_native_exact/native/hop.wasm",
+          "tape": "software/tomgrok_tape_exact/native/tape.wasm"
+        },
+        "memory_bytes": {
+          "protocol": "335544320",
+          "pinion": "131072",
+          "tape": "33554432"
+        },
+        "boot_resource": "language/xd_ecs_hop_suite/recipes/hop-environment.boot.json",
+        "bindings": [
+          {
+            "path": "software/tomgrok_hoprounds_native_exact/native/hop.wasm",
+            "sha256": "ab0d9dcfd42f5ba7f38d34a335fad1044a9e5c1cd88478daf8813fb6b7be97c7",
+            "bytes": "7404"
+          },
+          {
+            "path": "software/tomgrok_pinion_world_exact/native/pinion_world.wasm",
+            "sha256": "82003cc296ef3c6582f8c9f3fbd13fb83518a948d674d537279e30379051d690",
+            "bytes": "14912"
+          },
+          {
+            "path": "software/tomgrok_tape_exact/native/tape.wasm",
+            "sha256": "403ca173797e095b7f6182f10b5e966154ef4e8362bccdba9ccb8f8123503f89",
+            "bytes": "6525"
+          },
+          {
+            "path": "language/xd_ecs_hop_suite/recipes/hop-environment.boot.json",
+            "sha256": "9140c4cfeed5526e689e459a52a521f3210a66be35c75f268c60c110cada7f77",
+            "bytes": "74519"
+          }
+        ],
+        "projection": [
+          {
+            "offset": "0",
+            "bytes": "32"
+          }
+        ],
+        "output": {
+          "offset": "0",
+          "bits": "256",
+          "type": "TOM-GROK.AsyncHopMachine.control.u256",
+          "unit": "1",
+          "clock": "logical_n"
+        },
+        "input": null,
+        "metadata": {
+          "model": "TOM-GROK",
+          "leading_role": "contained",
+          "program": "source_async_hop_machine",
+          "lowering": "computational_data_bit_LUT",
+          "family_sha256": "7b1a28d0f4954d2f9944943810868bf438145a4c2c82a369265fc96fe5056871",
+          "family": {
+            "path": "software/tomgrok_hoprounds_native_exact/manifest.json",
+            "sha256": "7b1a28d0f4954d2f9944943810868bf438145a4c2c82a369265fc96fe5056871",
+            "bytes": "66796"
+          },
+          "native_layout": {
+            "protocol": {
+              "schema": "TOMGROK-HOPROUNDS-NATIVE-LAYOUT/1",
+              "layout_sha256": "bc9a4dc021b8d55ea33e1302abcb92a22e938307c138ce54be339c03fd39d496",
+              "memory_bytes": "335544320",
+              "header": {
+                "offset": "0",
+                "bytes": "256",
+                "max_rounds": "8",
+                "member_count": "12",
+                "round": "16",
+                "text_used_bytes": "20",
+                "pending_slots": "24",
+                "accepted_slots": "28",
+                "failed_kind": "32",
+                "failed_units": "36",
+                "failed_truthy": "40",
+                "phase": "44"
+              },
+              "members": {
+                "offset": "8192",
+                "stride": "64",
+                "max": "16"
+              },
+              "slot_index": {
+                "offset": "1048576",
+                "records": "1048576",
+                "stride": "16",
+                "bytes": "16777216"
+              },
+              "arena": {
+                "offset": "33554432",
+                "bytes": "268435456"
+              },
+              "failed_text": {
+                "offset": "393216",
+                "units": "65536"
+              },
+              "staging": {
+                "canonical": "131072",
+                "error": "262144",
+                "bytes": "131072"
+              },
+              "source_limits": {
+                "members": "16",
+                "member_ASCII_bytes": "48",
+                "max_rounds": "65536",
+                "future_window": "64",
+                "canonical_UTF16_units": "65536"
+              }
+            },
+            "machine": {
+              "pinion": {
+                "schema": "TOMGROK-PINION-WORLD-NATIVE-LAYOUT/1",
+                "memory_bytes": "131072",
+                "memory_pages": "2",
+                "legacy": {
+                  "header": "0",
+                  "genes": "24",
+                  "state": "256",
+                  "state_max_bytes": "400",
+                  "genes_input": "768",
+                  "world": "1024",
+                  "world_max_bytes": "17408",
+                  "trace": "20480",
+                  "trace_bytes": "32",
+                  "checkpoint_output": "21000",
+                  "checkpoint_max_bytes": "416",
+                  "candidate_world": "40000",
+                  "candidate_overlay": "58000",
+                  "overlay_max_bytes": "384",
+                  "lut_workspace": "60000",
+                  "lut_workspace_bytes": "1024"
+                },
+                "constructor_header": {
+                  "offset": "65536",
+                  "bytes": "64",
+                  "ready": "65536",
+                  "width": "65540",
+                  "height": "65544",
+                  "radius": "65548",
+                  "center": "65552",
+                  "N": "65556",
+                  "status": "65560",
+                  "max_distance": "65564"
+                },
+                "dc": {
+                  "offset": "65792",
+                  "lanes": "256",
+                  "lane_bytes": "4"
+                },
+                "bd": {
+                  "offset": "66816",
+                  "lanes": "256",
+                  "lane_bytes": "4"
+                },
+                "sign": {
+                  "offset": "67840",
+                  "lanes": "256",
+                  "lane_bytes": "4"
+                },
+                "axes": {
+                  "offset": "68864",
+                  "lanes": "512",
+                  "lane_bytes": "4"
+                },
+                "ip": {
+                  "offset": "70912",
+                  "lanes": "256",
+                  "lane_bytes": "4"
+                },
+                "queue": {
+                  "offset": "71936",
+                  "lanes": "256",
+                  "lane_bytes": "4"
+                },
+                "dc_order": {
+                  "offset": "72960",
+                  "lanes": "256",
+                  "lane_bytes": "4"
+                },
+                "sort_work": {
+                  "offset": "73984",
+                  "lanes": "256",
+                  "lane_bytes": "4"
+                },
+                "checkpoint_input": {
+                  "offset": "81920",
+                  "max_bytes": "416"
+                },
+                "construction_defaults": {
+                  "turns": [
+                    "11",
+                    "53",
+                    "137"
+                  ],
+                  "authority": "literal published default environment; independent of supplied live turns/gains"
+                },
+                "new_status": {
+                  "OK": "0",
+                  "CODE": "12",
+                  "WORLD_ARGUMENTS": "13",
+                  "RADIUS": "14",
+                  "FIELD": "15",
+                  "LIVE": "16",
+                  "GENES": "17",
+                  "CHECKPOINT": "18",
+                  "PHASE": "19"
+                },
+                "new_exports": {
+                  "initialize": "0",
+                  "reset_all": "0",
+                  "world_build": "4",
+                  "pinion_fresh": "3",
+                  "pinion_construct": "7",
+                  "pinion_restore": "1"
+                },
+                "start_function": null,
+                "atomicity": "new constructor executes source world and live installation natively; lowlevel failures may alter work/staging, outer runtime discards whole private candidate",
+                "whole_CPU_or_hardware": false
+              },
+              "tape": {
+                "memory_bytes": "33554432",
+                "header": {
+                  "offset": "0",
+                  "bytes": "40",
+                  "q": "0",
+                  "head_offset": "4",
+                  "tick": "8",
+                  "device_status": "12",
+                  "states": "16",
+                  "halt": "20",
+                  "rule_count": "24",
+                  "phase": "28",
+                  "trace_count": "32",
+                  "source_status": "36"
+                },
+                "abi_identity": {
+                  "offset": "40",
+                  "bytes": "4"
+                },
+                "phase": {
+                  "empty": "0",
+                  "fresh_loader": "1",
+                  "genes_loader": "2",
+                  "executable": "3"
+                },
+                "cells": {
+                  "offset": "4096",
+                  "lanes": "4096",
+                  "lane_bytes": "4",
+                  "signed_origin": "-2048"
+                },
+                "fresh_cell_seen": {
+                  "offset": "24576",
+                  "bytes": "4096"
+                },
+                "trace": {
+                  "offset": "65536",
+                  "rows": "4096",
+                  "row_bytes": "16",
+                  "fields": [
+                    "q",
+                    "signed_head",
+                    "write_byte",
+                    "tick"
+                  ]
+                },
+                "rules": {
+                  "offset": "1048576",
+                  "rows": "1048576",
+                  "row_bytes": "12",
+                  "fields": [
+                    "write_byte",
+                    "signed_move",
+                    "next_q"
+                  ],
+                  "missing_next_q": "4294967295"
+                },
+                "rule_order": {
+                  "offset": "13631488",
+                  "entries": "1048576",
+                  "entry_bytes": "4"
+                },
+                "source_status": {
+                  "READY": "0",
+                  "ACCEPT": "1",
+                  "HALT": "2",
+                  "INVALID": "3",
+                  "DEFER": "4"
+                },
+                "device_status": {
+                  "ACCEPT": "0",
+                  "HALT": "1",
+                  "INVALID": "2",
+                  "DEFER": "3"
+                },
+                "lut_workspace": {
+                  "offset": "33488896",
+                  "bytes": "1024",
+                  "identity_offset": "33489024",
+                  "identity_bytes": "12"
+                }
+              },
+              "projection": {
+                "bytes": "8",
+                "value_offset": "0",
+                "role_tag_offset": "4",
+                "role_tags": {
+                  "pinion": "0",
+                  "tape": "1"
+                },
+                "native_value_offsets": {
+                  "pinion": "256",
+                  "tape": "0"
+                }
+              },
+              "active_memory_bytes": {
+                "pinion": "131072",
+                "tape": "33554432"
+              }
+            },
+            "projection": {
+              "bytes": "32",
+              "lanes": {
+                "machine_value": "0",
+                "role": "4",
+                "round": "8",
+                "pending_slots": "12",
+                "accepted_slots": "16",
+                "failed_kind": "20",
+                "failed_truthy": "24",
+                "last_receive_outcome": "28"
+              },
+              "role_tags": {
+                "pinion": "0",
+                "tape": "1"
+              },
+              "outcome_tags": {
+                "none": "0",
+                "return": "1",
+                "source_throw": "2"
+              }
+            },
+            "banks": {
+              "protocol": "335544320",
+              "machine": {
+                "pinion": "131072",
+                "tape": "33554432"
+              }
+            },
+            "transport": "read() concatenates protocol then active Machine for integrity only; these remain two separate native memories"
+          },
+          "geometry": "EMPTY",
+          "initialization": {
+            "schema": "XD-HOP-INITIALIZATION/1",
+            "required": true,
+            "keys": [
+              "members",
+              "max_rounds",
+              "checkpoint_resource"
+            ],
+            "policy": "Per-component source data, retained and hashed separately from this generic code/environment recipe; native constructor validates full finite Machine checkpoints."
+          },
+          "native_source_profile_scope": "Original AsyncHopRounds with CPU Machine callback, dense immutable JSON, complete canonical texts and literal source outcomes. Both original native model roles and full constructor domain remain available; no compiler solver.",
+          "number_domain": "Exact source finite word/native domains; source packet metadata follows original finite IEEE754 JSON/canonical spelling through an opaque typed byte resource.",
+          "host": {
+            "node": "v24.22.1",
+            "v8": "13.6.233.17-node.58"
+          },
+          "clock": {
+            "kind": "logical_n",
+            "meaning": "Parent sampling; source protocol round, callback attempts and native Machine clocks are separately observed.",
+            "apparatus_time": false
+          },
+          "source_errors_are_typed_outcomes": true,
+          "deployment_errors_abort_outer_candidate": true,
+          "full_source_constructor": true,
+          "preloaded_full_Tape_checkpoint": true,
+          "original_AsyncHopRounds": true,
+          "original_Machine_dispatcher": true,
+          "no_delivery_context_is_noop": true,
+          "physical_hardware_or_calibration": false,
+          "whole_CPU": false
+        }
+      },
+      "recipe_sha256": "6884cf27b27b860aaa4cb28cc786eaad8ab64950ca5245250604267f9c313f25",
+      "frame_bytes": "32",
+      "onebit_data": true
+    }
+  },
+  "ancillary": [
+    {
+      "path": "software/xd_lut_machine/machine.wasm",
+      "sha256": "ad77e0056a21f8a6d77c70785bf65ca93853b660c7bb59922f5c666f758cd597"
+    },
+    {
+      "path": "software/bit_lut_arithmetic/bit_lut.wasm",
+      "sha256": "e4fe236986827940f0f2a7e7a3cf98f36a748feaf6219db5098963ae7b799822"
+    },
+    {
+      "bytes": "15209",
+      "path": "software/tomgrok_tape_exact/runtime/tape_runtime.mjs",
+      "sha256": "ba19b7c921b056d62be216a7cd66e324dff27670c51feb07a6dc104e9689e061"
+    },
+    {
+      "bytes": "279",
+      "path": "software/tomgrok_tape_exact/runtime/boot.mjs",
+      "sha256": "45f4427e8fc0b184c502fd70411f8a2538e33f659c6dd4bcdabe5790cdb2c401"
+    },
+    {
+      "bytes": "17434",
+      "path": "software/tomgrok_tape_exact/runtime/resources.json",
+      "sha256": "266ca3d741711a501bb477f40ed9e9cd9e57b8e2066a9dc0e9bf0defa806041e"
+    },
+    {
+      "bytes": "18691",
+      "path": "software/tomgrok_tape_exact/manifest.json",
+      "sha256": "eba0818bb2ea1ccc2655c67918327274ccdbe24df4e54d813adfae1519828ed9"
+    },
+    {
+      "bytes": "1562",
+      "path": "software/tomgrok_tape_exact/native/layout.json",
+      "sha256": "e2f6cee8d3549b1796e27d9b3d2f38326cb68feea97d01617d3ce4d644710125"
+    },
+    {
+      "bytes": "12752",
+      "path": "software/tomgrok_tape_exact/contracts/source_contract.json",
+      "sha256": "e3a2d9756ca7af0b4ca7b681b36e4ec89e1d3306226762b12630d3f8af95615c"
+    },
+    {
+      "bytes": "14501",
+      "path": "software/tomgrok_pinion_world_exact/runtime/pinion_runtime.mjs",
+      "sha256": "ac40f1ea58f33510101178c90d15abcd1d355a3cb8d2b1747178e22e77c3ddb2"
+    },
+    {
+      "bytes": "7221",
+      "path": "software/tomgrok_pinion_world_exact/runtime/machine_runtime.mjs",
+      "sha256": "465fcd14554b2f1891cba55515ebe088d49f99624001b1cfbd51a4da4b1c9014"
+    },
+    {
+      "bytes": "365",
+      "path": "software/tomgrok_pinion_world_exact/runtime/boot.mjs",
+      "sha256": "5aa994c4bc3c1073e1282a5ddd5f190041bb2e7bf740e16866999bef9fa83402"
+    },
+    {
+      "bytes": "35132",
+      "path": "software/tomgrok_pinion_world_exact/runtime/resources.json",
+      "sha256": "63d008ac9f32c39dd8398b8395334db24df61b1a1384e020b6d1c35941e70a8d"
+    },
+    {
+      "bytes": "53335",
+      "path": "software/tomgrok_pinion_world_exact/runtime/machine_resources.json",
+      "sha256": "35c8c02d48e3062daa0538543409e46014b68bf0ff4dcccd0293e6e4fa41ad8a"
+    },
+    {
+      "bytes": "24931",
+      "path": "software/tomgrok_pinion_world_exact/manifest.json",
+      "sha256": "c2704bd9d37d96f15bc3465ad665cea3d82ce5211249a8e71dadc2596f91f23f"
+    },
+    {
+      "bytes": "21408",
+      "path": "software/tomgrok_pinion_world_exact/reference/verification.json",
+      "sha256": "b878cec9e8ef67180490528402261ac0e1e16ccdc93a38448ccfa0f262c7bafb"
+    },
+    {
+      "bytes": "1738",
+      "path": "software/tomgrok_pinion_world_exact/native/layout.json",
+      "sha256": "df832e123eda2d24647ab85b59916688946c4737f98bd95780658a678dcb20ca"
+    },
+    {
+      "bytes": "9798",
+      "path": "software/tomgrok_pinion_world_exact/contracts/source_contract.json",
+      "sha256": "4302602e11caf85da30e43a044ecf737e15ecb8352dd7a60fa9e6a4b83fabffd"
+    },
+    {
+      "path": "software/tomgrok_hoprounds_native_exact/manifest.json",
+      "sha256": "7b1a28d0f4954d2f9944943810868bf438145a4c2c82a369265fc96fe5056871",
+      "bytes": "66796"
+    },
+    {
+      "path": "software/tomgrok_hoprounds_native_exact/native/layout.json",
+      "sha256": "bc9a4dc021b8d55ea33e1302abcb92a22e938307c138ce54be339c03fd39d496",
+      "bytes": "2745"
+    },
+    {
+      "path": "software/tomgrok_hoprounds_native_exact/runtime/codec.mjs",
+      "sha256": "bbdc2382d5bb21649f595379bd5b36495d61f38decddf29fa1abbbbb533e37dd",
+      "bytes": "10351"
+    },
+    {
+      "path": "software/tomgrok_hoprounds_native_exact/runtime/source_error.mjs",
+      "sha256": "35661cfa66775b3bf0f7042902b5dae2db1847468236f3189585e8301e8ec364",
+      "bytes": "16198"
+    },
+    {
+      "path": "language/xd_ecs_hop_suite/runtime/hop_runtime.mjs",
+      "sha256": "d3aeb7c0f0302f5a07d31019802ce91b3fde53a847d664a5faee8598f5afd7c5",
+      "bytes": "22130"
+    },
+    {
+      "path": "language/xd_ecs_hop_suite/runtime/machine_callback.mjs",
+      "sha256": "bd9221cdad03128b35ffca42fff8b6e1b702446767a675724c96d517c9cba023",
+      "bytes": "9288"
+    },
+    {
+      "path": "language/xd_ecs_hop_suite/runtime/machine_hop.mjs",
+      "sha256": "c2d24a40ff80c2b63087ec12b3fc028b94124199f3df19f40309faab61b77867",
+      "bytes": "4941"
+    },
+    {
+      "path": "language/xd_ecs_hop_suite/runtime/build_copy_runtime.mjs",
+      "sha256": "ab48eea2feba7099dea69cb0386cb046da057049c0c41c058e610227fad65072",
+      "bytes": "6707"
+    },
+    {
+      "path": "language/xd_ecs_hop_suite/runtime/copy_source_derivation.json",
+      "sha256": "260d9eadd8b35828d92e8e76619b1a9621e73f59194ce5c6fd0616ae15f507d0",
+      "bytes": "7185"
+    },
+    {
+      "path": "language/xd_ecs_hop_suite/runtime/copy_verification.json",
+      "sha256": "9bfb14b96dde99883d3f248930b66e5c73e8847d2eb2e51a3a18c88e7ac86845",
+      "bytes": "3092"
+    }
+  ],
+  "claim_scope": "Twenty-two canonically unchanged capabilities plus one generic contained TOM-GROK AsyncHopRounds+CPU Machine type. Constructor source data is explicit per instance; protocol/model clocks and source-error outcomes remain distinct. New parent execution/independent admission is a separate gate; full CPU/hardware/universal closure remains unclaimed."
+}

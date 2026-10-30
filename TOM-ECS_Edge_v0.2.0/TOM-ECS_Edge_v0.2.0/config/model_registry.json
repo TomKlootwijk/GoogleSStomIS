@@ -1,0 +1,101 @@
+{
+  "schema": "TOM-ECS-SOURCE-REGISTRY/1",
+  "account": "c0mbatduckzz",
+  "profile_url": "https://huggingface.co/c0mbatduckzz",
+  "discovery": "public live Hugging Face API",
+  "models": 8,
+  "datasets": 2,
+  "repositories": [
+    {
+      "repo_id": "c0mbatduckzz/TOMK",
+      "repo_type": "model",
+      "revision": "0febbaa1ea0df9a80eea6d7e45f75b652d39fa84",
+      "url": "https://huggingface.co/c0mbatduckzz/TOMK",
+      "license": "mit",
+      "file_count": 659,
+      "total_known_file_bytes": 392404115
+    },
+    {
+      "repo_id": "c0mbatduckzz/TOM-GROK",
+      "repo_type": "model",
+      "revision": "c9f0959233861726d1d7695fef8206f0d6d949e5",
+      "url": "https://huggingface.co/c0mbatduckzz/TOM-GROK",
+      "license": null,
+      "file_count": 58,
+      "total_known_file_bytes": 9029290
+    },
+    {
+      "repo_id": "c0mbatduckzz/Maktub-Tom-Klootwijk",
+      "repo_type": "model",
+      "revision": "902a80294f03f4b5d749c5272bf915be23585932",
+      "url": "https://huggingface.co/c0mbatduckzz/Maktub-Tom-Klootwijk",
+      "license": null,
+      "file_count": 20,
+      "total_known_file_bytes": 5552567
+    },
+    {
+      "repo_id": "c0mbatduckzz/TOM-MAKTUBIII",
+      "repo_type": "model",
+      "revision": "c5c90db368f09aa08ae1cd0d4c7c922f528075b6",
+      "url": "https://huggingface.co/c0mbatduckzz/TOM-MAKTUBIII",
+      "license": null,
+      "file_count": 27,
+      "total_known_file_bytes": 567662
+    },
+    {
+      "repo_id": "c0mbatduckzz/XD-TAU-JKT",
+      "repo_type": "model",
+      "revision": "55b94a067a11e8e65a3ad9f59cbfb3c2d85005ec",
+      "url": "https://huggingface.co/c0mbatduckzz/XD-TAU-JKT",
+      "license": null,
+      "file_count": 3,
+      "total_known_file_bytes": 5299010
+    },
+    {
+      "repo_id": "c0mbatduckzz/JTK-Twin-Viper",
+      "repo_type": "model",
+      "revision": "ad10a7a5083e3705118ede04c4b8dd24f665ec08",
+      "url": "https://huggingface.co/c0mbatduckzz/JTK-Twin-Viper",
+      "license": "other",
+      "file_count": 47,
+      "total_known_file_bytes": 43895619
+    },
+    {
+      "repo_id": "c0mbatduckzz/TK-MK-ULTRA",
+      "repo_type": "model",
+      "revision": "e78ede7d418effa3c912e9925493d55615c6adb1",
+      "url": "https://huggingface.co/c0mbatduckzz/TK-MK-ULTRA",
+      "license": "other",
+      "file_count": 57,
+      "total_known_file_bytes": 7500513
+    },
+    {
+      "repo_id": "c0mbatduckzz/TNOMTOM",
+      "repo_type": "model",
+      "revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+      "url": "https://huggingface.co/c0mbatduckzz/TNOMTOM",
+      "license": null,
+      "file_count": 6728,
+      "total_known_file_bytes": 14185694025
+    },
+    {
+      "repo_id": "c0mbatduckzz/TK-SROK-NL942-19900710",
+      "repo_type": "dataset",
+      "revision": "1666dfa264b47fcaf1f6d3d172219fca11245bc7",
+      "url": "https://huggingface.co/datasets/c0mbatduckzz/TK-SROK-NL942-19900710",
+      "license": null,
+      "file_count": 51,
+      "total_known_file_bytes": 2395678
+    },
+    {
+      "repo_id": "c0mbatduckzz/TOM-GROK",
+      "repo_type": "dataset",
+      "revision": "e6f4dd28d6068514e8943cc7f4be76801c1ddfd3",
+      "url": "https://huggingface.co/datasets/c0mbatduckzz/TOM-GROK",
+      "license": null,
+      "file_count": 64,
+      "total_known_file_bytes": 9220618
+    }
+  ],
+  "execution_notice": "Repository inventory is separate from admitted native profile support; see native_modules/README.md and provenance/huggingface/audit.md."
+}

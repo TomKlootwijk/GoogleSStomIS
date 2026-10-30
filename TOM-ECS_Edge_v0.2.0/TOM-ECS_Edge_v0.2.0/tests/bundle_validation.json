@@ -1,0 +1,405 @@
+{
+  "status": "passed",
+  "checks": 79,
+  "scope": "native parser framing, rehashed semantic adversaries, source failure and lifecycle summaries",
+  "baseline_state_sha256": "679e56fe867a139e4acdd34c6c50b30dae5a4d9c0e8e644dbaf227a882df27fa",
+  "cases": [
+    {
+      "name": "baseline source-backed execution",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "empty input",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "truncated header",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "bad magic with valid root hash",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "major version",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "minor version",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "header size",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "declared length",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "zero directory count",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "huge directory count",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "directory stride",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "header reserved",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "root checksum corruption",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "payload mutation with recomputed root only",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "unknown section type",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "duplicate section",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "unknown section flags",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "overlapping section",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "huge section offset",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "huge section length",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "opaque section count",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "record dimensions",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "trailing bytes",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "missing required configuration",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "missing paired LUT mask",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "opaque metadata is not parsed or executed",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "zero entities capacity",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "entity capacity bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "component minimum",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "component bitset bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "zero event capacity",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "event capacity bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "zero source capacity",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "source capacity bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "unknown capabilities",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "event work bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "operation work bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "config reserved",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "insufficient event budget",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "insufficient operation budget",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "capability-denied events produce rejection receipts",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "non-dense entity slot",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "zero entity generation",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "entity flags",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "entity reserved",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "zero rule version",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "rule reserved",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "component unknown entity",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "component slot overflow",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "component reserved",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "duplicate component rows",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "source ids not dense",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "reordered binary events rejected",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "duplicate ordered event key",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "event beyond frontier",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "unknown event source",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "source epoch mismatch",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "event entity capacity bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "zero event generation",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "unknown event opcode",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "event component overflow",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "event reserved flags",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "stale generation retained as rejected event",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "original source instruction failure is transactional",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "TOMAGI version",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "TOMAGI huge cell count",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "TOMAGI entry bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "TOMAGI reserved",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "TOMAGI unknown opcode",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "TOMAGI successor bound",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "TOMAGI truncated payload",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "LUT asymmetric but correctly hashed",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "native binding unavailable index",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "native binding wrong profile fingerprint",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "native binding reserved bits",
+      "passed": true,
+      "accepted": false
+    },
+    {
+      "name": "authoring permutation yields identical package bytes",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "summary follows new entity generation",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "summary includes dynamically spawned entity",
+      "passed": true,
+      "accepted": true
+    },
+    {
+      "name": "partial TOMAGI state does not invalidate successful publication",
+      "passed": true,
+      "accepted": true
+    }
+  ],
+  "android_execution": false,
+  "fuzzing_claim": "finite explicit adversaries; not exhaustive fuzzing"
+}

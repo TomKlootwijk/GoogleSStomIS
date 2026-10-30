@@ -1,0 +1,63 @@
+{
+  "validation_date": "2026-10-30",
+  "host": "Linux x86_64",
+  "core_cmake_build": true,
+  "core_ctest_passed": true,
+  "hf_offline_boundary_tests_passed": 7,
+  "hf_public_inventory_api_test": {
+    "namespace": "ggml-org",
+    "test_scope_only_not_user_account": true,
+    "entries": 2,
+    "truncation_reported_correctly": true
+  },
+  "hf_exact_file_stage_test": {
+    "repository": "ggml-org/tiny-llamas",
+    "revision": "def3e2dd70df35ecbf6403ea347de4c5977220c1",
+    "filename": "stories260K.gguf",
+    "bytes": 1185376,
+    "sha256": "047bf46455a544931cff6fef14d7910154c56afbc23ab1c5e56a72e69912c04b",
+    "server_sha256_verified": true,
+    "weights_included_in_delivery": false
+  },
+  "llama_cpp_build": {
+    "revision": "e216f4ec8753e7317314e1ee01861b0230e583aa",
+    "cmake": "3.31.6",
+    "cxx_compiler": "GCC 13.3.0",
+    "optimization": "O1",
+    "passed": true
+  },
+  "real_inference_smoke_test": {
+    "backend": "llama.cpp CPU",
+    "prompt_tokens": 5,
+    "generated_tokens": 32,
+    "output_nonempty": true,
+    "purpose": "Integration correctness only; tiny public test fixture, not a user model or phone benchmark"
+  },
+  "model_bound_checks": [
+    {
+      "check": "oversize_output",
+      "rejected": true,
+      "last_error": "Generation unavailable: Invalid model path, prompt, or bounded generation settings"
+    },
+    {
+      "check": "context_overflow",
+      "rejected": true,
+      "last_error": "Generation unavailable: Prompt plus output exceeds active context; retrieve less text"
+    }
+  ],
+  "android_apk_built": false,
+  "android_device_run": false,
+  "user_huggingface_models_accessed": false,
+  "google_account_connected": false,
+  "performance_claims": false,
+  "notes": [
+    "The first sandboxed upstream build emitted incomplete compiler metadata/assembly; a fresh build with normal approved execution access and lower optimization completed.",
+    "No cross-device performance extrapolation is justified by the tiny smoke test."
+  ],
+  "spacecraft_telemetry_http_schema_test": {
+    "passed": true,
+    "fixture_metadata": "android/tests/fixtures/noaa_solar_wind_sample_metadata.json",
+    "android_parser_executed": false,
+    "historical_fixture_not_runtime_live_data": true
+  }
+}

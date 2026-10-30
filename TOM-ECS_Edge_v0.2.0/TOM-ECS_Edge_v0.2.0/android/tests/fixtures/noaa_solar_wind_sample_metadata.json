@@ -1,0 +1,14 @@
+{
+  "fixture_type": "historical_public_http_sample_not_live_app_state",
+  "source_url": "https://services.swpc.noaa.gov/json/rtsw/rtsw_wind_1m.json",
+  "retrieved_utc": "2026-10-30T09:52:04.208843+00:00",
+  "http_status": 200,
+  "original_response_bytes": 2261525,
+  "original_row_count": 3059,
+  "original_response_sha256": "b292f8aa50cb9a88b5f1002b3d0b713b8c3b423450ae250b77eb82cfd1e28a97",
+  "sample_row_count": 3,
+  "selected_source": "SOLAR1",
+  "selected_observed_utc": "2026-10-30T09:46:00+00:00",
+  "schema_checks": "Array of objects; time_tag; Boolean active; spacecraft source; numeric-or-null proton fields. Live fetch succeeded; Android parser/runtime not executed.",
+  "latest_selection_rule": "Maximum parsed time_tag among active=true rows; never rely on response order."
+}

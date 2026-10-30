@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "verified_utc": "2026-10-30T10:57:17.401769+00:00",
+  "artifact": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 3321189,
+    "sha256": "df70e8f3d145bb8260458db2e3ee27c4c6a2a2a9bbeddff9da941668b45e5e92",
+    "package": "nl.lognetd.edge",
+    "version_name": "0.2.0",
+    "version_code": 2,
+    "minimum_sdk": 29,
+    "target_sdk": 35,
+    "abi": "arm64-v8a"
+  },
+  "build": {
+    "result": "BUILD SUCCESSFUL",
+    "task": ":app:clean :app:assembleDebug",
+    "tasks_executed": 39,
+    "gradle": "8.9",
+    "agp": "8.7.3",
+    "jdk": "Temurin 17.0.21+9",
+    "ndk": "27.0.12077973",
+    "cmake": "3.22.1",
+    "build_tools": "34.0.0",
+    "compile_sdk": 35,
+    "sdk_command_line_tools": "13.0",
+    "sdk_license_flow": "Normal sdkmanager prompts accepted for local app development; no altered licenses.",
+    "default_gguf_backend": "disabled",
+    "native_profiles_compiled": 8,
+    "source_kernels": 6
+  },
+  "signature_verification": [
+    "Verifies",
+    "Verified using v1 scheme (JAR signing): false",
+    "Verified using v2 scheme (APK Signature Scheme v2): true",
+    "Verified using v3 scheme (APK Signature Scheme v3): false",
+    "Verified using v3.1 scheme (APK Signature Scheme v3.1): false",
+    "Verified using v4 scheme (APK Signature Scheme v4): false",
+    "Verified for SourceStamp: false",
+    "Number of signers: 1",
+    "Signer #1 certificate DN: C=US, O=Android, CN=Android Debug",
+    "Signer #1 certificate SHA-256 digest: a60376a57b08baee5372b27eba1beace9d2875665cb0425c4d4bf5273d1b2be5",
+    "Signer #1 certificate SHA-1 digest: 9d9737ffd69258f1726133bef73e6db016498942",
+    "Signer #1 certificate MD5 digest: 1b7546d2ec4930879a338f29d280843d",
+    "Signer #1 key algorithm: RSA",
+    "Signer #1 key size (bits): 2048",
+    "Signer #1 public key SHA-256 digest: 64c99217991e6e92d1a806dcd7bf39fa4ef50ccf0459762619dd85fdcb21c778",
+    "Signer #1 public key SHA-1 digest: 720dac0d9a1a171c92d8f2b64be74b5012931ee3",
+    "Signer #1 public key MD5 digest: c24c4c213cc683910bb30252234f32d3"
+  ],
+  "manifest_badging": [
+    "package: name='nl.lognetd.edge' versionCode='2' versionName='0.2.0' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'",
+    "sdkVersion:'29'",
+    "targetSdkVersion:'35'",
+    "uses-permission: name='android.permission.INTERNET'",
+    "uses-permission: name='android.permission.ACCESS_NETWORK_STATE'",
+    "uses-permission: name='android.permission.ACCESS_COARSE_LOCATION'",
+    "uses-permission: name='android.permission.ACCESS_FINE_LOCATION'",
+    "application: label='TOM-ECS Edge' icon=''",
+    "application-debuggable",
+    "launchable-activity: name='nl.lognetd.edge.MainActivity'  label='' icon=''",
+    "feature-group: label=''",
+    "  uses-feature-not-required: name='android.hardware.location.gps'",
+    "  uses-feature-not-required: name='android.hardware.sensor.accelerometer'",
+    "  uses-feature: name='android.hardware.faketouch'",
+    "  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'",
+    "  uses-feature: name='android.hardware.location'",
+    "  uses-implied-feature: name='android.hardware.location' reason='requested android.permission.ACCESS_COARSE_LOCATION permission, and requested android.permission.ACCESS_FINE_LOCATION permission'",
+    "main",
+    "supports-screens: 'small' 'normal' 'large' 'xlarge'",
+    "supports-any-density: 'true'",
+    "locales:",
+    "densities:",
+    "native-code: 'arm64-v8a'"
+  ],
+  "zipalign_34_check": "zipalign -c -p -v 4 exited 0 (tool reports: Verification succesful)",
+  "additional_16k_zip_check": "Parsed every native ZIP local header and confirmed uncompressed data offset modulo 16384 equals zero.",
+  "elf_native_libraries": [
+    {
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "bytes": 1292896,
+      "sha256": "92ee8da641b969254cc8723f64aa115d36c8ffa87115e38bc9cb89e3eefee839",
+      "elf_machine": "AArch64",
+      "load_alignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "relro_checks": [
+        {
+          "virtual_address": "0x1392f0",
+          "memory_bytes": 40208,
+          "end_16k_aligned": false,
+          "isolated_load_and_next_write_after_rounded_page": true
+        }
+      ],
+      "zip_uncompressed": true,
+      "zip_data_offset": 98304,
+      "zip_16k_aligned": true
+    },
+    {
+      "path": "lib/arm64-v8a/liblognetd_jni.so",
+      "bytes": 1796832,
+      "sha256": "23380cdfa929693fc1f3cab28837d26525b35b719e07f9512869cfb854e478a6",
+      "elf_machine": "AArch64",
+      "load_alignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "relro_checks": [
+        {
+          "virtual_address": "0x1b91b0",
+          "memory_bytes": 11856,
+          "end_16k_aligned": true,
+          "isolated_load_and_next_write_after_rounded_page": true
+        }
+      ],
+      "zip_uncompressed": true,
+      "zip_data_offset": 1392640,
+      "zip_16k_aligned": true
+    }
+  ],
+  "packaged_assets": [
+    {
+      "path": "assets/tom_ecs_phone_v1.tecs",
+      "bytes": 16712,
+      "sha256": "9e30e4c48fbd2f53fbc10599a42921b60a8a2cd9babae4103e3ebddebad83e71",
+      "matches_source": true
+    },
+    {
+      "path": "assets/documents/source_cards.json",
+      "bytes": 319245,
+      "sha256": "5df7fcd9c388c747b2031f9638f06f664aa811be2942d6a812619ec04c9f9833",
+      "matches_source": true,
+      "cards": 132
+    },
+    {
+      "path": "assets/lognet/hex_q16_bitplanes.bin",
+      "bytes": 2448,
+      "sha256": "620cba5e0a6577e43fbce604702da7ddc5d718b6d7c836d0b25594f93e153d07",
+      "matches_source": true
+    },
+    {
+      "path": "assets/lognet/hex_validity_bits.bin",
+      "bytes": 153,
+      "sha256": "eaa0a872c4e4f2b6b6f5f24de433d6d624dc34e9b7665b5bcd4f0611c1854989",
+      "matches_source": true
+    }
+  ],
+  "jni_methods_verified": [
+    "describe",
+    "evaluateMotion",
+    "inspectLut",
+    "runEcsFixture",
+    "replayPhoneSnapshot",
+    "inspectBuiltinBundle",
+    "inspectBundle",
+    "nativeProfiles",
+    "runNativeProfile",
+    "startLiveSession",
+    "observeLiveSession",
+    "stopLiveSession",
+    "modelBackendStatus",
+    "generate"
+  ],
+  "all_jni_exports_present": true,
+  "native_compile_flags": {
+    "effective_optimization": "-O2",
+    "fast_math": false,
+    "fp_contract": "off",
+    "wasm_runtime_rounding_and_sibling_call_flags_preserved": true,
+    "sources_checked": [
+      "android/app/src/main/cpp/native_bridge.cpp",
+      "ecs/bundle.cpp",
+      "adapters/llama_backend.cpp",
+      "core/jit.cpp",
+      "core/lognet.cpp",
+      "core/runtime.cpp",
+      "native_modules/tnm_native.c",
+      "native_modules/sha256.c",
+      "native_modules/generated/profiles.c",
+      "native_modules/generated/tomagi.c",
+      "native_modules/generated/pinion.c",
+      "native_modules/generated/maktubiii.c",
+      "native_modules/generated/twin.c",
+      "native_modules/generated/physics.c",
+      "native_modules/generated/machine.c",
+      "native_modules/runtime/wasm-rt-impl.c",
+      "native_modules/runtime/wasm-rt-mem-impl.c",
+      "native_modules/runtime/wasm-rt-exceptions-impl.c",
+      "ecs/ecs.cpp",
+      "ecs/sha256.cpp",
+      "ecs/live_session.cpp",
+      "ecs/vendor/tomk/tomagi.c"
+    ]
+  },
+  "device_or_emulator_run": false,
+  "installation_performed": false,
+  "limits": [
+    "Host build and package inspection only; no Android runtime or POCO performance validation.",
+    "Debug signing is a local development certificate, not user or release identity.",
+    "16 KiB ELF and ZIP layout verified; runtime behavior still requires a 16 KiB device/emulator."
+  ]
+}

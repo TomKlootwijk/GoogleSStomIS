@@ -1,0 +1,42 @@
+{
+  "schema": "TOM-ECS-RELEASE/1",
+  "version": "0.2.0",
+  "date": "2026-10-30",
+  "apk": {
+    "file": "TOM-ECS_Edge_v0.2.0_arm64-debug.apk",
+    "bytes": 3321189,
+    "sha256": "df70e8f3d145bb8260458db2e3ee27c4c6a2a2a9bbeddff9da941668b45e5e92",
+    "package": "nl.lognetd.edge",
+    "abi": "arm64-v8a",
+    "signature": "local Android Debug, APK v2 verified",
+    "device_executed": false
+  },
+  "bundle": {
+    "file": "examples/tom_ecs_phone_v1.tecs",
+    "file_sha256": "9e30e4c48fbd2f53fbc10599a42921b60a8a2cd9babae4103e3ebddebad83e71",
+    "contract_root_sha256": "9368ddec938bb08c232713345d11e30051196428b9156569f1647e6232f76f15",
+    "state_sha256": "d6787877e1ba2ae204a91213d0bd8099d660ba344df00663af28bc5208b097b4",
+    "events": 24,
+    "native_profiles": 8,
+    "rejected": 0
+  },
+  "validation": {
+    "core_checks": 20685,
+    "native_source_checks": 1149,
+    "ecs_checks": 1123,
+    "adversarial_package_checks": 79,
+    "staging_tests": 7,
+    "ctest_suites_passed": 5,
+    "android_gradle_tasks": 39,
+    "android_device_or_emulator_executed": false
+  },
+  "documentation": "README.md; docs/format.md; docs/validation.md; android/README.md",
+  "models_scope": "Selected existing profiles from seven source families, assembled through pinned TNOMTOM; complete public inventory covers eight model and two dataset repositories",
+  "corpus": {
+    "cards": 132,
+    "pdf_pages": 59,
+    "bytes": 319245,
+    "sha256": "5df7fcd9c388c747b2031f9638f06f664aa811be2942d6a812619ec04c9f9833"
+  },
+  "private_build_material_included": false
+}

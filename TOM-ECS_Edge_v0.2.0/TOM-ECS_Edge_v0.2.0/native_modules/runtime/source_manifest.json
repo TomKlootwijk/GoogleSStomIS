@@ -1,0 +1,54 @@
+{
+  "version": "WABT1.0.42",
+  "source": "https://github.com/WebAssembly/wabt/releases/tag/1.0.42",
+  "files": [
+    {
+      "file": "wasm-rt-exceptions-impl.c",
+      "original_sha256": "4e5540848e153eaebd624ed18b48e1667afc53a5ecfa707c100bdfc97acf5380",
+      "embedded_sha256": "4e5540848e153eaebd624ed18b48e1667afc53a5ecfa707c100bdfc97acf5380",
+      "modified": false
+    },
+    {
+      "file": "wasm-rt-exceptions.h",
+      "original_sha256": "c0609d52ecbac7bb29718b2b8e2b9d3ac6d52a3ef00095227c51e67756836a8d",
+      "embedded_sha256": "c0609d52ecbac7bb29718b2b8e2b9d3ac6d52a3ef00095227c51e67756836a8d",
+      "modified": false
+    },
+    {
+      "file": "wasm-rt-impl-tableops.inc",
+      "original_sha256": "5debdc8ca347b7ca0fb763be3fdd3683e4824579f8f2eba84aa5de54ec040cd0",
+      "embedded_sha256": "5debdc8ca347b7ca0fb763be3fdd3683e4824579f8f2eba84aa5de54ec040cd0",
+      "modified": false
+    },
+    {
+      "file": "wasm-rt-impl.c",
+      "original_sha256": "2f14845b510f331e48ffc747304b34ccd80b19d91b67fa3a568bcf0ebfde5301",
+      "embedded_sha256": "2f14845b510f331e48ffc747304b34ccd80b19d91b67fa3a568bcf0ebfde5301",
+      "modified": false
+    },
+    {
+      "file": "wasm-rt-impl.h",
+      "original_sha256": "dd8fbe19ba42258bb3a235017b82399c63fead4c932ad45197e77ca75b00d562",
+      "embedded_sha256": "dd8fbe19ba42258bb3a235017b82399c63fead4c932ad45197e77ca75b00d562",
+      "modified": false
+    },
+    {
+      "file": "wasm-rt-mem-impl-helper.inc",
+      "original_sha256": "cb830e338448fafb4fa09a2013ecb11b45c6ff5ffd09eca3f72bffaf1cf63583",
+      "embedded_sha256": "63975ce1e08d00059c73b757a506a368f3cf67bc2a708f6909f2c25899f0eb83",
+      "modified": true
+    },
+    {
+      "file": "wasm-rt-mem-impl.c",
+      "original_sha256": "1deec12ce672fa17dcd35844a9f36b16b649c4eff3d984fcd1a62ea023ff9719",
+      "embedded_sha256": "1deec12ce672fa17dcd35844a9f36b16b649c4eff3d984fcd1a62ea023ff9719",
+      "modified": false
+    },
+    {
+      "file": "wasm-rt.h",
+      "original_sha256": "8905fa9c64101ca20702368d0202cd0172ea83a596c5568db135402f82fcde57",
+      "embedded_sha256": "8905fa9c64101ca20702368d0202cd0172ea83a596c5568db135402f82fcde57",
+      "modified": false
+    }
+  ]
+}

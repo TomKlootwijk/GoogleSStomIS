@@ -1,0 +1,17 @@
+# XD retained code/data/dispatch controller
+
+The executable `machine.wasm` implements a finite XD transaction envelope with committed, candidate and exact sealed banks; source-versioned dispatch; retained S8 payloads; bounded transport queues and receipts; and complete phase-aware snapshot/restore. It has no host imports or mutable globals and uses fixed integer instructions in one non-shared 1 MiB memory.
+
+The [ABI](ABI.md) specifies every retained region, descriptor, event, status and API. E/H/P/xi module payloads are retained; their unsupported native source operators are not silently replaced. The two currently registered source handlers are original XD six-vertex parity and original Maktub mirror, using packed one-bit LUT results. Native source CRDT materialization is a separate operation and is not redefined as this transport queue.
+
+An in-flight handler reads committed source code, routing and data. Proposed descriptions, routing and dispatch are admitted for the later commit boundary. The current policy validates its proposed successor. Generations survive deletion as tombstones. A candidate cannot authorize a previously forbidden capability. Physical calibration and future broader native handlers remain explicit implementation work.
+
+`validate` recomputes source outputs from committed bytes, checks candidate results and the output receipt, and retains the exact complete candidate. `commit` checks equality against that seal and revalidates the source/transaction relation before publication. This also applies when restoring a supplied validated snapshot. A checksum alone is not treated as proof of candidate identity or a correct source result.
+
+Independent [execution verification](../xd_lut_machine_reference/verification.json) passed 12 groups and 2,663 actual API calls. It includes all native parity vectors and retained wires, mirror coincidence/domain checks, old code versus future dispatch, current-policy checks, tombstone versions, code mutations, bounded queues/receipts, counter exhaustion, exact seals, and malformed snapshots. [Disk replay](../xd_lut_machine_reference/replay.json) reopened 299 instances and reproduced every return and retained-state hash from the explicit call/memory transcript.
+
+Two actual snapshot-admission bugs were found and corrected before those passes: noncanonical idle control and a forged native-result receipt copied into both candidate and seal. The final checker rejects both without altering retained execution state. The fixed implementation is bound by the independent evidence's source hashes.
+
+This is a software realization of the declared envelope and two source kernels. It is not every S8 operator, the whole physical suite, a physical quantum processor, universal theorem closure or hardware attestation. Broader integer native backends live in [TOMK](../tomk_exact/SPEC.md) and [Pinion/Maktub](../pinion_maktub_exact/README.md); word-level exactness is distinct from completion of their one-bit LUT lowering.
+
+Build tooling: `python software/xd_lut_machine/build.py` instantiates the hash-pinned native ROM in the explicit WAT template and compiles it with Wasmtime's WAT helper. Python does not execute production transactions. Reproduce the independent checks with `python software/xd_lut_machine_reference/verify.py` and its closed replay command documented in that folder. The build and checker require the recorded Wasmtime tool dependency.

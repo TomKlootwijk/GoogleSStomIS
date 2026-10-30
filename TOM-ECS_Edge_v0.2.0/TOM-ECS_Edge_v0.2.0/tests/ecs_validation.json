@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "validation_date": "2026-10-30",
+  "host_architecture": "x86_64",
+  "compiler": "GCC13.3.0",
+  "ecs_checks": 1123,
+  "sanitizer_ecs_checks": 1123,
+  "adversarial_package_checks": 79,
+  "sanitizer_package_checks": 79,
+  "sanitizers": [
+    "AddressSanitizer",
+    "UndefinedBehaviorSanitizer"
+  ],
+  "native_profiles_integrated": 8,
+  "native_events_in_full_replay_case": 16,
+  "native_reference": "Pinned original NativeRecipeKernel on Node WebAssembly; every profile's complete memory after two steps agrees with native_modules/tests/golden.json",
+  "native_state_bytes_for_all_eight_profiles": 2949120,
+  "native_rollback_bytes_for_all_eight_profiles": 2949120,
+  "generated_integration_fixture": {
+    "seed": "1",
+    "events": 8,
+    "value_u64": "130",
+    "rule_version": "9",
+    "state_sha256": "79c0a0690287ed1f8a17372c819bea2916b76535efe30d440d106552a2111396",
+    "replay_equal": true
+  },
+  "covered": [
+    "SHA256 known-answer vectors including padding and million-byte input",
+    "All120 permutations of a five-event fixture, checked against known final arithmetic value",
+    "Paired action and rewrite use the same pre-event snapshot; new rule applies next event",
+    "Budget preflight changes neither ECS nor native module state",
+    "Duplicate, conflicting duplicate, stale generation, source epoch, replay sequence and late-event behavior",
+    "Checked and explicit modulo2^64 overflow behavior; exhausted entity generations retire",
+    "Original TOMK exact19 Header128/Cell48/State64 fixtures and published intermediate/final words",
+    "D6 source validity remains distinct from measured zero",
+    "All8 native source profiles execute two steps in varied arrival and binding orders with identical canonical state",
+    "Every native profile's full memory agrees with independent original WebAssembly goldens",
+    "Exact8-byte typed input retains little-endian source ABI",
+    "Oversized2064-byte ECS input and invalid source rational input leave module state unchanged",
+    "Bound entity destruction is rejected without dropping its native authority",
+    "Malformed and rehashed malicious package dimensions, directories, events, source programs and profile fingerprints",
+    "Opaque native metadata has no execution authority; Python authoring inspector separately requires canonical JSON",
+    "Lifecycle summaries follow replacement generations and dynamically spawned entities",
+    "Retained foreground session: two explicit observation epochs reproduce identical complete JSON and source second-event state; a recorded thermal skip retains all model memory"
+  ],
+  "allocation_observation": "Instrumented C++ operator new recorded zero allocations during paired and all-profile commit calls. Native wrapper source separately uses preallocated full-memory rollback; serialization and hashing requested outside event execution can allocate.",
+  "limits": [
+    "Finite explicit regression/adversarial cases, not exhaustive fuzzing or a proof over all possible states",
+    "This report does not execute an Android APK or establish sustained phone performance",
+    "The source-native adapter is not full XD-ECS/11 language or constructor-history conformance",
+    "Abstract work units do not measure CPU cycles or guarantee physical deadlines",
+    "The2064-byte BigRat8192 typed input exceeds this event transport's512-byte span; retained default profile input and direct native API remain available"
+  ],
+  "live_session": {
+    "schema": "TOM-LIVE-SESSION/1",
+    "retains_native_instances_between_observations": true,
+    "telemetry_entities": 1,
+    "native_profile_entities": 8,
+    "two_epoch_replay_equal": true,
+    "source_model_advanced_to_original_second_event_golden": true,
+    "thermal_skip_replay_equal": true,
+    "observed_acceleration_unit": "micro(m/s^2)",
+    "minimum_available_bytes": 268435456,
+    "maximum_admitted_thermal_status": 2,
+    "clock_reads_in_core": false,
+    "network_reads_in_core": false
+  }
+}

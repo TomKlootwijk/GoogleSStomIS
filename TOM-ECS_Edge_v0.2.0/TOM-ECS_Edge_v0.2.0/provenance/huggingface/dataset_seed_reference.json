@@ -1,0 +1,46 @@
+{
+  "schema": "TNM-DATASET-SEED-REFERENCE/1",
+  "source_bindings": [
+    {
+      "repository": "c0mbatduckzz/TK-SROK-NL942-19900710",
+      "revision": "1666dfa264b47fcaf1f6d3d172219fca11245bc7",
+      "path": "kernel/docs/seed-inputs.json",
+      "sha256": "9c52c3bc286e108f67c8e1124316d6c058b84c440c9327fb332e617c75c8756b",
+      "url": "https://huggingface.co/datasets/c0mbatduckzz/TK-SROK-NL942-19900710/blob/1666dfa264b47fcaf1f6d3d172219fca11245bc7/kernel/docs/seed-inputs.json"
+    },
+    {
+      "repository": "c0mbatduckzz/TOM-GROK",
+      "revision": "e6f4dd28d6068514e8943cc7f4be76801c1ddfd3",
+      "path": "kernel/docs/seed-inputs.json",
+      "sha256": "9c52c3bc286e108f67c8e1124316d6c058b84c440c9327fb332e617c75c8756b",
+      "url": "https://huggingface.co/datasets/c0mbatduckzz/TOM-GROK/blob/e6f4dd28d6068514e8943cc7f4be76801c1ddfd3/kernel/docs/seed-inputs.json"
+    }
+  ],
+  "source_files_identical": true,
+  "classification": "parsed reference data; not learned weights; does not alter the fixed native recipe",
+  "encoding": "NFC-normalized UTF-8, exact case and whitespace",
+  "selected_safe_record": {
+    "label": "chef",
+    "sha256": "f59ac0828b9a32293b348e398a0efd342b1e4377a687f3a9055ee2871dff35e4"
+  },
+  "jitter_schedule": "digest bit (logical_tick + global_chain_id) modulo256, low bit first per byte",
+  "first16_bits_chain0": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1
+  ],
+  "check": "SHA-256 independently recomputed from the selected text and matched exact source bytes"
+}

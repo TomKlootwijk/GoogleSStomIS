@@ -1,0 +1,585 @@
+{
+  "manifest": {
+    "format": "TOM-ECS/1",
+    "profile": "native-phone-v1",
+    "project": "TOM-ECS Edge",
+    "version": "0.2.0",
+    "source_account": "c0mbatduckzz",
+    "source_repositories": [
+      {
+        "repo_id": "c0mbatduckzz/TOMK",
+        "repo_type": "model",
+        "revision": "0febbaa1ea0df9a80eea6d7e45f75b652d39fa84",
+        "url": "https://huggingface.co/c0mbatduckzz/TOMK",
+        "license": "mit",
+        "file_count": 659,
+        "total_known_file_bytes": 392404115
+      },
+      {
+        "repo_id": "c0mbatduckzz/TOM-GROK",
+        "repo_type": "model",
+        "revision": "c9f0959233861726d1d7695fef8206f0d6d949e5",
+        "url": "https://huggingface.co/c0mbatduckzz/TOM-GROK",
+        "license": null,
+        "file_count": 58,
+        "total_known_file_bytes": 9029290
+      },
+      {
+        "repo_id": "c0mbatduckzz/Maktub-Tom-Klootwijk",
+        "repo_type": "model",
+        "revision": "902a80294f03f4b5d749c5272bf915be23585932",
+        "url": "https://huggingface.co/c0mbatduckzz/Maktub-Tom-Klootwijk",
+        "license": null,
+        "file_count": 20,
+        "total_known_file_bytes": 5552567
+      },
+      {
+        "repo_id": "c0mbatduckzz/TOM-MAKTUBIII",
+        "repo_type": "model",
+        "revision": "c5c90db368f09aa08ae1cd0d4c7c922f528075b6",
+        "url": "https://huggingface.co/c0mbatduckzz/TOM-MAKTUBIII",
+        "license": null,
+        "file_count": 27,
+        "total_known_file_bytes": 567662
+      },
+      {
+        "repo_id": "c0mbatduckzz/XD-TAU-JKT",
+        "repo_type": "model",
+        "revision": "55b94a067a11e8e65a3ad9f59cbfb3c2d85005ec",
+        "url": "https://huggingface.co/c0mbatduckzz/XD-TAU-JKT",
+        "license": null,
+        "file_count": 3,
+        "total_known_file_bytes": 5299010
+      },
+      {
+        "repo_id": "c0mbatduckzz/JTK-Twin-Viper",
+        "repo_type": "model",
+        "revision": "ad10a7a5083e3705118ede04c4b8dd24f665ec08",
+        "url": "https://huggingface.co/c0mbatduckzz/JTK-Twin-Viper",
+        "license": "other",
+        "file_count": 47,
+        "total_known_file_bytes": 43895619
+      },
+      {
+        "repo_id": "c0mbatduckzz/TK-MK-ULTRA",
+        "repo_type": "model",
+        "revision": "e78ede7d418effa3c912e9925493d55615c6adb1",
+        "url": "https://huggingface.co/c0mbatduckzz/TK-MK-ULTRA",
+        "license": "other",
+        "file_count": 57,
+        "total_known_file_bytes": 7500513
+      },
+      {
+        "repo_id": "c0mbatduckzz/TNOMTOM",
+        "repo_type": "model",
+        "revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "url": "https://huggingface.co/c0mbatduckzz/TNOMTOM",
+        "license": null,
+        "file_count": 6728,
+        "total_known_file_bytes": 14185694025
+      },
+      {
+        "repo_id": "c0mbatduckzz/TK-SROK-NL942-19900710",
+        "repo_type": "dataset",
+        "revision": "1666dfa264b47fcaf1f6d3d172219fca11245bc7",
+        "url": "https://huggingface.co/datasets/c0mbatduckzz/TK-SROK-NL942-19900710",
+        "license": null,
+        "file_count": 51,
+        "total_known_file_bytes": 2395678
+      },
+      {
+        "repo_id": "c0mbatduckzz/TOM-GROK",
+        "repo_type": "dataset",
+        "revision": "e6f4dd28d6068514e8943cc7f4be76801c1ddfd3",
+        "url": "https://huggingface.co/datasets/c0mbatduckzz/TOM-GROK",
+        "license": null,
+        "file_count": 64,
+        "total_known_file_bytes": 9220618
+      }
+    ],
+    "native_phone_semantics": "ordered bounded integer events; per-event snapshot then commit",
+    "source_format_preserved": "TOMAGI 1.0 Header128 + Cell48 + State64",
+    "xd_ecs_11_conformance": false,
+    "fixture_scope": "Eight compiled TNOMTOM native profiles, original C TOMK exact19, log-net-D D6 LUT, paired-publication integration primitive",
+    "source_files": [
+      {
+        "path": "ecs/vendor/tomk/examples/exact19_rule.tmg",
+        "sha256": "3b4aab91c3f4102e09a31638d55fc741ad61777c08ec3789b5b53f3585119c3a",
+        "bytes": 272
+      },
+      {
+        "path": "assets/lognet/hex_q16_bitplanes.bin",
+        "sha256": "620cba5e0a6577e43fbce604702da7ddc5d718b6d7c836d0b25594f93e153d07",
+        "bytes": 2448
+      },
+      {
+        "path": "assets/lognet/hex_validity_bits.bin",
+        "sha256": "eaa0a872c4e4f2b6b6f5f24de433d6d624dc34e9b7665b5bcd4f0611c1854989",
+        "bytes": 153
+      },
+      {
+        "path": "assets/documents/source_cards.json",
+        "sha256": "5df7fcd9c388c747b2031f9638f06f664aa811be2942d6a812619ec04c9f9833",
+        "bytes": 319245
+      }
+    ],
+    "native_profiles": [
+      {
+        "id": "tomk.exact19.data-bit-lut-v1",
+        "model": "TOMK",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "256140abcadce241d5bbef9dd18438f02b948cef0115db0256fa7e6e5b446314",
+        "recipe_sha256": "ed535257244214d9f60af91edcfa3a32e8d6768bec54984f53abca09d28513b8",
+        "bootstrap_sha256": "48f3a38f68b86afa68b2bf73c44504e2e814b811cd134938bacf832fa98054e1",
+        "input_type": "none",
+        "input_unit": "none",
+        "output_type": "TOMK.State64.output.u32",
+        "output_unit": "1",
+        "clock": "logical_n",
+        "scope": "Original16opcode State64/Cell48 source profile; computational DATA arithmetic bit-LUT lowered, explicit native admission/index/address/packing remains. No whole1bitCPU theorem.",
+        "memory_bytes": 524288,
+        "input_bytes": 0,
+        "projection_bytes": 64,
+        "output_bytes": 4,
+        "output_bits": 32
+      },
+      {
+        "id": "tomgrok.pinion.default.data-bit-lut-v1",
+        "model": "TOM-GROK",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "ccc534051973b025ad0ba83c98ede902eb4fa1de4d5a78f4f66d9c868e8499bf",
+        "recipe_sha256": "6c664075bb45ff72dc05448287e57d3b9f97b829cfcbfabaa528267c465f493a",
+        "bootstrap_sha256": "2986b7d2436208456f41cb1519e1f087e44262f4cb29ff1ecdb3d3b1fceaba98",
+        "input_type": "none",
+        "input_unit": "none",
+        "output_type": "TOM-GROK.RP32",
+        "output_unit": "1",
+        "clock": "logical_n",
+        "scope": "Original Pinion read-act-before-overlay-mutation finite integer-world profile; fixed explicit jitter event1. Unsupported Tape/HopRounds/float constructions not imported. New separatemoduleidentity lowers computationalDATA through retainedbitLUTs; sourcecode/equations unchanged. Native index/address/packing remain explicit.",
+        "memory_bytes": 65536,
+        "input_bytes": 0,
+        "projection_bytes": 48,
+        "output_bytes": 4,
+        "output_bits": 32
+      },
+      {
+        "id": "maktub.mirror.data-bit-lut-v1",
+        "model": "Maktub-Tom-Klootwijk",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "ccc534051973b025ad0ba83c98ede902eb4fa1de4d5a78f4f66d9c868e8499bf",
+        "recipe_sha256": "79ee8a73f89547ba39628b278baa6b31fdbdf601f43091d8ea4ac0a9633d7f8c",
+        "bootstrap_sha256": "117a621e0d753cea6505fd6693272f54cc79af8aed363b041a184f065affef85",
+        "input_type": "identified_pair_u32",
+        "input_unit": "1",
+        "output_type": "identified_pair_u32",
+        "output_unit": "1",
+        "clock": "logical_n",
+        "scope": "Original paired state/description mirror specialization, admitted opaque finiteJSON null event. No WASM JSON-parser or full adaptive Maktub port claim. New separatemoduleidentity lowers computationalDATA through retainedbitLUTs; sourcecode/equations unchanged. Native index/address/packing remain explicit.",
+        "memory_bytes": 65536,
+        "input_bytes": 8,
+        "projection_bytes": 8,
+        "output_bytes": 8,
+        "output_bits": 64
+      },
+      {
+        "id": "maktubiii.paired.QIS2.data-bit-lut-v1",
+        "model": "TOM-MAKTUBIII",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "793a9a0d74fc21247e2b6722aa6e659108d68eb806d9c9bca6eaa3ce039fbeaa",
+        "recipe_sha256": "25f16d1ccd487518a31d2f0679de216411479913838aa6c9541f3be379e9a72a",
+        "bootstrap_sha256": "52e2f28202daac8884d7236a7d6ee361738854f6a3cdc47cb792f1c4a55116bb",
+        "input_type": "maktubiii.QIS2.rational_pair",
+        "input_unit": "1",
+        "output_type": "maktubiii.QIS2.rational_scalar",
+        "output_unit": "1",
+        "clock": "logical_n",
+        "scope": "NEW ideal/algebraic source-operator profile; originalrawbinary64/PaperTnotclaimed; Explicit next_event_T adds1 to the supplied positive rational model coordinate after sourcepairedStep; not a physical-time law. Separately sealed computational-DATA bit-LUT backend; native control/address/index/packing remains. No wholeCPU, hardware or physical calibration claim.",
+        "memory_bytes": 65536,
+        "input_bytes": 40,
+        "projection_bytes": 20,
+        "output_bytes": 20,
+        "output_bits": 160
+      },
+      {
+        "id": "jtk.slog2.quarterturn.data-bit-lut-v1",
+        "model": "JTK-Twin-Viper",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "dc7925afc65db4ef80b271b10d79185c117dd44f1419deff5e292903ed27adc7",
+        "recipe_sha256": "b0170d1a412c8af45c7f18af7f1039c096aa47e2bda35347515e360fc6a236ac",
+        "bootstrap_sha256": "1322548e8c24c62d0e7fe64e8302de2543ce246601dcc95535b8c1c88b65dead",
+        "input_type": "canonical_rational_i64_vec3",
+        "input_unit": "m",
+        "output_type": "canonical_rational_i64_vec3",
+        "output_unit": "m",
+        "clock": "logical_n",
+        "scope": "Exact mathematical restriction of source chart/rotation/fourth-product. Formal natural logarithm/polar expressions retained by codec. Native binary64 results are not byte-identical. No calibrated physical interface. Separately sealed computational-DATA bit-LUT backend; native control/address/index/packing remains. No wholeCPU, hardware or physical calibration claim.",
+        "memory_bytes": 65536,
+        "input_bytes": 48,
+        "projection_bytes": 48,
+        "output_bytes": 48,
+        "output_bits": 384
+      },
+      {
+        "id": "tk.selected-quarterturn.data-bit-lut-v1",
+        "model": "TK-MK-ULTRA",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "dc7925afc65db4ef80b271b10d79185c117dd44f1419deff5e292903ed27adc7",
+        "recipe_sha256": "dad126fc72f31f71f7a8e324eb47bd39876787fc3a65691ef5a79a3ab7d169ad",
+        "bootstrap_sha256": "7f6b49ddc0ae6d461637cb4878f955a755c4b800b49f203b9de0c61deb67b4df",
+        "input_type": "none",
+        "input_unit": "none",
+        "output_type": "canonical_rational_i64_pair",
+        "output_unit": "1",
+        "clock": "logical_n",
+        "scope": "Exact selected mathematical source profile; rational physical state plus formal exact field/energy/clock expressions. No native float byte equivalence, source clock/apparatus conflation or measured material claim. Separately sealed computational-DATA bit-LUT backend; native control/address/index/packing remains. No wholeCPU, hardware or physical calibration claim.",
+        "memory_bytes": 65536,
+        "input_bytes": 0,
+        "projection_bytes": 32,
+        "output_bytes": 32,
+        "output_bits": 256
+      },
+      {
+        "id": "xd.physics.rational8192.bit-data-v1",
+        "model": "XD-TAU",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "a311aea3fcdabf9ed0538fd25591d7143f0764cfe0bff677de5337e9bf5b4d0b",
+        "recipe_sha256": "3f2b1b09428434647fd5c2e74b1d316b525fa47fb94a9e944c70c879c23b0e4d",
+        "bootstrap_sha256": "07e6a24a8a5f977ceb46977b90417c39764045c716828c8319452406e122c606",
+        "input_type": "canonical_BigRat8192",
+        "input_unit": "declared_model.force",
+        "output_type": "canonical_BigRat8192",
+        "output_unit": "declared_model.displacement",
+        "clock": "source_model_time",
+        "scope": "Exact bounded original discrete numeric model; computational DATA bit-LUT lowered in a separately sealed backend. Native control/address/index/packing remains. No continuum, empirical device, wholeCPU or fullgeometry/CRDT port claim.",
+        "memory_bytes": 1048576,
+        "input_bytes": 2064,
+        "projection_bytes": 2064,
+        "output_bytes": 2064,
+        "output_bits": 16512
+      },
+      {
+        "id": "xd.parent.parity6.native-v1",
+        "model": "XD-TAU",
+        "source_revision": "9823c27edf9a7e84c5a10b28b1970a22e69abf39",
+        "wasm_sha256": "ad77e0056a21f8a6d77c70785bf65ca93853b660c7bb59922f5c666f758cd597",
+        "recipe_sha256": "572c1f256e8503dad79625c789ab0c2879c5ad1227d9ca6353eafaebdb46a450",
+        "bootstrap_sha256": "e2b5a1d0e5cc649de876c69c92c821221c5646db267b02b108884c616a9624de",
+        "input_type": "none",
+        "input_unit": "none",
+        "output_type": "XD.parity6.Q15",
+        "output_unit": "1",
+        "clock": "logical_n",
+        "scope": "Leading retained XD transaction controller executes original sixvertex45XOR parity kernel on a fixed actual admitted72bit fixture; not every XD geometry/CRDT/physics operator.",
+        "memory_bytes": 1048576,
+        "input_bytes": 0,
+        "projection_bytes": 31,
+        "output_bytes": 2,
+        "output_bits": 15
+      }
+    ],
+    "document_corpus": {
+      "cards": 132,
+      "pdf_pages": 59,
+      "public_hf_repositories": 10,
+      "source": "assets/documents/source_cards.json",
+      "status": "bounded local reference text, not executable instructions"
+    }
+  },
+  "config": {
+    "entity_capacity": 16,
+    "component_count": 16,
+    "event_capacity": 64,
+    "source_capacity": 11,
+    "commit_through": 4,
+    "capabilities": 31,
+    "max_events": 64,
+    "max_operations": 1000000
+  },
+  "source_epochs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "entities": [
+    {
+      "rule": {
+        "act_addend": 5,
+        "rewrite_xor": 3,
+        "version": 1
+      }
+    },
+    {
+      "tomagi_initial": true
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "components": [
+    [
+      0,
+      0,
+      7
+    ]
+  ],
+  "events": [
+    {
+      "tick": 1,
+      "source": 0,
+      "sequence": 1,
+      "entity": 0,
+      "opcode": "pair_act_rewrite",
+      "argument": 2
+    },
+    {
+      "tick": 1,
+      "source": 1,
+      "sequence": 1,
+      "entity": 1,
+      "opcode": "tomagi_step"
+    },
+    {
+      "tick": 1,
+      "source": 2,
+      "sequence": 1,
+      "entity": 2,
+      "opcode": "d6_lookup",
+      "argument": 34359738375
+    },
+    {
+      "tick": 2,
+      "source": 0,
+      "sequence": 2,
+      "entity": 0,
+      "opcode": "pair_act_rewrite",
+      "argument": 4
+    },
+    {
+      "tick": 2,
+      "source": 1,
+      "sequence": 2,
+      "entity": 1,
+      "opcode": "tomagi_step"
+    },
+    {
+      "tick": 2,
+      "source": 2,
+      "sequence": 2,
+      "entity": 2,
+      "opcode": "d6_lookup",
+      "component": 1,
+      "argument": 34359738387
+    },
+    {
+      "tick": 3,
+      "source": 0,
+      "sequence": 3,
+      "entity": 0,
+      "opcode": "xor",
+      "argument": 16
+    },
+    {
+      "tick": 4,
+      "source": 0,
+      "sequence": 4,
+      "entity": 0,
+      "opcode": "add_checked",
+      "argument": 3
+    },
+    {
+      "tick": 1,
+      "source": 3,
+      "sequence": 1,
+      "entity": 3,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 3,
+      "sequence": 2,
+      "entity": 3,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 1,
+      "source": 4,
+      "sequence": 1,
+      "entity": 4,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 4,
+      "sequence": 2,
+      "entity": 4,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 1,
+      "source": 5,
+      "sequence": 1,
+      "entity": 5,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 5,
+      "sequence": 2,
+      "entity": 5,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 1,
+      "source": 6,
+      "sequence": 1,
+      "entity": 6,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 6,
+      "sequence": 2,
+      "entity": 6,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 1,
+      "source": 7,
+      "sequence": 1,
+      "entity": 7,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 7,
+      "sequence": 2,
+      "entity": 7,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 1,
+      "source": 8,
+      "sequence": 1,
+      "entity": 8,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 8,
+      "sequence": 2,
+      "entity": 8,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 1,
+      "source": 9,
+      "sequence": 1,
+      "entity": 9,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 9,
+      "sequence": 2,
+      "entity": 9,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 1,
+      "source": 10,
+      "sequence": 1,
+      "entity": 10,
+      "opcode": "native_profile_step"
+    },
+    {
+      "tick": 2,
+      "source": 10,
+      "sequence": 2,
+      "entity": 10,
+      "opcode": "native_profile_step"
+    }
+  ],
+  "tomagi": "../ecs/vendor/tomk/examples/exact19_rule.tmg",
+  "lognet_planes": "../assets/lognet/hex_q16_bitplanes.bin",
+  "lognet_validity": "../assets/lognet/hex_validity_bits.bin",
+  "native_bindings": [
+    {
+      "entity": 3,
+      "profile_index": 0,
+      "profile_id": "tomk.exact19.data-bit-lut-v1",
+      "wasm_sha256": "256140abcadce241d5bbef9dd18438f02b948cef0115db0256fa7e6e5b446314",
+      "recipe_sha256": "ed535257244214d9f60af91edcfa3a32e8d6768bec54984f53abca09d28513b8",
+      "bootstrap_sha256": "48f3a38f68b86afa68b2bf73c44504e2e814b811cd134938bacf832fa98054e1"
+    },
+    {
+      "entity": 4,
+      "profile_index": 1,
+      "profile_id": "tomgrok.pinion.default.data-bit-lut-v1",
+      "wasm_sha256": "ccc534051973b025ad0ba83c98ede902eb4fa1de4d5a78f4f66d9c868e8499bf",
+      "recipe_sha256": "6c664075bb45ff72dc05448287e57d3b9f97b829cfcbfabaa528267c465f493a",
+      "bootstrap_sha256": "2986b7d2436208456f41cb1519e1f087e44262f4cb29ff1ecdb3d3b1fceaba98"
+    },
+    {
+      "entity": 5,
+      "profile_index": 2,
+      "profile_id": "maktub.mirror.data-bit-lut-v1",
+      "wasm_sha256": "ccc534051973b025ad0ba83c98ede902eb4fa1de4d5a78f4f66d9c868e8499bf",
+      "recipe_sha256": "79ee8a73f89547ba39628b278baa6b31fdbdf601f43091d8ea4ac0a9633d7f8c",
+      "bootstrap_sha256": "117a621e0d753cea6505fd6693272f54cc79af8aed363b041a184f065affef85"
+    },
+    {
+      "entity": 6,
+      "profile_index": 3,
+      "profile_id": "maktubiii.paired.QIS2.data-bit-lut-v1",
+      "wasm_sha256": "793a9a0d74fc21247e2b6722aa6e659108d68eb806d9c9bca6eaa3ce039fbeaa",
+      "recipe_sha256": "25f16d1ccd487518a31d2f0679de216411479913838aa6c9541f3be379e9a72a",
+      "bootstrap_sha256": "52e2f28202daac8884d7236a7d6ee361738854f6a3cdc47cb792f1c4a55116bb"
+    },
+    {
+      "entity": 7,
+      "profile_index": 4,
+      "profile_id": "jtk.slog2.quarterturn.data-bit-lut-v1",
+      "wasm_sha256": "dc7925afc65db4ef80b271b10d79185c117dd44f1419deff5e292903ed27adc7",
+      "recipe_sha256": "b0170d1a412c8af45c7f18af7f1039c096aa47e2bda35347515e360fc6a236ac",
+      "bootstrap_sha256": "1322548e8c24c62d0e7fe64e8302de2543ce246601dcc95535b8c1c88b65dead"
+    },
+    {
+      "entity": 8,
+      "profile_index": 5,
+      "profile_id": "tk.selected-quarterturn.data-bit-lut-v1",
+      "wasm_sha256": "dc7925afc65db4ef80b271b10d79185c117dd44f1419deff5e292903ed27adc7",
+      "recipe_sha256": "dad126fc72f31f71f7a8e324eb47bd39876787fc3a65691ef5a79a3ab7d169ad",
+      "bootstrap_sha256": "7f6b49ddc0ae6d461637cb4878f955a755c4b800b49f203b9de0c61deb67b4df"
+    },
+    {
+      "entity": 9,
+      "profile_index": 6,
+      "profile_id": "xd.physics.rational8192.bit-data-v1",
+      "wasm_sha256": "a311aea3fcdabf9ed0538fd25591d7143f0764cfe0bff677de5337e9bf5b4d0b",
+      "recipe_sha256": "3f2b1b09428434647fd5c2e74b1d316b525fa47fb94a9e944c70c879c23b0e4d",
+      "bootstrap_sha256": "07e6a24a8a5f977ceb46977b90417c39764045c716828c8319452406e122c606"
+    },
+    {
+      "entity": 10,
+      "profile_index": 7,
+      "profile_id": "xd.parent.parity6.native-v1",
+      "wasm_sha256": "ad77e0056a21f8a6d77c70785bf65ca93853b660c7bb59922f5c666f758cd597",
+      "recipe_sha256": "572c1f256e8503dad79625c789ab0c2879c5ad1227d9ca6353eafaebdb46a450",
+      "bootstrap_sha256": "e2b5a1d0e5cc649de876c69c92c821221c5646db267b02b108884c616a9624de"
+    }
+  ]
+}

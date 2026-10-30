@@ -1,0 +1,82 @@
+{
+  "schema": "TNM-NATIVE-VALIDATION/1",
+  "executed_at_utc": "2026-10-30T10:52:55.600304+00:00",
+  "platform": "Linux x86_64 host; GCC13.3 release; Android ARM64 cross-compile checked separately by application build",
+  "result": {
+    "result": "PASS",
+    "checks": 1149,
+    "profiles": 8,
+    "kernels": 6,
+    "source_golden_events": 32
+  },
+  "profile_results": [
+    {
+      "id": "tomk.exact19.data-bit-lut-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "be8637fdbc66d7f7e4e1f28210dcc0670187d61c5bc915168f708c349037e678"
+    },
+    {
+      "id": "tomgrok.pinion.default.data-bit-lut-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "c0c99cbc4823ceff1927add42a506bc2f83caf425af8b6896545f0fabb5f9b51"
+    },
+    {
+      "id": "maktub.mirror.data-bit-lut-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "4612e0ee38f2e144a096a50bd03b1363f98e4e1fa50b90fc928afc2c943f47ee"
+    },
+    {
+      "id": "maktubiii.paired.QIS2.data-bit-lut-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "252884e29e5f9a810514142cc38de0b57932ed115af1f386f07a41f3510bd12a"
+    },
+    {
+      "id": "jtk.slog2.quarterturn.data-bit-lut-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "27b8e3edec65b8429669e50f8d5f05e96b36823c18dc012577b493d2e30abf65"
+    },
+    {
+      "id": "tk.selected-quarterturn.data-bit-lut-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "b0b47248767cd5dc1af5a4ac69d122ead4db3aa2f7d3fa14ba0e84e9273dc8f2"
+    },
+    {
+      "id": "xd.physics.rational8192.bit-data-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "ffb0fc34f8b16635ce3d6a540be04e517be75f0e2a85eece1c0d2d164b6b8329"
+    },
+    {
+      "id": "xd.parent.parity6.native-v1",
+      "whole_memory_golden_events": 4,
+      "restore_replay": true,
+      "last_sha256": "28e16f5c20c713739dcf765430e364a3c18f01f50a51b4089071b7b070ec4319"
+    }
+  ],
+  "oracle": "Pinned original NativeRecipeKernel running unchanged original WASM in Node v24.22.1",
+  "checks_include": [
+    "Eight whole-memory bootstrap identities",
+    "32 successive original-WASM whole-memory golden events, outputs, projections and source return codes",
+    "Full-memory snapshot restore and future replay",
+    "Invalid input widths and canonical source encodings preserve full state and sequence",
+    "UI JSON bounds, wrapper u64 sequence exhaustion",
+    "TK selected source 256-tick capacity and event257 atomic rejection",
+    "Three SHA256 standard vectors"
+  ],
+  "strict_c_compile": "tnm_native.c and sha256.c passed -std=c11 -Wall -Wextra -Werror with POSIX declaration flag",
+  "sanitizer_scope": {
+    "local_standalone_attempt": "Address/Undefined instrumentation built; process exit blocked by LeakSanitizer inability to inspect restricted /proc. No standalone sanitizer pass claimed. Integrated ECS sanitizer report is maintained by ECS tests.",
+    "not_a_phone_performance_test": true
+  },
+  "limits": [
+    "Four source golden events per profile are not exhaustive proof over all allowed inputs.",
+    "Golden uses the same pinned WASM semantics through different runtimes; it does not independently validate physical models.",
+    "No physical POCO measurements or live sensor calibration performed by this test."
+  ]
+}
